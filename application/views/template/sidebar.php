@@ -17,7 +17,7 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="javascript:void(0);"><i class="fa fa-cog"></i> Account Settings</a></li>
                                 <li role="separator" class="divider"></li> -->
-                                <li><a href=""><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li><a href="signout"><i class="fa fa-power-off"></i> Logout</a></li>
                             </ul>
                         </div>
                         <p class="profile-text m-t-15 font-16"><a href="javascript:void(0);"> Hanna Gover</a></p>
