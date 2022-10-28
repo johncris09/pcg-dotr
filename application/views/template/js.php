@@ -2,6 +2,10 @@
     <!-- ==============================
         Required JS Files
     =============================== -->
+    <script>
+        var BASE_URL = "<?php echo base_url() ?>";
+    </script>
+
     <!-- ===== jQuery ===== -->
     <script src="<?php echo base_url(); ?>assets/vendor/jquery/dist/jquery.min.js"></script>
     <!-- ===== Bootstrap JavaScript ===== -->
