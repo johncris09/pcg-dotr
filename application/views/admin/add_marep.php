@@ -33,31 +33,39 @@
 									<li class="nav-item">
 									<a class="nav-link default active error" href="#step-1">
 										<div class="num">1</div>
-										Customer Details
 									</a>
 									</li>
 									<li class="nav-item">
-									<a class="nav-link default" href="#step-2">
-										<span class="num">2</span>
-										Products Details
-									</a>
+										<a class="nav-link default" href="#step-2">
+											<span class="num">2</span>
+											Products Details
+										</a>
+									</li>
+									<!-- <li class="nav-item">
+										<a class="nav-link default" href="#step-3">
+											<span class="num">3</span>
+											Shipping Details
+										</a>
 									</li>
 									<li class="nav-item">
-									<a class="nav-link default" href="#step-3">
-										<span class="num">3</span>
-										Shipping Details
-									</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link default" href="#step-4">
-										<span class="num">4</span>
-										Confirm Order
-									</a>
-									</li>
+										<a class="nav-link default" href="#step-4">
+											<span class="num">4</span>
+											Confirm Order
+										</a>
+									</li> -->
 								</ul>
 
 								<div class="tab-content" style="height: 215.511px;">
 								<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1" style="display: block;">
+									<div class="row">
+										<div class="col-md-12">
+											<h4>MARINE ENVIRONMENTAL PROTECTION CGDNM</h4>	
+											<p>
+												This is a prototype data gathering system to monitor and evaluate CGDNM performance in relation to its MAREP activities.  Please fill out all necessary information in the checkboxes below.
+											</p><br>
+											<h5>CGDNM STATIONS</h5>
+										</div>
+									</div><br><br>
 									<form id="form-1" class="needs-validation was-validated" novalidate="">
 										<div class="form-body">
 											<div class="row">
@@ -102,198 +110,29 @@
 															?>
 														</select>
 													</div>
-												</div>s
+												</div>
 											</div>  
 											
 										</div> 
 									</form>
 
-									<form>
-											<!-- <div class="form-group has-success">
-												<label class="control-label" for="inputSuccess1">Input with success</label>
-												<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
-												<span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-											</div>
-											<div class="form-group has-warning">
-												<label class="control-label" for="inputWarning1">Input with warning</label>
-												<input type="text" class="form-control" id="inputWarning1">
-											</div>
-											<div class="form-group has-error">
-												<label class="control-label" for="inputError1">Input with error</label>
-												<input type="text" class="form-control" id="inputError1">
-											</div>
-											<div class="has-success">
-												<div class="checkbox">
-												<label>
-													<input type="checkbox" id="checkboxSuccess" value="option1">
-													Checkbox with success
-												</label>
-												</div>
-											</div>
-											<div class="has-warning">
-												<div class="checkbox">
-												<label>
-													<input type="checkbox" id="checkboxWarning" value="option1">
-													Checkbox with warning
-												</label>
-												</div>
-											</div>
-											<div class="has-error">
-												<div class="checkbox">
-												<label>
-													<input type="checkbox" id="checkboxError" value="option1">
-													Checkbox with error
-												</label>
-												</div>
-											</div>
-											</form> -->
-
-
-									<!-- <form id="form-1" class="row row-cols-1 ms-5 me-5 needs-validation was-validated" novalidate="">
-										<div class="col">
-											<label for="first-name" class="form-label">First name</label>
-											<input type="text" class="form-control" id="first-name" value="" required="">
-											<div class="valid-feedback">
-												Looks good!
-											</div>
-											<div class="invalid-feedback">
-												Please provide first name.
-											</div>
-										</div>
-										<div class="col">
-											<label for="validationCustom02" class="form-label">Last name</label>
-											<input type="text" class="form-control" id="last-name" value="" required="">
-											<div class="valid-feedback">
-												Looks good!
-											</div>
-											<div class="invalid-feedback">
-												Please provide last name.
-											</div>
-										</div>
-									</form> -->
+									<form> 
 								</div>
 								<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2" style="display: none;">
 									<form id="form-2" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate="">
-									<div class="col-md-6">
-										<label for="validationCustom04" class="form-label">Product</label>
-										<select class="form-select" id="sel-products" multiple="" required="">
-										<option value="Apple iPhone 13">Apple iPhone 13</option>
-										<option value="Apple iPhone 12">Apple iPhone 12</option>
-										<option value="Samsung Galaxy S10">Samsung Galaxy S10</option>
-										<option value="Motorola G5">Motorola G5</option>
-										</select>
-										<div class="valid-feedback">
-										Looks good!
-										</div>
-										<div class="invalid-feedback">
-										Please select product.
-										</div>
-									</div>
+										<h2>Step 2</h2>
 									</form>
-								</div>
-									<div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3" style="display: none;">
-									<form id="form-3" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate="">
-										<div class="col">
-										<label for="address" class="form-label">Address</label>
-										<input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
-										<div class="invalid-feedback">
-											Please enter your shipping address.
-										</div>
-										</div>
-										<div class="col">
-										<label for="validationCustom04" class="form-label">State</label>
-										<select class="form-select" id="state" required="">
-											<option selected="" disabled="" value="">Choose...</option>
-											<option>State 1</option>
-											<option>State 2</option>
-											<option>State 3</option>
-										</select>
-										<div class="valid-feedback">
-											Looks good!
-										</div>
-										<div class="invalid-feedback">
-											Please select a valid state.
-										</div>
-										</div>
-										<div class="col">
-										<label for="validationCustom05" class="form-label">Zip</label>
-										<input type="text" class="form-control" id="zip" required="">
-										<div class="invalid-feedback">
-											Please provide a valid zip.
-										</div>
-										</div>
-									</form>  
-									</div>
-									<div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4" style="display: none;">
-
-									<form id="form-4" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate="">
-									<div class="col">
-										<div class="mb-3 text-muted">Please confirm your order details</div>
-
-										<div id="order-details"></div>
-								
-										<h4 class="mt-3">Payment</h4>
-										<hr class="my-2">
-								
-										<div class="row gy-3">
-											<div class="col-md-3">
-											<label for="cc-name" class="form-label">Name on card</label>
-											<input type="text" class="form-control" id="cc-name" value="My Name" placeholder="" required="">
-											<small class="text-muted">Full name as displayed on card</small>
-											<div class="invalid-feedback">
-												Name on card is required
-											</div>
-											</div>
-								
-											<div class="col-md-3">
-											<label for="cc-number" class="form-label">Credit card number</label>
-											<input type="text" class="form-control" id="cc-number" value="54545454545454" placeholder="" required="">
-											<div class="invalid-feedback">
-												Credit card number is required
-											</div>
-											</div>
-								
-											<div class="col-md-3">
-											<label for="cc-expiration" class="form-label">Expiration</label>
-											<input type="text" class="form-control" id="cc-expiration" value="1/28" placeholder="" required="">
-											<div class="invalid-feedback">
-												Expiration date required
-											</div>
-											</div>
-								
-											<div class="col-md-3">
-											<label for="cc-cvv" class="form-label">CVV</label>
-											<input type="text" class="form-control" id="cc-cvv" value="123" placeholder="" required="">
-											<div class="invalid-feedback">
-												Security code required
-											</div>
-											</div>
-
-											<div class="col">
-											<input type="checkbox" class="form-check-input" id="save-info" required="">
-											<label class="form-check-label" for="save-info">I agree to the terms and conditions</label>
-											</div>
-
-											<small class="text-muted">This is an example page, do not enter any real data, even tho we don't submit this information!</small>
-
-										</div>
-										</div>
-									</form>
-
-
-
-									</div>
-								</div>
+								</div> 
 								<div class="sw-toolbar-elm toolbar toolbar-bottom" role="toolbar">
 									<button class="btn sw-btn-prev sw-btn" type="button">Previous</button>
 									<button class="btn sw-btn-next sw-btn" type="button">Next</button>
-									<button class="btn btn-success-sm  " id="btnFinish" disabled="" onclick="onConfirm()">Complete Order</button>
+									<button class="btn btn-success-sm  " id="btnFinish" disabled="" >Submit</button>
 									<button class="btn btn-danger-sm " id="btnCancel" onclick="onCancel()">Cancel</button>
+								</div> 
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 								</div>
 
-								<div class="progress">
-								<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
 							</div>
 						</div> 
                     </div>
@@ -359,8 +198,6 @@
           // Reset form
           document.getElementById("form-1").reset();
           document.getElementById("form-2").reset();
-          document.getElementById("form-3").reset();
-          document.getElementById("form-4").reset();
         }
 
         function onConfirm() {
@@ -368,12 +205,12 @@
           if (form) {
             if (!form.checkValidity()) {
               form.classList.add('was-validated');
-              $('#smartwizard').smartWizard("setState", [3], 'error');
+              $('#smartwizard').smartWizard("setState", [1], 'error');
               $("#smartwizard").smartWizard('fixHeight');
               return false;
             }
             
-            $('#smartwizard').smartWizard("unsetState", [3], 'error'); 
+            $('#smartwizard').smartWizard("unsetState", [1], 'error'); 
           }
         }
 
@@ -389,7 +226,7 @@
  
         }
 
-        function showConfirm() {
+        function showConfirm() { 
           const name = $('#first-name').val() + ' ' + $('#last-name').val();
           const products = $('#sel-products').val();
           const shipping = $('#address').val() + ' ' + $('#state').val() + ' ' + $('#zip').val();
@@ -428,8 +265,9 @@
                   </div>
 
                   `;
+			console.info(html)
           $("#order-details").html(html);
-          $('#smartwizard').smartWizard("fixHeight"); 
+          $('#smartwizard').smartWizard("fixHeight");  
         }
 
         $(function() {
@@ -469,7 +307,7 @@
                 $("#sw-total-step").text(stepInfo.totalSteps);
 
                 if (stepPosition == 'last') {
-                  showConfirm();
+                //   showConfirm();
                   $("#btnFinish").prop('disabled', false);
                 } else {
                   $("#btnFinish").prop('disabled', true);
@@ -489,13 +327,13 @@
                 // autoAdjustHeight: false,
                 theme: 'dots', // basic, arrows, square, round, dots
                 transition: {
-                  animation:'slideSwing'
+                  animation:'none'
                 },
                 toolbar: {
                   showNextButton: true, // show/hide a Next button
                   showPreviousButton: true, // show/hide a Previous button
                   position: 'bottom', // none/ top/ both bottom
-                  extraHtml: `<button class="btn btn-success" id="btnFinish" disabled onclick="onConfirm()">Submit Order</button>
+                  extraHtml: `<button class="btn btn-success" id="btnFinish" disabled onclick="onConfirm()">Submit</button>
                               <button class="btn btn-danger" id="btnCancel" onclick="onCancel()">Cancel</button>`
                 },
                 anchor: {
