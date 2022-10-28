@@ -7,7 +7,7 @@
     <!-- ===== Custom CSS ===== -->
     <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
     <!-- ===== Color CSS ===== --> 
-    <link href="<?php echo base_url() ?>assets/css/colors/green-dark.css" id="theme" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
