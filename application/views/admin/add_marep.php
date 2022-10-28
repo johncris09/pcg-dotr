@@ -58,8 +58,8 @@
 
 								<div class="tab-content" style="height: 215.511px;">
 								<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1" style="display: block;">
-									<form id="form-1" class="    needs-validation was-validated" novalidate="">
-										<div class="form-body">  
+									<form id="form-1" class="needs-validation was-validated" novalidate="">
+										<div class="form-body">
 											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group">
@@ -76,7 +76,7 @@
 														</select>
 													</div>
 												</div>
-												<div class="col-md-6">
+												<div id="toggle-hidden" class="col-md-6 hidden">
 													<div class="form-group">
 														<label> <span id="station-text"></span> SUB-STATIONS</label>
 														<select id="sub-station" class="form-control">
@@ -319,26 +319,35 @@
 			var text = $(this).find(':selected').text() 
 			var station_id = $(this).val() 
 
-			var text= text.replace('CGS ', ""); 
+			var text = text.replace('CGS ', ""); 
 
 			$('#station-text').text(text)
+
+			if(station_id != ""){
 			
-			$.ajax({
-				url: BASE_URL + 'substation/get_substation_by_station/' + station_id,
-				type: 'POST',  
-				dataType: 'JSON',
-				success: function(data){  
-					$("#sub-station").empty();
-					$("#sub-station").append(new Option("Select", "" ))
-					$.each(data , function(index, val) { 
-						$("#sub-station").append(new Option(val.sub_station, val.sub_station_id ));
-					});
-				},
-				error: function(xhr, textStatus, error){
-					console.info(xhr.responseText);
-				}
-		
-			});
+				$.ajax({
+					url: BASE_URL + 'substation/get_substation_by_station/' + station_id,
+					type: 'POST',  
+					dataType: 'JSON',
+					success: function(data){  
+						$('#toggle-hidden').removeClass('hidden')
+						$("#sub-station").empty();
+						$("#sub-station").append(new Option("Select", "" ))
+						$.each(data , function(index, val) { 
+							$("#sub-station").append(new Option(val.sub_station, val.sub_station_id ));
+						});
+					},
+					error: function(xhr, textStatus, error){
+						console.info(xhr.responseText);
+					}
+			
+				});
+
+			}else{
+				$('#toggle-hidden').addClass('hidden')
+				$("#sub-station").empty();
+
+			}
 
 
 		})
@@ -429,8 +438,7 @@
                 // Validate only on forward movement  
                 if (stepDirection == 'forward') {
                   let form = document.getElementById('form-' + (currentStepIdx + 1));
-				  console.info(form)
-                  if (form) {
+                  if (form) { 
                     if (!form.checkValidity()) {
                       form.classList.add('was-validated');
                       $('#smartwizard').smartWizard("setState", [currentStepIdx], 'error');
@@ -487,7 +495,7 @@
                   showNextButton: true, // show/hide a Next button
                   showPreviousButton: true, // show/hide a Previous button
                   position: 'bottom', // none/ top/ both bottom
-                  extraHtml: `<button class="btn btn-success" id="btnFinish" disabled onclick="onConfirm()">Complete Order</button>
+                  extraHtml: `<button class="btn btn-success" id="btnFinish" disabled onclick="onConfirm()">Submit Order</button>
                               <button class="btn btn-danger" id="btnCancel" onclick="onCancel()">Cancel</button>`
                 },
                 anchor: {
