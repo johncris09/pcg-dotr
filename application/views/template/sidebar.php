@@ -27,7 +27,7 @@
                             <a class="waves-effect"  aria-expanded="false"><i class="icon-anchor fa-fw"></i> <span class="hide-menu"> MAREP</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="#">MAREP List</a></li>
-                                <li><a href="#">Add MAREP</a></li> 
+                                <li><a href="add_marep">Add MAREP</a></li> 
                             </ul>
                         </li>
                         <li>
