@@ -79,7 +79,7 @@
 												<div class="col-md-6">
 													<div class="form-group">
 														<label> <span id="station-text"></span> SUB-STATIONS</label>
-														<select class="form-control">
+														<select id="sub-station" class="form-control">
 															<option value="">Select</option>
 														</select>
 													</div>
@@ -317,10 +317,30 @@
 		$('select#station').on('change', function(e){
 			e.preventDefault();
 			var text = $(this).find(':selected').text() 
+			var station_id = $(this).val() 
 
 			var text= text.replace('CGS ', ""); 
 
 			$('#station-text').text(text)
+			
+			$.ajax({
+				url: BASE_URL + 'substation/get_substation_by_station/' + station_id,
+				type: 'POST',  
+				dataType: 'JSON',
+				success: function(data){  
+					$("#sub-station").empty();
+					$("#sub-station").append(new Option("Select", "" ))
+					$.each(data , function(index, val) { 
+						$("#sub-station").append(new Option(val.sub_station, val.sub_station_id ));
+					});
+				},
+				error: function(xhr, textStatus, error){
+					console.info(xhr.responseText);
+				}
+		
+			});
+
+
 		})
 
         function onCancel() { 
