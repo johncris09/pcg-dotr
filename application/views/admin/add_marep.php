@@ -63,41 +63,83 @@
 											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group">
-														<label>Country <strong class="text-danger">*</strong> </label>
+														<label>CGDNM STATIONS <strong class="text-danger">*</strong> </label>
 														<select class="form-control" required="">
-															<option>--Select your Country--</option>
-															<option>India</option>
-															<option>Sri Lanka</option>
-															<option>USA</option>
+															<option value="">Select</option>
+															<?php 
+																foreach($station as $row){
+															?>
+																<option value="<?php echo $row['station_id']; ?>"><?php echo $row['station']; ?></option>
+															<?php
+																}
+															?>
 														</select>
 													</div>
 												</div>
-												<!--/span-->
 												<div class="col-md-6">
 													<div class="form-group">
 														<label>Country</label>
 														<select class="form-control">
-															<option>--Select your Country--</option>
-															<option>India</option>
-															<option>Sri Lanka</option>
-															<option>USA</option>
+															<option value="">Select</option>
 														</select>
 													</div>
 												</div>
-												<!--/span-->
 											</div>
 
 												
 											<div class="row">
 												<div class="col-md-12 ">
 													<div class="form-group">
-														<label>Street <strong class="text-danger">*</strong></label>
-														<input type="text" class="form-control" required=""> </div>
+														<label>REPORT SELECTION <strong class="text-danger">*</strong> </label>
+														<select class="form-control">
+															<option value="">Select</option>
+														</select>
+													</div>
 												</div>
 											</div>  
 											
 										</div> 
 									</form>
+
+									<form>
+											<!-- <div class="form-group has-success">
+												<label class="control-label" for="inputSuccess1">Input with success</label>
+												<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+												<span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+											</div>
+											<div class="form-group has-warning">
+												<label class="control-label" for="inputWarning1">Input with warning</label>
+												<input type="text" class="form-control" id="inputWarning1">
+											</div>
+											<div class="form-group has-error">
+												<label class="control-label" for="inputError1">Input with error</label>
+												<input type="text" class="form-control" id="inputError1">
+											</div>
+											<div class="has-success">
+												<div class="checkbox">
+												<label>
+													<input type="checkbox" id="checkboxSuccess" value="option1">
+													Checkbox with success
+												</label>
+												</div>
+											</div>
+											<div class="has-warning">
+												<div class="checkbox">
+												<label>
+													<input type="checkbox" id="checkboxWarning" value="option1">
+													Checkbox with warning
+												</label>
+												</div>
+											</div>
+											<div class="has-error">
+												<div class="checkbox">
+												<label>
+													<input type="checkbox" id="checkboxError" value="option1">
+													Checkbox with error
+												</label>
+												</div>
+											</div>
+											</form> -->
 
 
 									<!-- <form id="form-1" class="row row-cols-1 ms-5 me-5 needs-validation was-validated" novalidate="">

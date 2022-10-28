@@ -20,7 +20,13 @@ class Marep extends CI_Controller {
  
     public function add()
 	{ 
+        
+        $this->load->model('Station_model', 'StationModel');
+
+
         $data['page_title'] = "Add MAREP"; 
+        $data['station'] = $this->StationModel->get_all(); 
+        
         $this->load->view('admin/add_marep', $data);  
 	}
 
