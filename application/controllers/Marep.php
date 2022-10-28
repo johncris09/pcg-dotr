@@ -22,10 +22,12 @@ class Marep extends CI_Controller {
 	{ 
         
         $this->load->model('Station_model', 'StationModel');
+        $this->load->model('Report_selection_model', 'ReportSelectionModel');
 
 
         $data['page_title'] = "Add MAREP"; 
         $data['station'] = $this->StationModel->get_all(); 
+        $data['report'] = $this->ReportSelectionModel->get_all(); 
         
         $this->load->view('admin/add_marep', $data);  
 	}

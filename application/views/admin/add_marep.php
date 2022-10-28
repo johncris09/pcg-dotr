@@ -91,11 +91,18 @@
 												<div class="col-md-12 ">
 													<div class="form-group">
 														<label>REPORT SELECTION <strong class="text-danger">*</strong> </label>
-														<select class="form-control">
+														<select class="form-control" required>
 															<option value="">Select</option>
+															<?php 
+																foreach($report as $row){
+															?>
+																<option value="<?php echo $row['report_selection_id']; ?>"><?php echo $row['report_selection']; ?></option>
+															<?php
+																}
+															?>
 														</select>
 													</div>
-												</div>
+												</div>s
 											</div>  
 											
 										</div> 
@@ -309,7 +316,7 @@
 		
 		$('select#station').on('change', function(e){
 			e.preventDefault();
-			var text = $(this).find(':selected').text()
+			var text = $(this).find(':selected').text() 
 
 			var text= text.replace('CGS ', ""); 
 
