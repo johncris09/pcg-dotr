@@ -58,7 +58,49 @@
 
 								<div class="tab-content" style="height: 215.511px;">
 								<div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1" style="display: block;">
-									<form id="form-1" class="row row-cols-1 ms-5 me-5 needs-validation was-validated" novalidate="">
+									<form id="form-1" class="    needs-validation was-validated" novalidate="">
+										<div class="form-body">  
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Country <strong class="text-danger">*</strong> </label>
+														<select class="form-control" required="">
+															<option>--Select your Country--</option>
+															<option>India</option>
+															<option>Sri Lanka</option>
+															<option>USA</option>
+														</select>
+													</div>
+												</div>
+												<!--/span-->
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Country</label>
+														<select class="form-control">
+															<option>--Select your Country--</option>
+															<option>India</option>
+															<option>Sri Lanka</option>
+															<option>USA</option>
+														</select>
+													</div>
+												</div>
+												<!--/span-->
+											</div>
+
+												
+											<div class="row">
+												<div class="col-md-12 ">
+													<div class="form-group">
+														<label>Street <strong class="text-danger">*</strong></label>
+														<input type="text" class="form-control" required=""> </div>
+												</div>
+											</div>  
+											
+										</div> 
+									</form>
+
+
+									<!-- <form id="form-1" class="row row-cols-1 ms-5 me-5 needs-validation was-validated" novalidate="">
 										<div class="col">
 											<label for="first-name" class="form-label">First name</label>
 											<input type="text" class="form-control" id="first-name" value="" required="">
@@ -79,7 +121,7 @@
 												Please provide last name.
 											</div>
 										</div>
-									</form>
+									</form> -->
 								</div>
 								<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2" style="display: none;">
 									<form id="form-2" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate="">
