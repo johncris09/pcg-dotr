@@ -64,7 +64,7 @@
 												<div class="col-md-6">
 													<div class="form-group">
 														<label>CGDNM STATIONS <strong class="text-danger">*</strong> </label>
-														<select class="form-control" required="">
+														<select id="station" class="form-control" required="">
 															<option value="">Select</option>
 															<?php 
 																foreach($station as $row){
@@ -78,7 +78,7 @@
 												</div>
 												<div class="col-md-6">
 													<div class="form-group">
-														<label>Country</label>
+														<label> <span id="station-text"></span> SUB-STATIONS</label>
 														<select class="form-control">
 															<option value="">Select</option>
 														</select>
@@ -306,8 +306,15 @@
 	<script src="<?php echo base_url(); ?>assets/vendor/jquery-smartwizard/dist/js/jquery.smartWizard.js"></script> 
 	
     <script type="text/javascript">
- 
+		
+		$('select#station').on('change', function(e){
+			e.preventDefault();
+			var text = $(this).find(':selected').text()
 
+			var text= text.replace('CGS ', ""); 
+
+			$('#station-text').text(text)
+		})
 
         function onCancel() { 
           // Reset wizard
