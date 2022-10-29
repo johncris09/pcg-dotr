@@ -11,8 +11,8 @@ class Substation extends CI_Controller {
             redirect('login'); 
         }
     }
-
-
+    
+    
     public function get_substation_by_station($station_id)
     {
         
