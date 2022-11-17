@@ -8,4 +8,7 @@ $autoload['drivers']   	= array();
 $autoload['config']    	= array('custom_config');
 $autoload['helper'] 	= array('url', 'file', 'directory');
 $autoload['language']  	= array();
-$autoload['model']     	= array();
+$autoload['model']     	= array(
+    'station_model',
+    'substation_model'
+);
