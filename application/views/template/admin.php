@@ -21,7 +21,19 @@
 
         <!-- Page Content -->
         <div class="page-wrapper">
+            <?php if($this->session->flashdata('errors') !== null): ?>
+            <div class="myadmin-alert myadmin-alert-icon myadmin-alert-click alert-danger myadmin-alert-top alertSuccess"
+                style="display:block">
+                <i class="icon-check"></i> <?= $this->session->flashdata('errors'); ?> <a href="#" class="closed">×</a>
+            </div>
+            <?php endif ?>
 
+            <?php if($this->session->flashdata('message') !== null): ?>
+            <div class="myadmin-alert myadmin-alert-icon myadmin-alert-click alert-success myadmin-alert-top alertSuccess"
+                style="display:block">
+                <i class="icon-check"></i> <?= $this->session->flashdata('message'); ?> <a href="#" class="closed">×</a>
+            </div>
+            <?php endif ?>
 
             <?= $content ?>
 
