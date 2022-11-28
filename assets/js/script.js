@@ -27,12 +27,14 @@ function editUser(that){
     let username = $(that).attr('data-username');
     let firstname = $(that).attr('data-firstname');
     let lastname = $(that).attr('data-lastname');
-    let email = $(that).attr('data-email');  
+    let email = $(that).attr('data-email'); 
+    let user_role = $(that).attr('data-user-role');    
+ 
 
     $('#user_id').val(user_id);
     $('#username').val(username);
     $('#firstname').val(firstname);
-    $('#lastname').val(lastname);
-    $('#email').val(email); 
-
+    $('#lastname').val(lastname)
+    $('#email').val(email)
+    $('#user_role_id  option[value="'+user_role+'"]').prop("selected", true);
 }
