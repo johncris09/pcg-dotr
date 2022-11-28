@@ -17,8 +17,7 @@ function editSubStation(that){
     $('#sub_station_id').val(id);
     $('#station_id').val(station_id);
     $('#sub_station').val(sub_station);
-
-}
+ 
 
 //function to edit user
 function editUser(that){ 
@@ -34,5 +33,5 @@ function editUser(that){
     $('#firstname').val(firstname);
     $('#lastname').val(lastname);
     $('#email').val(email); 
-
+ 
 }
