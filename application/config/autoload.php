@@ -11,5 +11,6 @@ $autoload['language']  	= array();
 $autoload['model']     	= array( 
     'user_model',   
     'station_model',
-    'substation_model'
+    'substation_model',
+    'user_role_model'
 );

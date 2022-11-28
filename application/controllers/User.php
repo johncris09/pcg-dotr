@@ -14,9 +14,9 @@ class User extends CI_Controller {
 
     public function index()
 	{ 
-        $data['page_title'] = "User"; 
-        
+        $data['page_title'] = "User";  
         $data['user'] = $this->user_model->get_all(); 
+        $data['user_role'] = $this->user_role_model->get_all(); 
 
         $this->base->load('admin', 'user/manage', $data);
 	}
@@ -26,6 +26,7 @@ class User extends CI_Controller {
         $this->form_validation->set_rules('firstname', 'First Name', 'required|trim');
         $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim'); 
+        $this->form_validation->set_rules('user_role_id', 'User Role', 'required|trim');  
 
         if ($this->form_validation->run() == FALSE){
 
@@ -38,6 +39,7 @@ class User extends CI_Controller {
                 'first_name' => $this->input->post('firstname'),
                 'last_name' => $this->input->post('lastname'), 
                 'email' => $this->input->post('email'),
+                'role' => $this->input->post('user_role_id'),
             );
             $insert = $this->user_model->save_user($data);
             
@@ -58,6 +60,7 @@ class User extends CI_Controller {
         $this->form_validation->set_rules('firstname', 'First Name', 'required|trim');
         $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim'); 
+        $this->form_validation->set_rules('user_role_id', 'User Role', 'required|trim');  
         if ($this->form_validation->run() == FALSE){
 
             $this->session->set_flashdata('errors', validation_errors());
@@ -71,8 +74,8 @@ class User extends CI_Controller {
                 'first_name' => $this->input->post('firstname'),
                 'last_name' => $this->input->post('lastname'), 
                 'email' => $this->input->post('email'),
-            );
-            print_r($data);
+                'role' => $this->input->post('user_role_id'),
+            ); 
             $update = $this->user_model->update_user($data, $id);
             
             if($update){
