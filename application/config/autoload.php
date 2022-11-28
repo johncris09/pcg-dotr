@@ -9,6 +9,7 @@ $autoload['config']    	= array('custom_config');
 $autoload['helper'] 	= array('url', 'file', 'directory');
 $autoload['language']  	= array();
 $autoload['model']     	= array(
+    'user_model',
     'station_model',
     'substation_model'
 );
