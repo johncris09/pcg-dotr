@@ -15,9 +15,9 @@ function editSubStation(that){
     let sub_station = $(that).attr('data-sub_station');
 
     $('#sub_station_id').val(id);
-    $('#station_id').val(station_id);
+    $('#station_id').val(station_id); 
     $('#sub_station').val(sub_station); 
-}
+}  
 
 //function to edit user
 function editUser(that){ 
@@ -31,6 +31,7 @@ function editUser(that){
     $('#user_id').val(user_id);
     $('#username').val(username);
     $('#firstname').val(firstname);
-    $('#lastname').val(lastname);
+    $('#lastname').val(lastname); 
+    $('#email').val(email);   
     $('#email').val(email);  
 }

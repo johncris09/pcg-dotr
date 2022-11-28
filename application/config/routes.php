@@ -22,7 +22,7 @@ $route['substation/delete/(:num)'] = 'substation/delete/$1';
 //user
 $route['add_user'] = 'user/save';
 $route['update_user'] = 'user/update';
-$route['user/delete/(:num)'] = 'user/delete/$1'; 
+$route['user/delete/(:num)'] = 'user/delete/$1';  
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

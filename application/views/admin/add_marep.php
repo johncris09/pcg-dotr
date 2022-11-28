@@ -240,18 +240,17 @@
 
 
 		})
- 
+  
 		$('#report-selection').on('change', function(e){
 			e.preventDefault();  
-		$('#report-selection').on('change', function(e){
-			e.preventDefault();
-			console.info($('#report-selection').val()) 
+		 
 			if($('#report-selection').val() == ""){
 				$('#report-selection').closest('div').addClass('has-error')
 			}else{ 
 				$('#report-selection').closest('div').removeClass('has-error')
-			}
-		}) 
+			} 
+		})   
+  
         function onCancel() { 
           // Reset wizard
           $('#smartwizard').smartWizard("reset");
