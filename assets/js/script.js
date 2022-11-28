@@ -17,5 +17,21 @@ function editSubStation(that){
     $('#sub_station_id').val(id);
     $('#station_id').val(station_id);
     $('#sub_station').val(sub_station);
+ 
 
+//function to edit user
+function editUser(that){ 
+ 
+    let user_id = $(that).attr('data-id');
+    let username = $(that).attr('data-username');
+    let firstname = $(that).attr('data-firstname');
+    let lastname = $(that).attr('data-lastname');
+    let email = $(that).attr('data-email');  
+
+    $('#user_id').val(user_id);
+    $('#username').val(username);
+    $('#firstname').val(firstname);
+    $('#lastname').val(lastname);
+    $('#email').val(email); 
+ 
 }

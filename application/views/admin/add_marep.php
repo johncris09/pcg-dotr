@@ -98,7 +98,7 @@
 												<div class="col-md-12 ">
 													<div class="form-group">
 														<label>REPORT SELECTION <strong class="text-danger">*</strong> </label>
-														<select class="form-control" required>
+														<select id="report-selection" class="form-control" required>
 															<option value="">Select</option>
 															<?php 
 																foreach($report as $row){
@@ -240,19 +240,19 @@
 
 
 		})
-
-<<<<<<< Updated upstream
-=======
+ 
 		$('#report-selection').on('change', function(e){
-			e.preventDefault(); 
+			e.preventDefault();
+			console.info($('#report-selection').val()) 
+		$('#report-selection').on('change', function(e){
+			e.preventDefault();  
 			if($('#report-selection').val() == ""){
 				$('#report-selection').closest('div').addClass('has-error')
 			}else{ 
 				$('#report-selection').closest('div').removeClass('has-error')
 			}
 		})
-
->>>>>>> Stashed changes
+ 
         function onCancel() { 
           // Reset wizard
           $('#smartwizard').smartWizard("reset");
@@ -329,11 +329,28 @@
                   let form = document.getElementById('form-' + (currentStepIdx + 1));
                   if (form) { 
                     if (!form.checkValidity()) {
-                      form.classList.add('was-validated');
-                      $('#smartwizard').smartWizard("setState", [currentStepIdx], 'error');
-                      $("#smartwizard").smartWizard('fixHeight');
-                      return false;
+						if(currentStepIdx == 0){
+							if($('#station').val() == ""){
+								$('#station').closest('div').addClass("has-error")
+							}else{
+								$('#station').closest('div').removeClass("has-error")
+							}
+
+							
+							if($('#report-selection').val() == ""){
+								$('#report-selection').closest('div').addClass("has-error")
+							}else{
+								$('#report-selection').closest('div').removeClass("has-error")
+							}
+
+						}
+						form.classList.add('was-validated');
+						$('#smartwizard').smartWizard("setState", [currentStepIdx], 'error');
+						$("#smartwizard").smartWizard('fixHeight');
+						
+						return false;
                     }
+					
                     $('#smartwizard').smartWizard("unsetState", [currentStepIdx], 'error');
                   }
                 }
