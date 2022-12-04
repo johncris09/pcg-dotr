@@ -102,7 +102,7 @@
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" name="password" id="password" required="">
+                        <input type="password" class="form-control" name="password" id="password" required=""> 
                     </div>
                     <div class="form-group">
                         <label>Email</label>

@@ -41,8 +41,8 @@ class User extends CI_Controller {
                 'first_name' => $this->input->post('firstname'),
                 'last_name' => $this->input->post('lastname'), 
                 'email' => $this->input->post('email'),
-                'role' => $this->input->post('user_role_id'),
-                'date_registered' => date('Y-m-d H:i:s') 
+                'role' => $this->input->post('user_role_id'), 
+                'date_registered' => date('Y-m-d H:i:s')  
             );
             $insert = $this->user_model->save_user($data);
             

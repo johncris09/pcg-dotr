@@ -34,7 +34,8 @@ function editUser(that){
     $('#username').val(username);
     $('#firstname').val(firstname);
     $('#lastname').val(lastname)
-    $('#email').val(email)
+    $('#email').val(email) 
+    $('#user_role_id  option[value="'+user_role+'"]').prop("selected", true); 
     $('#user_role_id  option[value="'+user_role+'"]').prop("selected", true); 
 }
 
@@ -44,5 +45,5 @@ function changePassword(that){
  
     let user_id = $(that).attr('data-id');  
     console.info(user_id) 
-    $('#changePassword #user_id').val(user_id);  
+    $('#changePassword #user_id').val(user_id);   
 }
