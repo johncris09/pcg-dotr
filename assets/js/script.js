@@ -47,8 +47,7 @@ function changePassword(that){
     console.info(user_id) 
     $('#changePassword #user_id').val(user_id);   
 }
-
-  
+ 
 
 // Add Marep
 
@@ -147,4 +146,12 @@ allNextBtn.click(function () {
 
 $('div.setup-panel div a.btn-success').trigger('click'); 
 
-
+ 
+//function to edit user role
+function editUserRole(that){ 
+ 
+    let user_role_id = $(that).attr('data-id');  
+    let user_role = $(that).attr('data-text');  
+    $('#role').val(user_role);   
+    $('#user_role_id').val(user_role_id);   
+} 
