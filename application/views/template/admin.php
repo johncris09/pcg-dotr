@@ -5,7 +5,7 @@
     <?php  
 		$this->view('template/meta');;
 		$this->view('template/css');  
-	?>
+	?> 
 </head>
 
 <body class="mini-sidebar">

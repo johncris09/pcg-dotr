@@ -8,6 +8,7 @@ $route['signout'] = 'dashboard/signout';
 
 // marep 
 $route['add_marep'] = 'marep/add';
+$route['insert_marep'] = 'marep/insert';
 
 //station
 $route['add_station'] = 'station/save';
