@@ -12,5 +12,6 @@ $autoload['model']     	= array(
     'user_model',   
     'station_model',
     'substation_model',
-    'user_role_model'
+    'user_role_model',
+    'report_selection_model'
 );
