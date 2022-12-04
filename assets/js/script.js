@@ -37,3 +37,12 @@ function editUser(that){
     $('#email').val(email)
     $('#user_role_id  option[value="'+user_role+'"]').prop("selected", true); 
 }
+
+
+//function to edit user
+function changePassword(that){ 
+ 
+    let user_id = $(that).attr('data-id');  
+    console.info(user_id) 
+    $('#changePassword #user_id').val(user_id);  
+}

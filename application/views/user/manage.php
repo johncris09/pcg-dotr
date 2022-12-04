@@ -55,7 +55,10 @@
                                         data-user-role="<?= $role["user_role_id"] ?>"  
                                         >
                                         <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-
+                                    <a type="button" href="#changePassword" data-toggle="modal" onclick="changePassword(this)" 
+                                        data-id="<?= $row->user_id ?>"
+                                        data-toggle="tooltip" data-original-title="Chnage Password"> <i
+                                            class="fa fa-user-secret text-info"></i> </a>
                                     <a href="<?= site_url('user/delete/').$row->user_id ?>"
                                         onclick="return confirm('Are you sure you want to delete this user?');"
                                         data-toggle="tooltip" data-original-title="Remove"> <i
@@ -96,6 +99,10 @@
                     <div class="form-group">
                         <label>Username</label>
                         <input type="text" class="form-control" name="username" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password" id="password" required="">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
@@ -159,6 +166,33 @@
                             <?php endforeach ?>
                         </select>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="user_id" id="user_id">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+            </div>
+            <form method="POST" action="<?= site_url() ?>change_password">
+                <div class="modal-body"> 
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="text" class="form-control" name="password" id="password" required="">
+                    </div> 
                 </div>
                 <div class="modal-footer">
                     <input type="hidden" name="user_id" id="user_id">
