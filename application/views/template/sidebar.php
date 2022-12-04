@@ -72,6 +72,14 @@
                         <li><a href="substation">Sub-station</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a class="waves-effect" aria-expanded="false"><i class="fa fa-user fa-fw"></i> <span
+                            class="hide-menu">USER</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="station">Users</a></li>
+                        <li><a href="substation">User Roles</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
