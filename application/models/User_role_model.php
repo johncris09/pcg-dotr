@@ -30,4 +30,21 @@ class User_role_model extends CI_Model {
             "text" => "",
         ];
     }
+
+    public function save_user_role($data)
+    {
+        $this->db->insert($this->table_name,$data);
+        return $this->db->affected_rows();
+    } 
+
+    public function update_user_role($data,$id){
+        $this->db->update($this->table_name,$data, "user_role_id='$id'");
+        return $this->db->affected_rows();
+    }
+    
+    public function delete_user_role($id){
+        $this->db->where('user_role_id', $id);
+        $this->db->delete($this->table_name);
+        return $this->db->affected_rows();
+    }
 }

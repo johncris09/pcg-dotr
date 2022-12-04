@@ -23,7 +23,12 @@ $route['substation/delete/(:num)'] = 'substation/delete/$1';
 $route['add_user'] = 'user/save';
 $route['update_user'] = 'user/update';
 $route['change_password'] = 'user/change_password';
-$route['user/delete/(:num)'] = 'user/delete/$1';  
+$route['user/delete/(:num)'] = 'user/delete/$1'; 
+
+//user roles
+$route['add_user_role'] = 'user_role/save';
+$route['update_user_role'] = 'user_role/update';
+$route['user_role/delete/(:num)'] = 'user_role/delete/$1'; 
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
