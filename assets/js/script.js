@@ -15,7 +15,35 @@ function editSubStation(that){
     let sub_station = $(that).attr('data-sub_station');
 
     $('#sub_station_id').val(id);
-    $('#station_id').val(station_id);
-    $('#sub_station').val(sub_station);
+    $('#station_id').val(station_id); 
+    $('#sub_station').val(sub_station); 
+}  
 
+//function to edit user
+function editUser(that){ 
+ 
+    let user_id = $(that).attr('data-id');
+    let username = $(that).attr('data-username');
+    let firstname = $(that).attr('data-firstname');
+    let lastname = $(that).attr('data-lastname');
+    let email = $(that).attr('data-email'); 
+    let user_role = $(that).attr('data-user-role');    
+ 
+
+    $('#user_id').val(user_id);
+    $('#username').val(username);
+    $('#firstname').val(firstname);
+    $('#lastname').val(lastname)
+    $('#email').val(email) 
+    $('#user_role_id  option[value="'+user_role+'"]').prop("selected", true); 
+    $('#user_role_id  option[value="'+user_role+'"]').prop("selected", true); 
+}
+
+
+//function to edit user
+function changePassword(that){ 
+ 
+    let user_id = $(that).attr('data-id');  
+    console.info(user_id) 
+    $('#changePassword #user_id').val(user_id);   
 }
