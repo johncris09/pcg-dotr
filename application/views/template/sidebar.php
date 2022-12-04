@@ -52,6 +52,7 @@
                     <a class="waves-effect" aria-expanded="false"><i class="icon-anchor fa-fw"></i> <span
                             class="hide-menu"> MARSLEC</span></a>
                     <ul aria-expanded="false" class="collapse">
+
                         <li><a href="#">MARSLEC List</a></li>
                         <li><a href="#">Add MARSLEC</a></li>
                     </ul>
@@ -70,11 +71,19 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="station">Station</a></li>
                         <li><a href="substation">Sub-station</a></li>
-                    </ul> 
-                </li> 
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="user" aria-expanded="false"><i class="icon-user fa-fw"></i> <span class="hide-menu">
+                            User</span></a>
+                </li> -->
                 <li>
-                    <a href="user" aria-expanded="false"><i class="icon-user fa-fw"></i> <span
-                            class="hide-menu"> User</span></a> 
+                    <a class="waves-effect" aria-expanded="false"><i class="icon-user fa-fw"></i> <span
+                            class="hide-menu">USER</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="user">Users</a></li>
+                        <li><a href="user_role">User Roles</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
