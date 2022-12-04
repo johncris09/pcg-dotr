@@ -70,11 +70,11 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="station">Station</a></li>
                         <li><a href="substation">Sub-station</a></li>
-                    </ul>
+                    </ul> 
                 </li> 
                 <li>
                     <a href="user" aria-expanded="false"><i class="icon-user fa-fw"></i> <span
-                            class="hide-menu"> User</span></a>
+                            class="hide-menu"> User</span></a> 
                 </li>
             </ul>
         </nav>

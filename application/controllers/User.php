@@ -23,6 +23,7 @@ class User extends CI_Controller {
  
     public function save(){  
         $this->form_validation->set_rules('username', 'Username','required|trim|is_unique[user.username]');
+        $this->form_validation->set_rules('password', 'Password', 'required|trim');
         $this->form_validation->set_rules('firstname', 'First Name', 'required|trim');
         $this->form_validation->set_rules('lastname', 'Last Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim'); 
@@ -36,10 +37,12 @@ class User extends CI_Controller {
 
             $data = array(
                 'username' => $this->input->post('username'),
+                'password' => md5($this->input->post('password')),
                 'first_name' => $this->input->post('firstname'),
                 'last_name' => $this->input->post('lastname'), 
                 'email' => $this->input->post('email'),
-                'role' => $this->input->post('user_role_id'),
+                'role' => $this->input->post('user_role_id'), 
+                'date_registered' => date('Y-m-d H:i:s')  
             );
             $insert = $this->user_model->save_user($data);
             
@@ -87,6 +90,33 @@ class User extends CI_Controller {
         redirect("user",'refresh');
 	}
 
+    
+    public function change_password()
+	{ 
+  
+        $this->form_validation->set_rules('password', 'Password', 'required|trim'); 
+        if ($this->form_validation->run() == FALSE){
+
+            $this->session->set_flashdata('errors', validation_errors());
+
+        }else{
+ 
+            $id = $this->input->post('user_id'); 
+            $data = array( 
+                'password' =>  md5($this->input->post('password')), 
+            ); 
+            $update = $this->user_model->update_user($data, $id);
+            
+            if($update){
+                $this->session->set_flashdata('message', 'Password updated successfully!');
+            }else{
+                $this->session->set_flashdata('errors', 'No changes has been made!');
+            }
+        }
+        redirect("user",'refresh');
+	}
+
+
     public function delete($id){
 
 		$delete = $this->user_model->delete_user($id);
@@ -99,5 +129,9 @@ class User extends CI_Controller {
 		redirect('user', 'refresh');
 	}
         
+
+    
+
+    
 }
          

@@ -10,7 +10,7 @@ class Substation extends CI_Controller {
         if ( !$this->session->userdata('user_id') ) { 
             redirect('login'); 
         }
-    }
+    } 
 
     public function index(){ 
         $data['page_title'] = "Sub-Station"; 
@@ -19,7 +19,7 @@ class Substation extends CI_Controller {
         $data['sub_station'] = $this->substation_model->get_all();
         
         $this->base->load('admin', 'station/sub_station', $data);
-    }
+    }  
 
     public function save(){ 
         $this->form_validation->set_rules('sub_station', 'Sub-Station Name', 'required|trim|is_unique[sub_station.sub_station]');
@@ -65,8 +65,10 @@ class Substation extends CI_Controller {
             }
         }
         redirect("substation",'refresh');
-	}
-
+	} 
+ 
+ 
+ 
     public function get_substation_by_station($station_id)
     {
         

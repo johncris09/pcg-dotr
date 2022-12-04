@@ -37,8 +37,7 @@
 									</li>
 									<li class="nav-item">
 										<a class="nav-link default" href="#step-2">
-											<span class="num">2</span>
-											Products Details
+											<span class="num">2</span> 
 										</a>
 									</li>
 									<!-- <li class="nav-item">
@@ -120,13 +119,59 @@
 								</div>
 								<div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2" style="display: none;">
 									<form id="form-2" class="row row-cols-1 ms-5 me-5 needs-validation" novalidate="">
-										<h2>Step 2</h2>
+										<div class="form-body">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>CGDNM STATIONS <strong class="text-danger">*</strong> </label>
+														<select id="station" class="form-control" required="">
+															<option value="">Select</option>
+															<?php 
+																foreach($station as $row){
+															?>
+																<option value="<?php echo $row['station_id']; ?>"><?php echo $row['station']; ?></option>
+															<?php
+																}
+															?>
+														</select>
+													</div>
+												</div>
+												<div id="toggle-hidden" class="col-md-6 hidden">
+													<div class="form-group">
+														<label> <span id="station-text"></span> SUB-STATIONS</label>
+														<select id="sub-station" class="form-control">
+															<option value="">Select</option>
+														</select>
+													</div>
+												</div>
+											</div>
+
+												
+											<div class="row">
+												<div class="col-md-12 ">
+													<div class="form-group">
+														<label>REPORT SELECTION <strong class="text-danger">*</strong> </label>
+														<select id="report-selection" class="form-control" required>
+															<option value="">Select</option>
+															<?php 
+																foreach($report as $row){
+															?>
+																<option value="<?php echo $row['report_selection_id']; ?>"><?php echo $row['report_selection']; ?></option>
+															<?php
+																}
+															?>
+														</select>
+													</div>
+												</div>
+											</div>  
+											
+										</div> 
 									</form>
 								</div> 
 								<div class="sw-toolbar-elm toolbar toolbar-bottom" role="toolbar">
 									<button class="btn sw-btn-prev sw-btn" type="button">Previous</button>
 									<button class="btn sw-btn-next sw-btn" type="button">Next</button>
-									<button class="btn btn-success-sm  " id="btnFinish" disabled="" >Submit</button>
+									<button class="btn btn-success-sm  " id="btnFinish" disabled=""  onclick="onConfirm()" >Submit</button>
 									<button class="btn btn-danger-sm " id="btnCancel" onclick="onCancel()">Cancel</button>
 								</div> 
 								<div class="progress">
@@ -153,6 +198,11 @@
 	
     <script type="text/javascript">
 		
+		$('#btnFinish').on('click', function(e){
+			e.preventDefault();
+			console.log('finish')
+		})
+
 		$('select#station').on('change', function(e){
 			e.preventDefault();
 			var text = $(this).find(':selected').text() 
@@ -190,17 +240,17 @@
 
 
 		})
-
+  
 		$('#report-selection').on('change', function(e){
-			e.preventDefault();
-			console.info($('#report-selection').val())
+			e.preventDefault();  
+		 
 			if($('#report-selection').val() == ""){
 				$('#report-selection').closest('div').addClass('has-error')
 			}else{ 
 				$('#report-selection').closest('div').removeClass('has-error')
-			}
-		})
-
+			} 
+		})   
+  
         function onCancel() { 
           // Reset wizard
           $('#smartwizard').smartWizard("reset");
@@ -211,30 +261,20 @@
         }
 
         function onConfirm() {
-          let form = document.getElementById('form-4');
-          if (form) {
-            if (!form.checkValidity()) {
-              form.classList.add('was-validated');
-              $('#smartwizard').smartWizard("setState", [1], 'error');
-              $("#smartwizard").smartWizard('fixHeight');
-              return false;
-            }
+          let form = document.getElementById('form-2');
+		  console.info(form)
+        //   if (form) {
+        //     if (!form.checkValidity()) {
+        //       form.classList.add('was-validated');
+        //       $('#smartwizard').smartWizard("setState", [1], 'error');
+        //       $("#smartwizard").smartWizard('fixHeight');
+        //       return false;
+        //     }
             
-            $('#smartwizard').smartWizard("unsetState", [1], 'error'); 
-          }
+        //     $('#smartwizard').smartWizard("unsetState", [1], 'error'); 
+        //   }
         }
-
-        function closeModal() {
-          // Reset wizard
-          $('#smartwizard').smartWizard("reset");
-
-          // Reset form
-          document.getElementById("form-1").reset();
-          document.getElementById("form-2").reset();
-          document.getElementById("form-3").reset();
-          document.getElementById("form-4").reset();
  
-        }
 
         function showConfirm() { 
           const name = $('#first-name').val() + ' ' + $('#last-name').val();
@@ -274,8 +314,7 @@
                     </div>
                   </div>
 
-                  `;
-			console.info(html)
+                  `; 
           $("#order-details").html(html);
           $('#smartwizard').smartWizard("fixHeight");  
         }
