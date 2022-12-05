@@ -10,6 +10,11 @@ $route['signout'] = 'dashboard/signout';
 $route['add_marep'] = 'marep/add';
 $route['insert_marep'] = 'marep/insert';
 
+
+// marsaf 
+$route['add_marsaf'] = 'marsaf/add';
+$route['insert_marsaf'] = 'marsaf/insert';
+
 //station
 $route['add_station'] = 'station/save';
 $route['update_station'] = 'station/update';
