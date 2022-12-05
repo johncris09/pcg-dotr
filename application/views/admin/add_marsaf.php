@@ -4096,8 +4096,8 @@
 											</div>
 										</div>
 									</div> 
-								</div>
-								  
+									<button class="btn btn-danger pull-right" type="button">Finish!</button>
+								</div> 
 							</form>
 						</div>
 					</div>
