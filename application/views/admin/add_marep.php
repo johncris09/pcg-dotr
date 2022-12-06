@@ -112,7 +112,7 @@
 
 															
 															<div class="col-md-2">
-																<div class="form-group has-error">
+																<div class="form-group ">
 																	<label class="control-label">&nbsp;</label>
 																	<select name="" id="" class="form-control" >
 																		<option value=""> </option>
@@ -271,7 +271,7 @@
 																</div> 
 															</div> 
 															<div class="col-md-2">
-																<div class="form-group has-error">
+																<div class="form-group ">
 																	<label class="control-label">Time</label> 
 																	<select name="" id="" class="form-control" >
 																		<option value=""> </option>
@@ -288,7 +288,7 @@
 
 															
 															<div class="col-md-2">
-																<div class="form-group has-error">
+																<div class="form-group ">
 																	<label class="control-label">&nbsp;</label>
 																	<select name="" id="" class="form-control" >
 																		<option value=""> </option>
