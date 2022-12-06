@@ -3785,7 +3785,7 @@
 													<div class="col-md-6">
 														<div class="form-group ">
 															<label class="control-label">TIME OF DEPARTURE FROM PORT OF ORIGIN</label> 
-															<dov class="col-md-4"> 
+															<div class="col-md-4"> 
 																<select name="" id="" class="form-control" >
 																	<option value=""> </option>
 																	<?php 
@@ -3796,8 +3796,8 @@
 																		}
 																	?>
 																</select>
-															</dov>
-															<dov class="col-md-4">
+															</div>
+															<div class="col-md-4">
 																<select name="" id="" class="form-control " style="float:left !important"  >
 																	<option value=""> </option>
 																	<?php 
@@ -3809,7 +3809,7 @@
 																		}
 																	?>
 																</select>
-															</dov>
+															</div>
 															
 														</div>
 													</div> 
@@ -4008,7 +4008,7 @@
 												<div class="col-md-6">
 													<div class="form-group ">
 														<label class="control-label">TIME OF DEPARTURE FROM PORT OF ORIGIN</label> 
-														<dov class="col-md-4"> 
+														<div class="col-md-4"> 
 															<select name="" id="" class="form-control" >
 																<option value=""> </option>
 																<?php 
@@ -4019,8 +4019,8 @@
 																	}
 																?>
 															</select>
-														</dov>
-														<dov class="col-md-4">
+														</div>
+														<div class="col-md-4">
 															<select name="" id="" class="form-control " style="float:left !important"  >
 																<option value=""> </option>
 																<?php 
@@ -4032,7 +4032,7 @@
 																	}
 																?>
 															</select>
-														</dov>
+														</div>
 														
 													</div>
 												</div> 
