@@ -111,6 +111,14 @@ $('select#report-type').on('change', function(e){
 
 
 
+$('select#maritime-incident').on('change', function(e){
+    e.preventDefault(); 
+    var report_type = $(this).val(); 
+    $('.toggle-show').css({"display": "none" });
+    $('.toggle-show[data-value="'+report_type+'"]').css({"display": "block" }); 
+
+}) 
+
 
 
 var navListItems = $('div.setup-panel div a'),
