@@ -45,7 +45,7 @@
                             class="hide-menu"> MARSAR</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="#">MARSAR List</a></li>
-                        <li><a href="#">Add MARSAR</a></li>
+                        <li><a href="add_marsar">Add MARSAR</a></li>
                     </ul>
                 </li>
                 <li>
@@ -54,7 +54,7 @@
                     <ul aria-expanded="false" class="collapse">
 
                         <li><a href="#">MARSLEC List</a></li>
-                        <li><a href="#">Add MARSLEC</a></li>
+                        <li><a href="add_marslec">Add MARSLEC</a></li>
                     </ul>
                 </li>
                 <li>
@@ -62,7 +62,7 @@
                             class="hide-menu">URBAN MARSAR</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="#" URBAN>MARSAR List</a></li>
-                        <li><a href="#">AddURBAN MARSAR</a></li>
+                        <li><a href="add_urban_marsar">Add URBAN MARSAR</a></li>
                     </ul>
                 </li>
                 <li>
