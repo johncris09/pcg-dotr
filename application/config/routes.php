@@ -19,9 +19,13 @@ $route['insert_marsaf'] = 'marsaf/insert';
 $route['add_marsar'] = 'marsar/add';
 $route['insert_marsar'] = 'marsar/insert'; 
 
-// marsar
+// marslec
 $route['add_marslec'] = 'marslec/add';
 $route['insert_marslec'] = 'marslec/insert';
+
+// urban_marsar
+$route['add_urban_marsar'] = 'urban_marsar/add';
+$route['insert_urban_marsar'] = 'urban_marsar/insert';
 
 //station
 $route['add_station'] = 'station/save';
