@@ -23,8 +23,8 @@ class Marsaf extends CI_Controller {
           
         $data['page_title'] = "Add MARSAF"; 
         $data['station'] = $this->station_model->get_all(); 
-        $data['report'] = $this->report_selection_model->get_all();  
-         
+        $data['report_type'] = $this->report_type_model->get_all();  
+        $data['psc_center'] = $this->psc_center_model->get_all();   
         $this->base->load('admin', 'admin/add_marsaf', $data); 
  
 	} 
