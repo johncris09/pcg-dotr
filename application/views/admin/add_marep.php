@@ -78,13 +78,14 @@
 									<div class="panel-body">  
 										<?php 
 											foreach($report as $row){
+												$report_selection_id = $row['report_selection_id'] ;
 										?>
 											
 												<div id="<?php echo $row['report_selection_id']; ?>"  class="toggle-show" style="display: none">	
 													<h2><?php echo $row['report_selection']; ?></h2> 
 
 										<?php 
-											if(  $row['report_selection_id'] == 1){ //Coastal Clean Up
+											if( $report_selection_id   == 1){ //Coastal Clean Up
 										?> 
 													<div id="report1"> 
 														<div class="row" style="margin-top: 50px;">
@@ -138,66 +139,41 @@
 																</div>
 															</div>
 														</div>
-
 														<div class="row">
-															<div class="form-group"> 
+															<div class="form-group">  
 																<label class="col-sm-12">CONDUCT OF ACTIVITY</label>
-																<div class="col-sm-12">
+																<div class="col-sm-12"> 
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio1"  >
-																			<label for="radio1">PCG INITIATED</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio2"  >
-																			<label for="radio2">JOINT</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio3"  >
-																			<label for="radio3">PARTICIPATED FROM OTHER AGENCY</label>
-																		</div>
+																		<?php 
+																			foreach($activity_conduct as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="activity_conduct" id="activity_conduct_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="activity_conduct_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->activity_conduct ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div> 
 																</div>
 															</div>
-														</div> 
+														</div>  
 
 														<div class="row">
 															<div class="form-group"> 
 																<label class="col-sm-12">PARTICIPATING AGENCIES</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency1" type="checkbox"  >
-																		<label for="agency1"> LGU </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency2" type="checkbox"  >
-																		<label for="agency2"> NATIONAL LINE AGENCIES </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency3" type="checkbox"  >
-																		<label for="agency3"> ACADEME </label>
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency4" type="checkbox"  >
-																		<label for="agency4"> PRIVATE CORPORATIONS </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency5" type="checkbox"  >
-																		<label for="agency5"> SHIPPING COMPANIES</label>
-																	</div> 
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency6" type="checkbox"  >
-																		<label for="agency6"> PCG UNITS</label>
-																	</div>
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency7" type="checkbox"  >
-																		<label for="agency7"> PCG AUXILIARY</label>
-																	</div>
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency8" type="checkbox"  >
-																		<label for="agency8"> RESIDENTS OF COASTAL COMMUNITY</label>
-																	</div>
-																</div>
+																	<?php 
+																		foreach($participating_agency as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="participating_agency"  id="participating_agency_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="participating_agency_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->participating_agency ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>  
+																</div> 
 															</div>
 														</div> 
 
@@ -223,27 +199,17 @@
 															<div class="form-group"> 
 																<label class="col-sm-12">TYPES OF GARBAGE COLLECTED</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">HOUSEHOLD PLASTIC ITEMS </label> 
-																	</div>   
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype2" type="checkbox"  >
-																		<label for="garbagetype2">DISCARDED FISHING GEARS (NETS, LINES, FLOATERS, ROPES)</label> 
-																	</div>   
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype3" type="checkbox"  >
-																		<label for="garbagetype3">DISCARDED SANITARY PRODUCTS</label> 
-																	</div>   
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype4" type="checkbox"  >
-																		<label for="garbagetype4">METALS</label> 
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">BIODEGARDABLE (WOODS, PAPERS, FOOD WASTE)</label> 
-																	</div>  
-																</div> 
+																	<?php 
+																		foreach($garbage_type_collected as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="garbage_type_collected"  id="garbage_type_collected_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="garbage_type_collected_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->garbage_type_collected ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>  
+																</div>  
 															</div>
 														</div>  
 														<div class="row">
@@ -307,64 +273,40 @@
 														
 
 														<div class="row">
-															<div class="form-group"> 
+															<div class="form-group">  
 																<label class="col-sm-12">CONDUCT OF ACTIVITY</label>
-																<div class="col-sm-12">
+																<div class="col-sm-12"> 
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio1"  >
-																			<label for="radio1">PCG INITIATED</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio2"  >
-																			<label for="radio2">JOINT</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio3"  >
-																			<label for="radio3">PARTICIPATED FROM OTHER AGENCY</label>
-																		</div>
+																		<?php 
+																			foreach($activity_conduct as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="activity_conduct" id="activity_conduct_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="activity_conduct_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->activity_conduct ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div> 
 																</div>
 															</div>
-														</div> 
+														</div>   
 
 														<div class="row">
 															<div class="form-group"> 
 																<label class="col-sm-12">PARTICIPATING AGENCIES</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency1" type="checkbox"  >
-																		<label for="agency1"> LGU </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency2" type="checkbox"  >
-																		<label for="agency2"> NATIONAL LINE AGENCIES </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency3" type="checkbox"  >
-																		<label for="agency3"> ACADEME </label>
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency4" type="checkbox"  >
-																		<label for="agency4"> PRIVATE CORPORATIONS </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency5" type="checkbox"  >
-																		<label for="agency5"> SHIPPING COMPANIES</label>
-																	</div> 
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency6" type="checkbox"  >
-																		<label for="agency6"> PCG UNITS</label>
-																	</div>
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency7" type="checkbox"  >
-																		<label for="agency7"> PCG AUXILIARY</label>
-																	</div>
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency8" type="checkbox"  >
-																		<label for="agency8"> RESIDENTS OF COASTAL COMMUNITY</label>
-																	</div>
-																</div>
+																	<?php 
+																		foreach($participating_agency as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="participating_agency"  id="participating_agency_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="participating_agency_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->participating_agency ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>  
+																</div> 
 															</div>
 														</div> 
 
@@ -439,25 +381,21 @@
 																</div>
 															</div>  
 														</div>
-														
-
 														<div class="row">
-															<div class="form-group"> 
+															<div class="form-group">  
 																<label class="col-sm-12">CONDUCT OF ACTIVITY</label>
-																<div class="col-sm-12">
+																<div class="col-sm-12"> 
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio1"  >
-																			<label for="radio1">PCG INITIATED</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio2"  >
-																			<label for="radio2">JOINT</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="radio3"  >
-																			<label for="radio3">PARTICIPATED FROM OTHER AGENCY</label>
-																		</div>
+																		<?php 
+																			foreach($activity_conduct as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="activity_conduct" id="activity_conduct_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="activity_conduct_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->activity_conduct ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div> 
 																</div>
 															</div>
@@ -467,39 +405,17 @@
 															<div class="form-group"> 
 																<label class="col-sm-12">PARTICIPATING AGENCIES</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency1" type="checkbox"  >
-																		<label for="agency1"> LGU </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency2" type="checkbox"  >
-																		<label for="agency2"> NATIONAL LINE AGENCIES </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency3" type="checkbox"  >
-																		<label for="agency3"> ACADEME </label>
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency4" type="checkbox"  >
-																		<label for="agency4"> PRIVATE CORPORATIONS </label>
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency5" type="checkbox"  >
-																		<label for="agency5"> SHIPPING COMPANIES</label>
-																	</div> 
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency6" type="checkbox"  >
-																		<label for="agency6"> PCG UNITS</label>
-																	</div>
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency7" type="checkbox"  >
-																		<label for="agency7"> PCG AUXILIARY</label>
-																	</div>
-																	<div class="checkbox checkbox-custom">
-																		<input id="agency8" type="checkbox"  >
-																		<label for="agency8"> RESIDENTS OF COASTAL COMMUNITY</label>
-																	</div>
-																</div>
+																	<?php 
+																		foreach($participating_agency as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="participating_agency"  id="participating_agency_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="participating_agency_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->participating_agency ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>  
+																</div> 
 															</div>
 														</div> 
 
@@ -595,35 +511,17 @@
 																<label class="col-sm-12">TYPE OF VESSEL</label>
 																<div class="col-sm-12">
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="vessel1"  >
-																			<label for="vessel1">PASSENGER VESSEL</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="vessel2"  >
-																			<label for="vessel2">PASSENGER-CARGO VESSEL</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="vessel3"  >
-																			<label for="vessel3">CARGO VESSEL</label>
-																		</div>
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="vessel4"  >
-																			<label for="vessel4">TANKER</label>
-																		</div>
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="vessel5"  >
-																			<label for="vessel5">LANDING CRAFT TANK (LCT) VESSEL</label>
-																		</div>
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="vessel6"  >
-																			<label for="vessel6">TUGBOAT/BARGE</label>
-																		</div>
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="vessel7"  >
-																			<label for="vessel7">TANKER (LPG)</label>
-																		</div>
-																	</div> 
+																		<?php 
+																			foreach($vessel_type as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="vessel_type" id="vessel_type_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="vessel_type_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
+																	</div>  
 																</div>
 															</div>
 														</div> 
@@ -643,16 +541,16 @@
 																<label class="col-sm-12">TYPE OF INSPECTION</label>
 																<div class="col-sm-12">
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="inpection_type1"  >
-																			<label for="inpection_type1"> MONITORING INSPECTION</label>
-																		</div>  
-																	</div> 
-																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="inpection_type2"  >
-																			<label for="inpection_type2"> COMPLIANCE INSPECTION</label>
-																		</div>  
+																		<?php 
+																			foreach($inspection_type as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="inspection_type" id="inspection_type_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="inspection_type_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->inspection_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
 															</div>
@@ -730,26 +628,16 @@
 																<label class="col-sm-12">TYPE OF FACILITY</label>
 																<div class="col-sm-12">
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="facility_type1"  >
-																			<label for="facility_type1">DEPOT/TERMINAL</label>
-																		</div>  
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="facility_type2" >
-																			<label for="facility_type2">POWER PLANT</label>
-																		</div>  
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="facility_type3" >
-																			<label for="facility_type3">SHIPYARD</label>
-																		</div>  
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="facility_type4" >
-																			<label for="facility_type4">OIL MILL</label>
-																		</div>  
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="facility_type5" >
-																			<label for="facility_type5">MANUFACTURING PLANT</label>
-																		</div>  
+																		<?php 
+																			foreach($facility_type as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="facility_type" id="facility_type_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="facility_type_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->facility_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
 															</div>
@@ -770,16 +658,16 @@
 																<label class="col-sm-12">TYPE OF INSPECTION</label>
 																<div class="col-sm-12">
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="inpection_type1"  >
-																			<label for="inpection_type1"> MONITORING INSPECTION</label>
-																		</div>  
-																	</div> 
-																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="radio" id="inpection_type2"  >
-																			<label for="inpection_type2"> COMPLIANCE INSPECTION</label>
-																		</div>  
+																		<?php 
+																			foreach($inspection_type as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="inspection_type" id="inspection_type_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="inspection_type_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->inspection_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>   
 																	</div> 
 																</div>
 															</div>
@@ -855,19 +743,17 @@
 														<div class="row">
 															<div class="form-group"> 
 																<label class="col-sm-12">TYPE OF TRAINING</label>
-																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="training_type1" type="checkbox"  >
-																		<label for="training_type1">OIL SPILL RESPONSE AWARENESS AND EMERGENCY TRAINING </label>
-																	</div>   
-																	<div class="checkbox checkbox-custom">
-																		<input id="training_type2" type="checkbox"  >
-																		<label for="training_type2">BASIC MAREP</label>
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="training_type3" type="checkbox"  >
-																		<label for="training_type3">GUEST INSTRUCTOR</label>
-																	</div>  
+																<div class="col-sm-12"> 
+																	<?php 
+																		foreach($training_type as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="training_type"  id="training_type_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="training_type_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->training_type ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
 																</div>
 															</div>
 														</div> 
@@ -899,26 +785,16 @@
 																<label class="col-sm-12">CAUSE OF INCIDENT</label>
 																<div class="col-sm-12">
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="incident_cause" id="incident1"  >
-																			<label for="incident1">MACHINERY FAILURE</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="incident_cause" id="incident2"  >
-																			<label for="incident2">NAVIGATIONAL EQUIPMENT FAILURE</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="incident_cause" id="incident3"  >
-																			<label for="incident3">HUMAN ERROR</label>
-																		</div>
-																		<div class="radio radio-info">
-																			<input type="radio" name="incident_cause" id="incident4"  >
-																			<label for="incident4">SEA AND WEATHER CONDITION</label>
-																		</div>
-																		<div class="radio radio-info">
-																			<input type="radio" name="incident_cause" id="incident5"  >
-																			<label for="incident5">GEOGRAPHIC FACTOR</label>
-																		</div>
+																		<?php 
+																			foreach($incident_cause as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="incident_cause" id="incident_cause_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="incident_cause_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->incident_cause ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
 															</div>
@@ -979,22 +855,16 @@
 																<label class="col-sm-12">TYPE OF VESSEL</label>
 																<div class="col-sm-12">
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="vessel_type" id="vessel1"  >
-																			<label for="vessel1">PASSENGER VESSEL</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="vessel_type" id="vessel2"  >
-																			<label for="vessel2">PASSENGER-CARGO VESSEL</label>
-																		</div> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="vessel_type" id="vessel3"  >
-																			<label for="vessel3">CARGO VESSEL</label>
-																		</div>
-																		<div class="radio radio-info">
-																			<input type="radio" name="vessel_type" id="vessel4"  >
-																			<label for="vessel4">TANKER</label>
-																		</div> 
+																		<?php 
+																			foreach($vessel_type as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="vessel_type" id="vessel_type_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="vessel_type_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div> 
 																</div>
 															</div>
@@ -1077,17 +947,17 @@
 																<label class="col-sm-12">SPILLER</label>
 																<div class="col-sm-12">
 																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="spiller" id="spiller1"  >
-																			<label for="spiller1">VESSEL</label>
-																		</div>  
-																	</div> 
-																	<div class="radio-list"> 
-																		<div class="radio radio-info">
-																			<input type="radio" name="spiller" id="spiller2"  >
-																			<label for="spiller2">LANDBASED FACILITY</label>
-																		</div>  
-																	</div> 
+																		<?php 
+																			foreach($spiller as $row){
+																		?> 
+																			<div class="radio radio-info">
+																				<input type="radio" name="spiller" id="spiller_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																				<label for="spiller_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->spiller ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
+																	</div>
 																</div>
 															</div>
 														</div> 
@@ -1114,18 +984,16 @@
 																	<label>TIER LEVEL</label>
 																	<div class="col-sm-12">
 																		<div class="radio-list"> 
-																			<div class="radio radio-info">
-																				<input type="radio" name="tier_level" id="tier"  >
-																				<label for="tier">TIER 1</label>
-																			</div> 
-																			<div class="radio radio-info">
-																				<input type="radio" name="tier_level" id="tier2"  >
-																				<label for="tier2">TIER 2</label>
-																			</div> 
-																			<div class="radio radio-info">
-																				<input type="radio" name="tier_level" id="tier3"  >
-																				<label for="tier3">TIER 3</label>
-																			</div>
+																			<?php 
+																				foreach($tier_level as $row){
+																			?> 
+																				<div class="radio radio-info">
+																					<input type="radio" name="tier_level" id="tier_level_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																					<label for="tier_level_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->tier_level ?></label>
+																				</div> 
+																			<?php
+																				}
+																			?>  
 																		</div> 
 																	</div>
 																</div>
@@ -1135,30 +1003,16 @@
 																	<label>TYPES OF OIL</label>
 																	<div class="col-sm-12">
 																		<div class="radio-list"> 
-																			<div class="radio radio-info">
-																				<input type="radio" name="oil_type" id="oil_type1"  >
-																				<label for="oil_type1">HEAVY OIL</label>
-																			</div> 
-																			<div class="radio radio-info">
-																				<input type="radio" name="oil_type" id="oil_type2"  >
-																				<label for="oil_type2">CRUDE OIL</label>
-																			</div> 
-																			<div class="radio radio-info">
-																				<input type="radio" name="oil_type" id="oil_type3"  >
-																				<label for="oil_type3">BUNKER FUEL 3</label>
-																			</div>
-																			<div class="radio radio-info">
-																				<input type="radio" name="oil_type" id="oil_type4"  >
-																				<label for="oil_type4">DIESEL</label>
-																			</div>
-																			<div class="radio radio-info">
-																				<input type="radio" name="oil_type" id="oil_type5"  >
-																				<label for="oil_type5">GASOLINE</label>
-																			</div>
-																			<div class="radio radio-info">
-																				<input type="radio" name="oil_type" id="oil_type6"  >
-																				<label for="oil_type6">HNS</label>
-																			</div>
+																			<?php 
+																				foreach($oil_type as $row){
+																			?> 
+																				<div class="radio radio-info">
+																					<input type="radio" name="oil_type" id="oil_type_<?php echo $report_selection_id . "_" . $row->id  ?>" value="<?php echo $row->id  ?>"  >
+																					<label for="oil_type_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->oil_type ?></label>
+																				</div> 
+																			<?php
+																				}
+																			?>    
 																		</div> 
 																	</div>
 																</div>
@@ -1166,23 +1020,17 @@
 															<div class="col-sm-4"> 
 																<div class="form-group"> 
 																	<label class="col-sm-12">RESPONDING UNITS</label>
-																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="responding_unit1" type="checkbox"  >
-																			<label for="responding_unit1">SPILLER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="responding_unit2" type="checkbox"  >
-																			<label for="responding_unit2">MEP FORCE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="responding_unit4" type="checkbox"  >
-																			<label for="responding_unit4">PCG UNITS</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="responding_unit5" type="checkbox"  >
-																			<label for="responding_unit5">CREDITED SALVORS</label> 
-																		</div>  
+																	<div class="col-sm-12"> 
+																		<?php 
+																			foreach($responding_unit as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="responding_unit"  id="responding_unit_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="responding_unit_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->responding_unit ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div> 
 																</div> 
 															</div>
@@ -1203,38 +1051,16 @@
 																<div class="form-group"> 
 																	<label class=" ">AFFECTED AREAS </label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area1" type="checkbox"  >
-																			<label for="affected_area1">MANGROVES</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area2" type="checkbox"  >
-																			<label for="affected_area2">SEA GRASS</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area3" type="checkbox"  >
-																			<label for="affected_area3">MPA</label>
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area4" type="checkbox"  >
-																			<label for="affected_area4">PSSA</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area5" type="checkbox"  >
-																			<label for="affected_area5">TOURISM AREA</label>
-																		</div> 
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area6" type="checkbox"  >
-																			<label for="affected_area6">RESIDENTIAL</label>
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area7" type="checkbox"  >
-																			<label for="affected_area7">DIVE SITES</label>
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_area8" type="checkbox"  >
-																			<label for="affected_area8">INDUSTRIAL AREA</label>
-																		</div>
+																		<?php 
+																			foreach($affected_area as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="affected_area"  id="affected_area_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="affected_area_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->affected_area ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div>
 																</div>
 															</div>
@@ -1242,26 +1068,16 @@
 																<div class="form-group"> 
 																	<label class=" ">AFFECTED BIODIVERSITY</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_biodoversoty1" type="checkbox"  >
-																			<label for="affected_biodoversoty1">BIRDS</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_biodoversoty2" type="checkbox"  > 
-																			<label for="affected_biodoversoty2">CRUSTACEANS</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_biodoversoty3" type="checkbox"  >
-																			<label for="affected_biodoversoty3">RESIDENTIAL AREAS</label>
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_biodoversoty4" type="checkbox"  >
-																			<label for="affected_biodoversoty4">MARINE MAMMALS</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="affected_biodoversoty5" type="checkbox"  >
-																			<label for="affected_biodoversoty5">MARICULTURE AREAS</label>
-																		</div>  
+																		<?php 
+																			foreach($affected_biodiversity as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="affected_biodiversity"  id="affected_biodiversity_<?php echo $report_selection_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="affected_biodiversity_<?php echo $report_selection_id . "_" . $row->id  ?>"><?php echo $row->affected_biodiversity ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div>
 																</div>
 															</div>
