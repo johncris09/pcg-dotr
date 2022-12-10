@@ -34,5 +34,14 @@ $autoload['model']     	= array(
     'pdi_result_model',
     'noted_deficiency_model', 
     'vsei_deficiency_code_model', 
-    'drill_conducted_model', 
+    'drill_conducted_model',  
+    'action_code_model', 
+    'marsaf_inspection_type_model',
+    'vsei_result_model', 
+    'related_international_conventions_noted_deficiency_model',
+    'psc_action_code_model',
+    'coastal_and_beach_violation_model', 
+    'beach_coast_line_length_model',
+    'recration_watercraft_model',
+    'recreational_violation_model'
 );

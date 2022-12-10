@@ -173,43 +173,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">TYPE OF VESSEL</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">BULK CARRIER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">CARGO</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">CHEMICAL TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">CONTAINER</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">FISHING VESSEL</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PASSENGER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TUGBOAT</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">Other</label>  
-																			<input type="text"> 
-																		</div> 
+																		<?php 
+																			foreach($vessel_type as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="vessel_type"  id="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div> 
 																</div>
 															</div>  
@@ -245,14 +218,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">RESULT OF PDI</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">CLEARED TO DEPART</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">NOT CLEARED TO DEPART</label> 
-																		</div>   
+																		<?php 
+																			foreach($pdi_result as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="pdi_result"  id="pdi_result_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="pdi_result_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->pdi_result ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
 															</div>  
@@ -260,142 +235,33 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">ACTION CODES (IF ANY)</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">VS83 RECTIFY AT NEXT PORT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">VS85 RECTIFY WITHIN 14 DAYS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">VS87 RECTIFY BEFORE DEPARTURE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">VS88 RECTIFY WITHIN 3 MONTHS</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS90 DETAINABLE DEFICIENCIES</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS95 OTHERS (SPECIFY)</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">Other</label>  
-																			<input type="text"> 
-																		</div> 
-																	</div> 
+																		<?php 
+																			foreach($action_code as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="action_code"  id="action_code_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="action_code_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->action_code ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
+																	</div>
 																</div>
 															</div>  
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">NOTED DEFICIENCY/IES (IF ANY)</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 161/ MC 2006-06 CERTIFIED OF PUBLIC CONVENIENCE (CPC)</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">MARINA MC 203 (SHIP SAFETY CERTIFICATES)</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">MARINA MC 177 (CERTIFICATE OF VESSEL SAFETY) AND (CERTIFICATE OF OWNERSHIP)</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">MARINA MC 110 (COSTWISE/BAY AND RIVER LICENSE)</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 89,148,179 (MINIMUM SAFE MANNING CERTIFICATE)</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 2007-03 (LOADLINE CERTIFICATE)</label> 
-																		</div>      
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 2007-04 (TONNAGE MEASUREMENT CERTIFICATE)</label> 
-																		</div>         
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 124 (CLASSIFICATION SOCIETY CERTIFICATE)</label> 
-																		</div>           
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 143, 159 (DOCUMENT OF COMPLIANCE)</label> 
-																		</div>          
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 148, 179 (SAFETY MANAGEMENT CERTIFICATE)</label> 
-																		</div>          
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 105, 105-A (SPECIAL PERMIT)</label> 
-																		</div>          
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 2007-05 (CERTIFICATE OF STABILITY)</label> 
-																		</div>             
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 123 (ADEQUACY OF LIFEJACKETS/LIFECRAFTS AND OTHER LIFE SAVING APPLIANCES)</label> 
-																		</div>             
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 151,170 (SHIPS OFFICES PASSSES LICENSES)</label> 
-																		</div>             
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 180, 2009-13, 2009-18 (CARGO MANIFEST)</label> 
-																		</div>            
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 191 (INFLUENCE OF ALCOHOL OR PROHIBITED DRUGS)</label> 
-																		</div>          
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MARINA MC 114 (WEARING OF PROPER UNIFORM)</label> 
-																		</div>            
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PMMRR 1997 CHAPTER X (SHIP STATION LICENSE)</label> 
-																		</div>             
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PMMRR 1997 CHAPTER X AND XI (NAVIGATIONAL EQUIPMENT REQUIREMENT FOR SHIP STATION LICENSE)</label> 
-																		</div>               
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PMMRR 1997 CHAPTER XI (RUNNING LIGHTS)</label> 
-																		</div>                 
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PMMRR 1997 CHAPTER V, HPCG MC 04-98 (MASTER AND CHIEF ENGINEER ATTESTED ALL MAIN AND AUXILLIARY AGENCIES ARE OPERATING  )</label> 
-																		</div>                    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">HPCG MC 08-12 (MASTER DECLARANT SAFE DEPARTURE)</label> 
-																		</div>                      
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">HPCG MC 00-2011 (VESSEL SAFETY INSPECTION BOOKLET)</label> 
-																		</div>      
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">HPCG MC 04-98 (VESSEL STABILITY)</label> 
-																		</div>      
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">HPCG MC 01-09 MC 03-01 (GUIDELINES OF MOVEMENT IN HEAVY WEATHER)</label> 
-																		</div>  
+																		<?php 
+																			foreach($noted_deficiency as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="noted_deficiency"  id="noted_deficiency_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="noted_deficiency_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->noted_deficiency ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?> 
 																	</div> 
 																</div>
 															</div>  
@@ -462,568 +328,95 @@
 														</div>
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NR OF PDI CONDUCTED PER TYPE OF VESSEL</legend> 
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CARGO</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
+															<?php 
+																foreach($vessel_type as $row){
+															?>    
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $row->vessel_type ?></label>
+																			<div class="radio-list"> 
+																				<?php 
+																					foreach(range(1,5) as $i){
+																				?>
+																					<label class="radio-inline p-0">
+																						<div class="radio radio-info">
+																							<input type="radio" name="<?php echo $row->vessel_type ?>" id="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>" value="<?php echo $i; ?>">
+																							<label for="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>"><?php echo $i; ?></label>
+																						</div>
+																					</label>
+																				<?php
+
+																					}
+																				?>
+																				<label class="radio-inline">
+																					<div class="radio radio-info">
+																						<input type="radio" name="<?php echo $row->vessel_type ?>" id="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_6-10"   ?>"  value="6-10">
+																						<label for="radio2">6-10</label>
+																					</div>
+																				</label> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CHEMICAL TANKER</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CONTAINER</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">FISHING VESSEL</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">PASSENGER</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">ROLL-ON/ROLL-OFF</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TANKER</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TUGBOAT</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div> 
+																
+															<?php
+																}
+															?>  
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">CHECK BOXES OF ALL NOTED DEFICIENCY/IES (IF ANY)</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 161/ MC 2006-06 CERTIFIED OF PUBLIC CONVENIENCE (CPC)</label> 
-																		</div>
-																		
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 203 (SHIP SAFETY CERTIFICATES)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 177 (CERTIFICATE OF VESSEL SAFETY) AND (CERTIFICATE OF OWNERSHIP)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 110 (COSTWISE/BAY AND RIVER LICENSE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 89,148,179 (MINIMUM SAFE MANNING CERTIFICATE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 2007-03 (LOADLINE CERTIFICATE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 2007-04 (TONNAGE MEASUREMENT CERTIFICATE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 124 (CLASSIFICATION SOCIETY CERTIFICATE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 143, 159 (DOCUMENT OF COMPLIANCE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 148, 179 (SAFETY MANAGEMENT CERTIFICATE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 105, 105-A (SPECIAL PERMIT)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 2007-05 (CERTIFICATE OF STABILITY)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 123 (ADEQUACY OF LIFEJACKETS/LIFECRAFTS AND OTHER LIFE SAVING APPLIANCES)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 151,170 (SHIPS OFFICES PASSSES LICENSES)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 180, 2009-13, 2009-18 (CARGO MANIFEST)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 191 (INFLUENCE OF ALCOHOL OR PROHIBITED DRUGS)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MARINA MC 114 (WEARING OF PROPER UNIFORM)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">PMMRR 1997 CHAPTER X (SHIP STATION LICENSE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">PMMRR 1997 CHAPTER X AND XI (NAVIGATIONAL EQUIPMENT REQUIREMENT FOR SHIP STATION LICENSE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">PMMRR 1997 CHAPTER XI (RUNNING LIGHTS)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">PMMRR 1997 CHAPTER V, HPCG MC 04-98 (MASTER AND CHIEF ENGINEER ATTESTED ALL MAIN AND AUXILLIARY AGENCIES ARE OPERATING  )</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">HPCG MC 08-12 (MASTER DECLARANT SAFE DEPARTURE)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">HPCG MC 00-2011 (VESSEL SAFETY INSPECTION BOOKLET)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">HPCG MC 04-98 (VESSEL STABILITY)</label> 
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">HPCG MC 01-09 MC 03-01 (GUIDELINES OF MOVEMENT IN HEAVY WEATHER)</label> 
-																		</div> 
+																		<?php 
+																			foreach($noted_deficiency as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="noted_deficiency2s"  id="noted_deficiency_<?php echo $report_type_id . "_" . $row->id  ?>_2"  value="<?php echo $row->id  ?>" >
+																				<label for="noted_deficiency_<?php echo $report_type_id . "_" . $row->id  ?>_2"><?php echo $row->noted_deficiency ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>
 																	</div> 
 																</div>
 															</div>  
 														</fieldset> 
 														<fieldset > 
-															<legend class="scheduler-border">TOTAL NUMBER OF VESSEL THAT HAVE BEEN CLEARED TO DEPART AND NOT CLEARED TO DEPART</legend> 
-															
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CLEARED TO DEPART</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
+															<legend class="scheduler-border">TOTAL NUMBER OF VESSEL THAT HAVE BEEN CLEARED TO DEPART AND NOT CLEARED TO DEPART</legend>  
+															<?php  
+																foreach($pdi_result as $row){
+															?>
+																	<div class="row">
+																		<div class="col-md-12">
+																			<div class="form-group">
+																				<label class="control-label"><?php echo $row->pdi_result; ?></label>
+																				<div class="checkbox-list">
+																					<?php 
+																						foreach(range(1,5) as $i){
+																					?>
+																						<label class="checkbox-inline p-0">
+																							<div class="checkbox checkbox-info">
+																								<input type="checkbox" name="depart" id="<?php echo $row->pdi_result . "_" .  $report_type_id . "_" . $row->id   ?>" value="<?php echo $i; ?>">
+																								<label for="<?php echo $row->pdi_result . "_" .  $report_type_id . "_" . $row->id   ?>"><?php echo $i; ?></label>
+																							</div>
+																						</label> 
+																					<?php
+
+																						}
+																					?> 
+																					<label class="checkbox-inline p-0">
+																						<div class="checkbox checkbox-info">
+																							<input type="checkbox" name="depart" id="depart1" value="<?php echo $i; ?>">
+																							<label for="depart1">6-10</label>
+																						</div>
+																					</label>   
 																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">4</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">5</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">6-10</label>
-																				</div>
-																			</label>
+																			</div>
 																		</div>
-																	</div>
-																</div>
-															</div>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">NOT CLEARED TO DEPART</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">4</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">5</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">6-10</label>
-																				</div>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>  
+																	</div>  
+															<?php
+																}
+															?> 
 														</fieldset> 
 												<?php
 													}else if($report_type_id == 2){ // VESSEL SAFETY ENFORCEMENT INSPECTION (VSEI)
@@ -1048,42 +441,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">TYPE OF VESSEL</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">BULK CARRIER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">CARGO</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">CHEMICAL TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">CONTAINER</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">FISHING VESSEL</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PASSENGER</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PASSENGER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TUGBOAT</label> 
-																		</div>   
+																		<?php 
+																			foreach($vessel_type as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="vessel_type"  id="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>    
 																	</div> 
 																</div>
 															</div>  
@@ -1126,32 +493,32 @@
 																	<div class="form-group">
 																		<label class="col-sm-12">TYPE OF INSPECTION</label>  
 																		<div class="col-sm-12">
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype1" type="checkbox"  >
-																				<label for="garbagetype1">OVERRIDING INSPECTION</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">REQUEST OF OWNER/COMPANY</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">REGULAR INSPECTIONS ONCE EVERY 3 MONTHS</label> 
-																			</div>  
+																			<?php 
+																				foreach($inspection_type as $row){
+																			?>  
+																				<div class="checkbox checkbox-custom">
+																					<input  type="checkbox" name="inspection_type"  id="inspection_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																					<label for="inspection_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->inspection_type ?></label>
+																				</div> 
+																			<?php
+																				}
+																			?>  
 																		</div>
 																	</div> 
 																</div> 
 																<div class="col-md-6">
 																	<div class="form-group">
 																		<label class="col-sm-12">RESULT OF VSEI</label>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">UNDETAINED</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">DETAINED</label> 
-																		</div>  
+																		<?php 
+																			foreach($vsei_result as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="vsei_result"  id="vsei_result_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="vsei_result_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vsei_result ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>  
 															</div>
@@ -1159,30 +526,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">ACTION CODES (IF ANY)</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">VS83 RECTIFY AT NEXT PORT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">VS85 RECTIFY WITHIN 14 DAYS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">VS87 RECTIFY BEFORE DEPARTURE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">VS88 RECTIFY WITHIN 3 MONTHS</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS90 DETAINABLE DEFICIENCIES</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS95 OTHERS (SPECIFY)</label> 
-																		</div>    
+																		<?php 
+																			foreach($action_code as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="action_code"  id="action_code_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="action_code_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->action_code ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																		<div class="checkbox checkbox-custom">
 																			<input id="garbagetype5" type="checkbox"  >
 																			<label for="garbagetype5">Other</label>  
@@ -1196,102 +549,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">VSEI DEFICIENCY CODE (IF ANY)</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">VS8100 ABSENCE OF SHIPS CERTIFICATE AND DOCUMENT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">VS8200 ABSENCE OF CERTIFICATE AND WATCH KEEPING FOR SEAFARER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">VS8300 WHEELHOUSE/ DOCUMENTATION INSTRUMENTAL EQUIPMENT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">VS8400 CREW AND ACCOMODATION</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS8500 FIRE FIGHTING APPLIANCES/FIRE SAFETY MEASURES</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS8600 BOAT DECK/OPEN DECK/ACCOMODATION LIFE-SAVING APPLIANCES</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS8700 NAVIGATIONAL SAFETY</label> 
-																		</div>      
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS8800 WORKING SPACES</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81000 ALARM SIGNAL</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81100 CARRIAGE OF CARGO AND DANGEROUS GOODS</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81300 RADIO COMMUNICATION</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81400 CONSTRUCTIONS SAFETY</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81500 EGIE ROOM/FIREFIGHTIG APPLIANCES</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81600 OIL CHEMICAL TANNKERS AND GA CARRIER</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81700 MARPOL</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81800 SOLAS RELATE OPERATIONAL DEFICIENCY</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS81900 EGINE ROOM SHYLIGTH AD ADJACENT STRUCTURE</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS82000 H.O REQUIREMENTS</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS82100 FOODS AND CATERS</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS82200 MOORING ARRANGEMENTS</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS82300 PROPOLSION AN AUXILIARY MACHINERY</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS82400 ISM RELATED DEFICENCIES</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS82500 BULK CARRIER- ADDITIONAL SAFETY MEASURES</label> 
-																		</div>      
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">VS82600 ADDITIONAL MEASURES TO ENHANCE MARITIME SECURITY</label> 
-																		</div>        
+																		<?php 
+																			foreach($vsei_deficiency_code as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="vsei_deficiency_code"  id="vsei_deficiency_code_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="vsei_deficiency_code_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vsei_deficiency_code ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>          
 																	</div> 
 																</div>
 															</div>   
@@ -1321,410 +588,85 @@
 														</fieldset> 
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NR OF PDI CONDUCTED PER TYPE OF VESSEL</legend>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">BULK CARRIER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
+															<?php 
+																foreach($vessel_type as $row){
+															?>    
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $row->vessel_type ?></label>
+																			<div class="checkbox-list">
+																				<?php 
+																					foreach(range(1,3) as $i){
+																				?>
+																					<label class="checkbox-inline p-0">
+																						<div class="checkbox checkbox-info">
+																						<input  type="checkbox" name="<?php echo $row->vessel_type ?>" id="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>" value="<?php echo $i; ?>">
+																							<label for="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>"><?php echo $i; ?></label>
+																						</div>
+																					</label>   
+																				<?php
+
+																					}
+																				?> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CARGO</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CHEMICAL TANKER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CONTAINER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">FISHING VESSEL</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>     
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">PASSENGER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>     
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">ROLL-ON/ROLL-OFF</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>      
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TANKER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>      
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TUGBOAT</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>  
+																
+															<?php
+																}
+															?>     
 														</fieldset> 
 														<div class="row">
 															<div class="form-group"> 
 																<label class="col-sm-12">VSEI DEFICIENCY CODE (IF ANY)</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">VS8100 ABSENCE OF SHIPS CERTIFICATE AND DOCUMENT</label> 
-																	</div>   
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype2" type="checkbox"  >
-																		<label for="garbagetype2">VS8200 ABSENCE OF CERTIFICATE AND WATCH KEEPING FOR SEAFARER</label> 
-																	</div>   
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype3" type="checkbox"  >
-																		<label for="garbagetype3">VS8300 WHEELHOUSE/ DOCUMENTATION INSTRUMENTAL EQUIPMENT</label> 
-																	</div>   
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype4" type="checkbox"  >
-																		<label for="garbagetype4">VS8400 CREW AND ACCOMODATION</label> 
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS8500 FIRE FIGHTING APPLIANCES/FIRE SAFETY MEASURES</label> 
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS8600 BOAT DECK/OPEN DECK/ACCOMODATION LIFE-SAVING APPLIANCES</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS8700 NAVIGATIONAL SAFETY</label> 
-																	</div>      
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS8800 WORKING SPACES</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81000 ALARM SIGNAL</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81100 CARRIAGE OF CARGO AND DANGEROUS GOODS</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81300 RADIO COMMUNICATION</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81400 CONSTRUCTIONS SAFETY</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81500 EGIE ROOM/FIREFIGHTIG APPLIANCES</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81600 OIL CHEMICAL TANNKERS AND GA CARRIER</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81700 MARPOL</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81800 SOLAS RELATE OPERATIONAL DEFICIENCY</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS81900 EGINE ROOM SHYLIGTH AD ADJACENT STRUCTURE</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS82000 H.O REQUIREMENTS</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS82100 FOODS AND CATERS</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS82200 MOORING ARRANGEMENTS</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS82300 PROPOLSION AN AUXILIARY MACHINERY</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS82400 ISM RELATED DEFICENCIES</label> 
-																	</div>     
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS82500 BULK CARRIER- ADDITIONAL SAFETY MEASURES</label> 
-																	</div>      
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype5" type="checkbox"  >
-																		<label for="garbagetype5">VS82600 ADDITIONAL MEASURES TO ENHANCE MARITIME SECURITY</label> 
-																	</div>        
+																	<?php 
+																		foreach($vsei_deficiency_code as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="vsei_deficiency_code"  id="vsei_deficiency_code_<?php echo $report_type_id . "_" . $row->id  ?>_2"  value="<?php echo $row->id  ?>" >
+																			<label for="vsei_deficiency_code_<?php echo $report_type_id . "_" . $row->id  ?>_2"><?php echo $row->vsei_deficiency_code ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>      
 																</div> 
 															</div>
 														</div> 
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NUMBER OF VESSEL DETAINED AND DETAINED</legend> 
+															<?php 
+																$status = ['DETAINED', 'NOT DETAINEDs']; 
+																foreach($status as $stat){
+															?>
 															
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">DETAINED</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label>  
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $stat; ?></label>
+																			<div class="checkbox-list">
+																				<?php 
+																					foreach(range(1,3) as $i){
+																				?>
+
+																						<label class="checkbox-inline p-0">
+																							<div class="checkbox checkbox-info">
+																								<input type="checkbox" name="<?php echo $stat; ?>" id="<?php echo $stat . "_" . $report_type_id . "_" . $i ?>" value="<?php echo $stat; ?>">
+																								<label for="<?php echo $stat . "_" . $report_type_id . "_" . $i ?>"><?php echo $i; ?></label>
+																							</div>
+																						</label>
+																				<?php 
+																					}
+																				?> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">NOT DETAINED</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>  
+															<?php
+																}
+															?>   
 														</fieldset>   
 
 
@@ -1756,43 +698,17 @@
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">TYPE OF VESSEL</label>
-																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">BULK CARRIER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">CARGO</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">CHEMICAL TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">CONTAINER</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">FISHING VESSEL</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PASSENGER</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PASSENGER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TUGBOAT</label> 
-																		</div>   
+																	<div class="col-sm-12"> 
+																		<?php 
+																			foreach($vessel_type as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="vessel_type"  id="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
 															</div>  
@@ -1843,18 +759,16 @@
 																	<div class="form-group">
 																		<label class="col-sm-12">TYPE OF INSPECTION</label>  
 																		<div class="col-sm-12">
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype1" type="checkbox"  >
-																				<label for="garbagetype1">OVERRIDING INSPECTION</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">REQUEST OF OWNER/COMPANY</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">REGULAR INSPECTIONS ONCE EVERY 3 MONTHS</label> 
-																			</div>  
+																			<?php 
+																				foreach($inspection_type as $row){
+																			?>  
+																				<div class="checkbox checkbox-custom">
+																					<input  type="checkbox" name="inspection_type"  id="inspection_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																					<label for="inspection_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->inspection_type ?></label>
+																				</div> 
+																			<?php
+																				}
+																			?>   
 																		</div>
 																	</div> 
 																</div> 
@@ -1862,40 +776,32 @@
 																	<div class="form-group">
 																		<label class="col-sm-12">DRILLS CONDUCTED</label>  
 																		<div class="col-sm-12">
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype1" type="checkbox"  >
-																				<label for="garbagetype1">ABANDONSHIP</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">FIRE IN PORT AND/OR AT SEA</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">COLLISION AT PORT AND/OR AT SEA</label> 
-																			</div>     
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">EMERGENCY STEERING CASUALTY</label> 
-																			</div>     
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">MAN- OVERBOARD</label> 
-																			</div> 
+																			<?php 
+																				foreach($drill_conducted as $row){
+																			?>  
+																				<div class="checkbox checkbox-custom">
+																					<input  type="checkbox" name="drill_conducted"  id="drill_conducted_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																					<label for="drill_conducted_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->drill_conducted ?></label>
+																				</div> 
+																			<?php
+																				}
+																			?>
 																		</div>
 																	</div> 
 																</div> 
 																<div class="col-md-6">
 																	<div class="form-group">
-																		<label class="col-sm-12">RESULT OF VSEI</label>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">UNDETAINED</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">DETAINED</label> 
-																		</div>  
+																		<label class="col-sm-12">RESULT OF VSEI</label>   
+																		<?php 
+																			foreach($vsei_result as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="vsei_result"  id="vsei_result_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="vsei_result_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vsei_result ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>    
 																	</div> 
 																</div>  
 															</div> 
@@ -1925,307 +831,75 @@
 															</div>  
 														</fieldset> 
 														<fieldset > 
-															<legend class="scheduler-border">TOTAL NR OF PDI CONDUCTED PER TYPE OF VESSEL</legend>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">BULK CARRIER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
+															<legend class="scheduler-border">TOTAL NR OF PDI CONDUCTED PER TYPE OF VESSEL</legend>
+															<?php 
+																foreach($vessel_type as $row){
+															?>    
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $row->vessel_type ?></label>
+																			<div class="radio-list"> 
+																				<?php 
+																					foreach(range(1,5) as $i){
+																				?>
+																					<label class="radio-inline p-0">
+																						<div class="radio radio-info">
+																							<input type="radio" name="<?php echo $row->vessel_type ?>" id="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>" value="<?php echo $i; ?>">
+																							<label for="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>"><?php echo $i; ?></label>
+																						</div>
+																					</label>
+																				<?php
+
+																					}
+																				?>
+																				<label class="radio-inline">
+																					<div class="radio radio-info">
+																						<input type="radio" name="<?php echo $row->vessel_type ?>" id="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_6-10"   ?>"  value="6-10">
+																						<label for="radio2">6-10</label>
+																					</div>
+																				</label> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CARGO</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CHEMICAL TANKER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CONTAINER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">FISHING VESSEL</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>     
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">PASSENGER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>     
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">ROLL-ON/ROLL-OFF</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>      
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TANKER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>      
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TUGBOAT</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>  
+																
+															<?php
+																}
+															?>    
 														</fieldset> 
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NUMBER OF VESSEL THAT HAVE PASSED AND FAILED</legend>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">PASSED</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label>  
+															<?php 
+																$status = ['PASSED', 'FAILED']; 
+																foreach($status as $stat){
+															?>
+															
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $stat; ?></label>
+																			<div class="checkbox-list">
+																				<?php 
+																					foreach(range(1,3) as $i){
+																				?>
+
+																						<label class="checkbox-inline p-0">
+																							<div class="checkbox checkbox-info">
+																								<input type="checkbox" name="<?php echo $stat; ?>" id="<?php echo $stat . "_" . $report_type_id . "_" . $i ?>" value="<?php echo $stat; ?>">
+																								<label for="<?php echo $stat . "_" . $report_type_id . "_" . $i ?>"><?php echo $i; ?></label>
+																							</div>
+																						</label>
+																				<?php 
+																					}
+																				?> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">FAILED</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>  
+															<?php
+																}
+															?>  
 														</fieldset>  
 												
 												<?php
@@ -2259,42 +933,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">TYPE OF VESSEL</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">BULK CARRIER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">CARGO</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">CHEMICAL TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">CONTAINER</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">FISHING VESSEL</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PASSENGER</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">PASSENGER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TANKER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TUGBOAT</label> 
-																		</div>   
+																		<?php 
+																			foreach($vessel_type as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="vessel_type"  id="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>   
 																	</div> 
 																</div>
 															</div>  
@@ -2343,18 +991,16 @@
 																<div class="form-group">
 																	<label class="col-sm-12">TYPE OF INSPECTION</label>  
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">OVERRIDING INSPECTION</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">INITIAL INSPECTION</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">FOLLOW-UP INSPECTION</label> 
-																		</div>  
+																		<?php 
+																			foreach($inspection_type as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="inspection_type"  id="inspection_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="inspection_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->inspection_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>   
 																	</div> 
 																</div>  
 															</div> 
@@ -2362,47 +1008,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">ACTION CODES (IF VESSEL HAS NOTED DEFICIENCY)</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">15-RECTIFY AT NEXT PORT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">16-RECTIFY WITHIN 14 DAYS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">17-RECTIFY BEFORE DEPARTURE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">18-RECTIFY WITHIN 3 MONTHS</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">30-DETAINABLE DEFICIENCIES</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">46-RECTIFY DETAINABLE DEF AT AGREED REPAIR PORT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">48-AS IN THE AGREED  FLAG STATION CONDITION</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">49-AS IN THE AGREED RECTIFICATION ACTION PLAN</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">99-OTHER (SPECIFY)</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">Other</label>  
-																			<input type="text"> 
-																		</div> 
+																		<?php 
+																			foreach($psc_action_code as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="psc_action_code"  id="psc_action_code_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="psc_action_code_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->psc_action_code ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
 															</div>  
@@ -2410,50 +1025,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">RELATED INTERNATIONAL CONVENTIONS NOTED DEFICIENCY/IES</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">SOLAS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">MARPOL</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">STCW</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">LOADLINE</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">TONNAGE</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">MLC</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">BALLAST WATER MANAGEMENT CONVENTION</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">ANTI FOULING SYSTEM</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">COLREG</label> 
-																		</div>       
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">ISM CODE</label> 
-																		</div>       
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype5" type="checkbox"  >
-																			<label for="garbagetype5">ISPS CODE</label> 
-																		</div>    
+																		<?php 
+																			foreach($related_international_conventions_noted_deficiency as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="related_international_conventions_noted_deficiency"  id="related_international_conventions_noted_deficiency_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="related_international_conventions_noted_deficiency_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->related_international_conventions_noted_deficiency ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>     
 																	</div> 
 																</div>
 															</div>   
@@ -2474,306 +1055,69 @@
 														</fieldset> 
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NR OF PSC CONDUCTED PER TYPE OF VESSEL</legend>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">BULK CARRIER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
+															<?php 
+																foreach($vessel_type as $row){
+															?>    
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $row->vessel_type ?></label>
+																			<div class="checkbox-list">
+																				<?php 
+																					foreach(range(1,3) as $i){
+																				?>
+																					<label class="checkbox-inline p-0">
+																						<div class="checkbox checkbox-info">
+																						<input  type="checkbox" name="<?php echo $row->vessel_type ?>" id="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>" value="<?php echo $i; ?>">
+																							<label for="<?php echo $row->vessel_type . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>"><?php echo $i; ?></label>
+																						</div>
+																					</label>   
+																				<?php
+
+																					}
+																				?> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CARGO</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CHEMICAL TANKER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">CONTAINER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">FISHING VESSEL</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>     
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">PASSENGER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>     
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">ROLL-ON/ROLL-OFF</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>      
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TANKER</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>      
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">TUGBOAT</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div> 
+																
+															<?php
+																}
+															?>  														
+															 
 														</fieldset> 
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NUMBER OF VESSEL NOT-DETAINED AND DETAINED</legend>   
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">NOT DETAINED</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label> 
+															<?php 
+																$status = ['DETAINED', 'NOT DETAINEDs']; 
+																foreach($status as $stat){
+															?>
+															
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $stat; ?></label>
+																			<div class="checkbox-list">
+																				<?php 
+																					foreach(range(1,3) as $i){
+																				?>
+
+																						<label class="checkbox-inline p-0">
+																							<div class="checkbox checkbox-info">
+																								<input type="checkbox" name="<?php echo $stat; ?>" id="<?php echo $stat . "_" . $report_type_id . "_" . $i ?>" value="<?php echo $stat; ?>">
+																								<label for="<?php echo $stat . "_" . $report_type_id . "_" . $i ?>"><?php echo $i; ?></label>
+																							</div>
+																						</label>
+																				<?php 
+																					}
+																				?> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">DETAINED</label>
-																		<div class="checkbox-list">
-																			<label class="checkbox-inline p-0">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart1" value="option1">
-																					<label for="depart1">1</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">2</label>
-																				</div>
-																			</label>
-																			<label class="checkbox-inline">
-																				<div class="checkbox checkbox-info">
-																					<input type="checkbox" name="depart" id="depart2" value="option2">
-																					<label for="depart2">3</label>
-																				</div>
-																			</label>  
-																		</div>
-																	</div>
-																</div>
-															</div>  
+															<?php
+																}
+															?>   
 														</fieldset>  
 												
 												<?php
@@ -2813,80 +1157,34 @@
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">LENGTH  OF BEACH COAST LINE</label>
-																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">20 METER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">40 METER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">60 METER</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">80 METER</label> 
-																		</div>   
+																	<div class="col-sm-12"> 
+																		<?php 
+																			foreach($beach_coast_line_length as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="beach_coast_line_length"  id="beach_coast_line_length_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="beach_coast_line_length_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->beach_coast_line_length ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
-															</div>  
-
-															
+															</div>   
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">VIOLATIONS (IF ANY)</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">INSUFFICIENT NUMBER OF LIFEGUARD CERTIFIED BY THE PCG</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO PHYSICIAN</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NON- ACCESSIBILITY TO HOSPITAL OR MEDICAL CENTERS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">FIRST-AIDERS NOT CERTIFIED BY PRC</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO FIRST-AIDE MEDICINE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO LIFE SAVING EQUIPMENTS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">INSUFFICIENTS NUMBER OF BUOYS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO VISIBLE WARNING SIGN OF DANGER AREAS</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO RADIO/COMMUNICATION ROOM</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO VHF RADIO WITH BASE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO HOUSE RULES AND REGULATORY BEATED</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">NO BEACH WARNING SIGNAGE AND FLAG SIGNAL</label> 
-																		</div>      
+																		<?php 
+																			foreach($coastal_and_beach_violation as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="coastal_and_beach_violation"  id="coastal_and_beach_violation_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="coastal_and_beach_violation_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->coastal_and_beach_violation ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>    
 																	</div> 
 																</div>
 															</div>   
@@ -2935,38 +1233,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">RECRATION WATERCRAFTS</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">PERSONAL WATERCRAFT(PWC)</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">BANANA BOAT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype3" type="checkbox"  >
-																			<label for="garbagetype3">DRAGON BOAT</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">KAYAK BOAT</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">MOTOR BOAT</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">HELMS-POWERED</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">PARASAIL</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype4" type="checkbox"  >
-																			<label for="garbagetype4">SAILBOAT</label> 
-																		</div>      
+																		<?php 
+																			foreach($recration_watercraft as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="recration_watercraft"  id="recration_watercraft_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="recration_watercraft_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->recration_watercraft ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>        
 																	</div> 
 																</div>
 															</div>  
@@ -2975,23 +1251,17 @@
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">VIOLATIONS (IF ANY)</label>
-																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">BOATING OUTSIDE THE DESIGNATED SAILING AREAS</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">BOATING WITHOUT WEARING OF PERSONAL FLOATATION DEVICES OR LIFEJACKETS</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">OPERATING WITH LACK OF SAFETY EQUIPMENT</label> 
-																		</div> 
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">BOATING UNDER THE INFLUENCE OF LIQUOR</label> 
-																		</div>  
+																	<div class="col-sm-12"> 
+																		<?php 
+																			foreach($recreational_violation as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="recreational_violation"  id="recreational_violation_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="recreational_violation_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->recreational_violation ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>   
 																	</div> 
 																</div>
 															</div>   
