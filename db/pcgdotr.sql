@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2022 at 03:48 AM
+-- Generation Time: Dec 11, 2022 at 05:39 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -130,6 +130,34 @@ INSERT INTO `application_type` (`id`, `application_type`) VALUES
 (3, 'RENEWAL OF SALVOR CERTIFICATE OF REGISTRATION'),
 (4, 'INSPECTION PERMIT AND SALVAGE PERMIT'),
 (5, 'SALVAGE CERTIFICATE OF INSPECTION');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `asset_deployment`
+--
+
+CREATE TABLE `asset_deployment` (
+  `id` int(11) NOT NULL,
+  `asset_deployment` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `asset_deployment`
+--
+
+INSERT INTO `asset_deployment` (`id`, `asset_deployment`) VALUES
+(1, 'ALUMINUM BOAT'),
+(2, 'DF CRAFT'),
+(3, '24 METER'),
+(4, '35 METER'),
+(5, '44 METER'),
+(6, '56 METER'),
+(7, '83 METER'),
+(8, '97 METER'),
+(9, 'PCGA FLOATING ASSET'),
+(10, 'LGU WATER ASSET'),
+(11, 'METAL SHARK BOATS');
 
 -- --------------------------------------------------------
 
@@ -286,6 +314,26 @@ INSERT INTO `facility_type` (`id`, `facility_type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `fire_cause`
+--
+
+CREATE TABLE `fire_cause` (
+  `id` int(11) NOT NULL,
+  `fire_cause` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `fire_cause`
+--
+
+INSERT INTO `fire_cause` (`id`, `fire_cause`) VALUES
+(1, 'Unattended Cooking Equipment'),
+(2, 'Petroleum and Oil'),
+(3, 'Electrical Failure');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `garbage_type_collected`
 --
 
@@ -350,6 +398,31 @@ INSERT INTO `incident_consequences` (`id`, `incident_consequences`) VALUES
 (6, 'LOSS OF SHIPS'),
 (7, 'DAMAGE OF CARGOES'),
 (8, 'MATERIAL DAMAGE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `information_acquired_thru`
+--
+
+CREATE TABLE `information_acquired_thru` (
+  `id` int(11) NOT NULL,
+  `information_acquired_thru` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `information_acquired_thru`
+--
+
+INSERT INTO `information_acquired_thru` (`id`, `information_acquired_thru`) VALUES
+(1, 'VHF CALL FROM DISTRESS VESSEL'),
+(2, 'CELLULAR PHONE CALL'),
+(3, 'PCG COMCEN'),
+(4, 'GMDSS'),
+(5, 'PCG UNIT'),
+(6, 'LGU'),
+(7, 'GOVERNMENT AGENCY'),
+(8, 'CONCERNED CITIZEN');
 
 -- --------------------------------------------------------
 
@@ -667,6 +740,50 @@ INSERT INTO `marsaf_vessel_type` (`id`, `vessel_type`) VALUES
 (7, 'PASSENGER'),
 (8, 'TANKER'),
 (9, 'TUGBOAT');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marsar_incident_cause`
+--
+
+CREATE TABLE `marsar_incident_cause` (
+  `id` int(11) NOT NULL,
+  `incident_cause` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `marsar_incident_cause`
+--
+
+INSERT INTO `marsar_incident_cause` (`id`, `incident_cause`) VALUES
+(1, 'Machinery Failure'),
+(2, 'Navigational Equipment failure'),
+(3, 'Human Error'),
+(4, 'Environmental Factor (Geographic Location)'),
+(5, 'Electrical Failure'),
+(6, 'Failure in Ships Steering System');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `material_report`
+--
+
+CREATE TABLE `material_report` (
+  `id` int(11) NOT NULL,
+  `material_report` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `material_report`
+--
+
+INSERT INTO `material_report` (`id`, `material_report`) VALUES
+(1, 'VESSEL SUNK'),
+(2, 'FULLY DAMAGE BUT AFLOAT'),
+(3, 'PARTIALLY DAMAGE BUT CAN BE PROPELLED ON HER OWN'),
+(4, 'HALF SUBMERGE');
 
 -- --------------------------------------------------------
 
@@ -1089,6 +1206,27 @@ INSERT INTO `tier_level` (`id`, `tier_level`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `time_assets_deployment`
+--
+
+CREATE TABLE `time_assets_deployment` (
+  `id` int(11) NOT NULL,
+  `time_assets_deployment` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `time_assets_deployment`
+--
+
+INSERT INTO `time_assets_deployment` (`id`, `time_assets_deployment`) VALUES
+(1, '15 MINUTES'),
+(2, '30 MINUTES'),
+(3, '1 HOUR'),
+(4, '2 HOURS');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `training_type`
 --
 
@@ -1218,6 +1356,46 @@ INSERT INTO `very_serious_mc_category` (`id`, `very_serious_mc_category`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `vessel_age`
+--
+
+CREATE TABLE `vessel_age` (
+  `id` int(11) NOT NULL,
+  `vessel_age` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `vessel_age`
+--
+
+INSERT INTO `vessel_age` (`id`, `vessel_age`) VALUES
+(1, 'LESS THAN 500GT'),
+(2, '500 GT TO 1000 GT'),
+(3, '1000 GT TO 2000 GT');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vessel_size`
+--
+
+CREATE TABLE `vessel_size` (
+  `id` int(11) NOT NULL,
+  `vessel_size` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `vessel_size`
+--
+
+INSERT INTO `vessel_size` (`id`, `vessel_size`) VALUES
+(1, 'LESS THAN 500GT'),
+(2, '500 GT TO 1000 GT'),
+(3, '1000 GT TO 2000 GT');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `vessel_type`
 --
 
@@ -1238,6 +1416,35 @@ INSERT INTO `vessel_type` (`id`, `vessel_type`) VALUES
 (5, 'LANDING CRAFT TANK (LCT) VESSEL'),
 (6, 'TUGBOAT/BARGE'),
 (7, 'TANKER (LPG)');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vessel_type_involved`
+--
+
+CREATE TABLE `vessel_type_involved` (
+  `id` int(11) NOT NULL,
+  `vessel_type_involved` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `vessel_type_involved`
+--
+
+INSERT INTO `vessel_type_involved` (`id`, `vessel_type_involved`) VALUES
+(1, 'PASSENGER/ CARGO VESSEL'),
+(2, 'GENERAL CARGO VESSEL'),
+(3, 'RORO VESSEL'),
+(4, 'FISHING VESSEL'),
+(5, 'WOODEN HULLED VESSEL 15 GT ABOVE'),
+(6, 'WOODEN HULLED VESSEL 3GT BELOW'),
+(7, 'SAILING VESSEL'),
+(8, 'PLEASURE CRAFTS'),
+(9, 'TANKER VESSELS'),
+(10, 'LNG CARRIERS'),
+(11, 'GOVERNMENT VESSEL'),
+(12, 'WARSHIP');
 
 -- --------------------------------------------------------
 
@@ -1334,6 +1541,12 @@ ALTER TABLE `application_type`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `asset_deployment`
+--
+ALTER TABLE `asset_deployment`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `beach_coast_line_length`
 --
 ALTER TABLE `beach_coast_line_length`
@@ -1377,6 +1590,12 @@ ALTER TABLE `facility_type`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `fire_cause`
+--
+ALTER TABLE `fire_cause`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `garbage_type_collected`
 --
 ALTER TABLE `garbage_type_collected`
@@ -1392,6 +1611,12 @@ ALTER TABLE `incident_cause`
 -- Indexes for table `incident_consequences`
 --
 ALTER TABLE `incident_consequences`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `information_acquired_thru`
+--
+ALTER TABLE `information_acquired_thru`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1482,6 +1707,18 @@ ALTER TABLE `marsaf_inspection_type`
 -- Indexes for table `marsaf_vessel_type`
 --
 ALTER TABLE `marsaf_vessel_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `marsar_incident_cause`
+--
+ALTER TABLE `marsar_incident_cause`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `material_report`
+--
+ALTER TABLE `material_report`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1591,6 +1828,12 @@ ALTER TABLE `tier_level`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `time_assets_deployment`
+--
+ALTER TABLE `time_assets_deployment`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `training_type`
 --
 ALTER TABLE `training_type`
@@ -1617,9 +1860,27 @@ ALTER TABLE `very_serious_mc_category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `vessel_age`
+--
+ALTER TABLE `vessel_age`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `vessel_size`
+--
+ALTER TABLE `vessel_size`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `vessel_type`
 --
 ALTER TABLE `vessel_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `vessel_type_involved`
+--
+ALTER TABLE `vessel_type_involved`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1669,6 +1930,12 @@ ALTER TABLE `application_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `asset_deployment`
+--
+ALTER TABLE `asset_deployment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `beach_coast_line_length`
 --
 ALTER TABLE `beach_coast_line_length`
@@ -1711,6 +1978,12 @@ ALTER TABLE `facility_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `fire_cause`
+--
+ALTER TABLE `fire_cause`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `garbage_type_collected`
 --
 ALTER TABLE `garbage_type_collected`
@@ -1726,6 +1999,12 @@ ALTER TABLE `incident_cause`
 -- AUTO_INCREMENT for table `incident_consequences`
 --
 ALTER TABLE `incident_consequences`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `information_acquired_thru`
+--
+ALTER TABLE `information_acquired_thru`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
@@ -1817,6 +2096,18 @@ ALTER TABLE `marsaf_inspection_type`
 --
 ALTER TABLE `marsaf_vessel_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `marsar_incident_cause`
+--
+ALTER TABLE `marsar_incident_cause`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `material_report`
+--
+ALTER TABLE `material_report`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `noted_deficiency`
@@ -1921,6 +2212,12 @@ ALTER TABLE `tier_level`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `time_assets_deployment`
+--
+ALTER TABLE `time_assets_deployment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `training_type`
 --
 ALTER TABLE `training_type`
@@ -1945,10 +2242,28 @@ ALTER TABLE `very_serious_mc_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `vessel_age`
+--
+ALTER TABLE `vessel_age`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `vessel_size`
+--
+ALTER TABLE `vessel_size`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `vessel_type`
 --
 ALTER TABLE `vessel_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `vessel_type_involved`
+--
+ALTER TABLE `vessel_type_involved`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `vsei_deficiency_code`

@@ -59,8 +59,21 @@ $autoload['model']     	= array(
     'application_type_model',
     'salvage_operation_purpose_model',
     'maritime_acitivity_model',
-    'maritime_related_violation_model',
+    'maritime_related_violation_model', 
+    'maritime_incident_type_model',
+    'marsar_incident_cause_model', 
+    'material_report_model',
+    'asset_deployment_model', 
+    'information_acquired_thru_model', 
+    'time_assets_deployment_model',
+    'vessel_size_model', 
+    'vessel_age_model', 
+    'vessel_type_involved_model',
+    'fire_cause_model', 
+    'man_overboard_incident_cause_model',
 
+
+    
     
     
     
