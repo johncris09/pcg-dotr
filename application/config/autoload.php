@@ -43,5 +43,27 @@ $autoload['model']     	= array(
     'coastal_and_beach_violation_model', 
     'beach_coast_line_length_model',
     'recration_watercraft_model',
-    'recreational_violation_model'
+    'recreational_violation_model', 
+    'lighthouse_type_model',
+    'lighthouse_inspection_purpose_model',
+    'lighthouse_status_model',
+    'lighthouse_cause_if_not_operating_model',
+    'bouy_type_model',
+    'light_bouy_inspection_purpose_model',
+    'light_buoy_status_model',
+    'light_buoy__cause_if_not_operating_model',
+    'maritime_casualty_nature_model',
+    'marsaf_incident_cause_model',
+    'incident_consequences_model',
+    'very_serious_mc_category_model',
+    'application_type_model',
+    'salvage_operation_purpose_model',
+    'maritime_acitivity_model',
+    'maritime_related_violation_model',
+
+    
+    
+    
+
+    
 );
