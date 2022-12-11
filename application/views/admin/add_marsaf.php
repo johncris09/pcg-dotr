@@ -1296,32 +1296,32 @@
 																	<div class="form-group">
 																		<label class="col-sm-12">TYPE OF LH</label>  
 																		<div class="col-sm-12">
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype1" type="checkbox"  >
-																				<label for="garbagetype1">PRIMARY</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">SECONDARY</label> 
-																			</div>   
-																			<div class="checkbox checkbox-custom">
-																				<input id="garbagetype2" type="checkbox"  >
-																				<label for="garbagetype2">TERTIARY</label> 
-																			</div>  
+																			<?php 
+																				foreach($lighthouse_type as $row){
+																			?>  
+																				<div class="checkbox checkbox-custom">
+																					<input  type="checkbox" name="lighthouse_type"  id="lighthouse_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																					<label for="lighthouse_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->lighthouse_type ?></label>
+																				</div> 
+																			<?php
+																				}
+																			?>   
 																		</div>
 																	</div> 
 																</div> 
 																<div class="col-md-6">
 																	<div class="form-group">
-																		<label class="col-sm-12">PURPOSE OF INSPECTION</label>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">MAINTENANCE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">REPAIR</label> 
-																		</div>  
+																		<label class="col-sm-12">PURPOSE OF INSPECTION</label>   
+																		<?php 
+																			foreach($lighthouse_inspection_purpose as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="lighthouse_inspection_purpose"  id="lighthouse_inspection_purpose_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="lighthouse_inspection_purpose_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->lighthouse_inspection_purpose ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>  
 															</div> 
@@ -1346,133 +1346,69 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">STATUS</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">OPERATING</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype2" type="checkbox"  >
-																			<label for="garbagetype2">NOT OPERATING</label> 
-																		</div>   
+																		<?php 
+																			foreach($lighthouse_status as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="lighthouse_status"  id="lighthouse_status_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="lighthouse_status_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->lighthouse_status ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>  
 																	</div> 
 																</div>
 															</div>
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">IF NOT OPERATING, WHAT IS THE CAUSED?</label>
-																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">DEFECTIVE LATERN</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">DEFECTIVE BATTERY</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">SOLAR PANEL DAMAGE</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">DEFECTIVE CHARGING CONTROLLER</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">DEFECTIVE LAMP CHANGER</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">VANDALIZED</label> 
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox"  >
-																			<label for="garbagetype1">STOLEN PARTS</label> 
-																		</div>    
+																	<div class="col-sm-12"> 
+																		<?php 
+																			foreach($lighthouse_cause_if_not_operating as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="lighthouse_cause_if_not_operating"  id="lighthouse_cause_if_not_operating_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="lighthouse_cause_if_not_operating_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->lighthouse_cause_if_not_operating ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>   
 																	</div> 
 																</div>
 															</div>  
 														</fieldset>  
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NUMBER OF LH NOT OPERATING AND OPERATING</legend> 
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">NOT OPERATING</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label> 
+															
+															<?php 
+																foreach($lighthouse_status as $row){
+															?>  
+																
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $row->lighthouse_status; ?></label>
+																			<div class="radio-list">
+																				<?php
+																					foreach(range(1,5) as $i){
+																				?>
+																						<label class="radio-inline p-0">
+																							<div class="radio radio-info">
+																								<input type="radio" name="<?php echo $row->lighthouse_status; ?>" id="<?php echo $row->lighthouse_status . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>" value="<?php echo $i; ?>">
+																								<label for="<?php echo $row->lighthouse_status . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>"><?php echo $i; ?></label>
+																							</div>
+																						</label>
+																				<?php
+
+																					}
+																				?> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div>
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">OPERATING</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div>   
+															<?php
+																}
+															?>    
 														</fieldset> 
 														<fieldset > 
 															<legend class="scheduler-border">Part 2. LIGHTED BUOYS</legend> 
@@ -1489,30 +1425,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">TYPE OF BOUY</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">LATERAL PORT HAND MARK</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">LATERAL STARBOARD HAND MARK</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">NORTH CARDINAL MARK</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">SOUTH CARDINAL MARK</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">WEST CARDINAL MARK</label> 
-																		</div>    
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">EAST CARDINAL MARK</label> 
-																		</div>       
+																		<?php 
+																			foreach($bouy_type as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="bouy_type"  id="bouy_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="bouy_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->bouy_type ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>       
 																	</div> 
 																</div>
 															</div>
@@ -1531,14 +1453,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">PURPOSE OF INSPECTION</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">MAINTENANCE</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">REPAIR</label> 
-																		</div>        
+																		<?php 
+																			foreach($light_bouy_inspection_purpose as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="light_bouy_inspection_purpose"  id="light_bouy_inspection_purpose_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="light_bouy_inspection_purpose_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->light_bouy_inspection_purpose ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>         
 																	</div> 
 																</div>
 															</div> 
@@ -1563,14 +1487,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">STATUS</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">OPERATING</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">NOT OPERATING</label> 
-																		</div>        
+																		<?php 
+																			foreach($light_buoy_status as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="light_buoy_status"  id="light_buoy_status_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="light_buoy_status_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->light_buoy_status ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>         
 																	</div> 
 																</div>
 															</div>  
@@ -1579,34 +1505,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">IF NOT OPERATING, WHAT IS THE CAUSED?</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">DRIFTED</label> 
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">DETACHED SINKER</label> 
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">DEFECTIVE 3 AD 1 LANTERN</label> 
-																		</div>        
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">DAMAGE BUOY ASSEMBLY</label> 
-																		</div>          
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">DEFECTIVE BATTERY</label> 
-																		</div>           
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">VANDALIZED</label> 
-																		</div>             
-																		<div class="checkbox checkbox-custom">
-																			<input id="garbagetype1" type="checkbox">
-																			<label for="garbagetype1">STOLEN PARTS</label> 
-																		</div>   
+																		<?php 
+																			foreach($light_buoy__cause_if_not_operating as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="light_buoy__cause_if_not_operating"  id="light_buoy__cause_if_not_operating_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="light_buoy__cause_if_not_operating_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->light_buoy__cause_if_not_operating ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>   
 																	</div> 
 																</div>
 															</div> 
@@ -1614,85 +1522,36 @@
 														</fieldset> 
 														<fieldset > 
 															<legend class="scheduler-border">TOTAL NUMBER OF BOUY NOT-OPERATING AND OPERATING</legend>  
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">NOT-OPERATING</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label> 
-																		</div>
-																	</div>
-																</div>
-															</div> 
+															
+															<?php 
+																foreach($light_buoy_status as $row){
+															?>  
+																
+																<div class="row">
+																	<div class="col-md-12">
+																		<div class="form-group">
+																			<label class="control-label"><?php echo $row->light_buoy_status; ?></label>
+																			<div class="radio-list">
+																				<?php
+																					foreach(range(1,5) as $i){
+																				?>
+																						<label class="radio-inline p-0">
+																							<div class="radio radio-info">
+																								<input type="radio" name="<?php echo $row->light_buoy_status; ?>" id="<?php echo $row->light_buoy_status . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>" value="<?php echo $i; ?>">
+																								<label for="<?php echo $row->light_buoy_status . "_" .  $report_type_id . "_" . $row->id . "_" . $i  ?>"><?php echo $i; ?></label>
+																							</div>
+																						</label>
+																				<?php
 
-															<div class="row">
-																<div class="col-md-12">
-																	<div class="form-group">
-																		<label class="control-label">OPERATING</label>
-																		<div class="radio-list">
-																			<label class="radio-inline p-0">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio1" value="option1">
-																					<label for="radio1">1</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">2</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">3</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">4</label>
-																				</div>
-																			</label>
-																			<label class="radio-inline">
-																				<div class="radio radio-info">
-																					<input type="radio" name="radio" id="radio2" value="option2">
-																					<label for="radio2">5</label>
-																				</div>
-																			</label> 
+																					}
+																				?> 
+																			</div>
 																		</div>
 																	</div>
 																</div>
-															</div> 
+															<?php
+																}
+															?>  
 														</fieldset>   
 												
 												<?php
@@ -1705,9 +1564,7 @@
 															</div>
 														</div> 
 
-														<fieldset > 
-															<legend class="scheduler-border">TOTAL NUMBER OF BOUY NOT-OPERATING AND OPERATING</legend>  
-															
+														<fieldset >   
 															<div class="row">
 																<div class="col-md-6">
 																	<div class="form-group">
@@ -1823,51 +1680,17 @@
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">NATURE OF MARITIME CASUALTY</label>
-																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">AGROUNDING</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">ALLISION</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">CAPSIZING</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">COLLISION</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">EXPLOSION</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">MECHANICAL FAILURE</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">FIRE</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">HALF-SUBMERGED</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">SINKING</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">OCCUPATIONAL ACCIDENT</label>
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">HULL FAILURE</label>
-																		</div>   
+																	<div class="col-sm-12"> 
+																		<?php 
+																			foreach($maritime_casualty_nature as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="maritime_casualty_nature"  id="maritime_casualty_nature_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="maritime_casualty_nature_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->maritime_casualty_nature ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>    
 																	</div>
 																</div>
 															</div> 
@@ -1875,18 +1698,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">CAUSE OF INCIDENT</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">HUMAN FACTOR</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">OPERATIONAL FACTOR</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">MANAGEMENT/ORGANIZATIONAL FACTOR</label>
-																		</div>      
+																		<?php 
+																			foreach($incident_cause as $row){ 
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="incident_cause"  id="incident_cause_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="incident_cause_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->incident_cause ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>      
 																	</div>
 																</div>
 															</div> 
@@ -1894,38 +1715,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">CONSEQUENCES OF INCIDENT</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">INJURY</label>
-																		</div>
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">DEATH</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">MISSING PERSON</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">POLLUTION</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">DAMAGE TO MARINE ENVIRONMENT</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">LOSS OF SHIPS</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">DAMAGE OF CARGOES</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">MATERIAL DAMAGE</label>
-																		</div>            
+																		<?php 
+																			foreach($incident_consequences as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="incident_consequences"  id="incident_consequences_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="incident_consequences_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->incident_consequences ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>            
 																	</div>
 																</div>
 															</div>
@@ -1934,37 +1733,33 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">SEVERITY OF MARITIME CASUALTY/INCIDENT</label>
 																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">VERY SERIOUS MC - INVOLVING TOTAL LOSS OF VESSEL, DEATH OR SEVERE DAMAGE TO THE ENVIRONMENT</label>
-																		</div>     
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">SERIOUS MC - A) FIRE, EXPLOSION, GROUNDING, CONTACT, HEAVY WEATHER, HULL CRACKING OR SUSPECTED HULL DEFECT. B) STRUCTURAL DAMAGE RENDERING THE VESSEL UNSEAWORTHY, SUCH AS PENETRATION OF THE HULL UNDERWATER, IMMOBILIZATION OF MAIN ENGINES, EXTENSIVE ACCOMMODATION DAMAGE. C) POLLUTION. AND D) BREAKDOWN NECESSITATING TOWAGE OR SHORE ASSISTANCE.</label>
-																		</div>   
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">MI - EVENTS OTHER THAN MARINE CASUALTY, WHICH HAS OCCURED DIRECTLY IN CONNECTION WITH THE OPERATION OF A SHIP THAT ENDANGERED, OR IF NOT CORRECTED WOULD ENDANGER THE SAFETY OF SHIP, ITS OCCUPANTS OR ANY OTHER PERSON OR ENVIRONMENT</label>
-																		</div>      
+																		<?php 
+																			foreach($incident_consequences as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="incident_consequences"  id="incident_consequences_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="incident_consequences_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->incident_consequences ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>     
 																	</div>
 																</div>
 															</div> 
 															<div class="row">
 																<div class="form-group"> 
 																	<label class="col-sm-12">IF VERY SERIOUS MC, WHAT IS THE CATEGORY?</label>
-																	<div class="col-sm-12">
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">CATEGORY 1 - INVOLVING CONVENTIONAL VESSEL OF 300 GT ABOVE WITH MULTIPLE DEATHS</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">CATEGORY 2 - INVOLVING NON-CONVENTIONAL VESSEL OF LESS THAN 300 GT WITH 1 OR MORE DEATHS</label>
-																		</div>  
-																		<div class="checkbox checkbox-custom">
-																			<input id="agency1" type="checkbox"  >
-																			<label for="agency1">CATEGORY 3 - INVOLVING CONVENTIONAL VESSEL OF 300 GT WITH 1 DEATH</label>
-																		</div>        
+																	<div class="col-sm-12"> 
+																		<?php 
+																			foreach($very_serious_mc_category as $row){
+																		?>  
+																			<div class="checkbox checkbox-custom">
+																				<input  type="checkbox" name="very_serious_mc_category"  id="very_serious_mc_category_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																				<label for="very_serious_mc_category_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->very_serious_mc_category ?></label>
+																			</div> 
+																		<?php
+																			}
+																		?>          
 																	</div>
 																</div>
 															</div> 
@@ -2164,30 +1959,16 @@
 															<div class="form-group"> 
 																<label class="col-sm-12">TYPE OF APPLICATION</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">APPLICATION FOR SALVOR CERTIFICATE OF REGISTRATION</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">SALVOR CERTIFICATE OF REGISTRATION</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">RENEWAL OF SALVOR CERTIFICATE OF REGISTRATION</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">INSPECTION PERMIT AND SALVAGE PERMIT</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">SALVAGE CERTIFICATE OF INSPECTION</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">SALVAGE PERMIT FOR CARGO</label> 
-																	</div>    
+																	<?php 
+																		foreach($application_type as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="application_type"  id="application_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="application_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->application_type ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>  
 																</div> 
 															</div>
 														</div>  
@@ -2204,22 +1985,16 @@
 															<div class="form-group"> 
 																<label class="col-sm-12">PURPOSE OF SALVAGE OPERATION</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">HAZARDS TO MARITIME NAVIGATION, ESPECIALY THOSE WHICH OBSTRUCT THE SEALANES</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">HAMPER THE DEVELOPMENT OF PORTS AND HARBOR</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">EMERGENCY CONDITIONS FOR THE SAFETY AND PROPERTY AT SEA</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">FOR THE VALUE OF CARGO</label> 
-																	</div>   
+																	<?php 
+																		foreach($salvage_operation_purpose as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="salvage_operation_purpose"  id="salvage_operation_purpose_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="salvage_operation_purpose_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->salvage_operation_purpose ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
 																</div> 
 															</div>
 														</div>
@@ -2268,26 +2043,16 @@
 															<div class="form-group"> 
 																<label class="col-sm-12">MARITIME ACITIVITY/ IES</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">FLUVIAL PARADE</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">MARINE PARADE</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">EMERTRIATHLON</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">REGATTA</label> 
-																	</div>    
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox"  >
-																		<label for="garbagetype1">DRAGON BOAT</label> 
-																	</div>  
+																	<?php 
+																		foreach($maritime_acitivity as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="maritime_acitivity"  id="maritime_acitivity_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="maritime_acitivity_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->maritime_acitivity ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
 																</div> 
 															</div>
 														</div>
@@ -2369,22 +2134,16 @@
 															<div class="form-group"> 
 																<label class="col-sm-12">VIOLATIONS (IF ANY)</label>
 																<div class="col-sm-12">
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox">
-																		<label for="garbagetype1">FAILURE TO SECURE PERMIT</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox">
-																		<label for="garbagetype1">OWNER/OPERATOR/BOAT CAPTAIN OF WATERCRAFT JOINING MARINE EVENT WITHOUT PERMISSION OF THE PCG</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox">
-																		<label for="garbagetype1">PASSENGER AND CREWS FAILED TO WEAR LIFE JACKETS IN OPEN DECK BOATS</label> 
-																	</div>  
-																	<div class="checkbox checkbox-custom">
-																		<input id="garbagetype1" type="checkbox">
-																		<label for="garbagetype1">PASSENGER/CREWS UNDER THE INFLUENCE OF LIQUOR AND ILLEGAL DRUGS</label> 
-																	</div>   
+																	<?php 
+																		foreach($maritime_related_violation as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="maritime_related_violation"  id="maritime_related_violation_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="maritime_related_violation_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->maritime_related_violation ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
 																</div> 
 															</div>
 														</div> 

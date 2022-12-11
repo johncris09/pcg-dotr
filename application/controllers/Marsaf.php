@@ -39,7 +39,26 @@ class Marsaf extends CI_Controller {
         $data['beach_coast_line_length'] = $this->beach_coast_line_length_model->get_all();  
         $data['recration_watercraft'] = $this->recration_watercraft_model->get_all();   
         $data['recreational_violation'] = $this->recreational_violation_model->get_all();  
-  
+        $data['lighthouse_type'] = $this->lighthouse_type_model->get_all();   
+        $data['lighthouse_inspection_purpose'] = $this->lighthouse_inspection_purpose_model->get_all(); 
+        $data['lighthouse_status'] = $this->lighthouse_status_model->get_all();  
+        $data['lighthouse_cause_if_not_operating'] = $this->lighthouse_cause_if_not_operating_model->get_all();  
+        
+        $data['bouy_type'] = $this->bouy_type_model->get_all();  
+        $data['light_bouy_inspection_purpose'] = $this->light_bouy_inspection_purpose_model->get_all();   
+        $data['light_buoy_status'] = $this->light_buoy_status_model->get_all(); 
+        $data['light_buoy__cause_if_not_operating'] = $this->light_buoy__cause_if_not_operating_model->get_all();  
+
+        $data['maritime_casualty_nature'] = $this->maritime_casualty_nature_model->get_all();  
+        $data['incident_cause'] = $this->marsaf_incident_cause_model->get_all();  
+        $data['incident_consequences'] = $this->incident_consequences_model->get_all();  
+        $data['very_serious_mc_category'] = $this->very_serious_mc_category_model->get_all();  
+        $data['application_type'] = $this->application_type_model->get_all();   
+        $data['salvage_operation_purpose'] = $this->salvage_operation_purpose_model->get_all(); 
+        $data['maritime_acitivity'] = $this->maritime_acitivity_model->get_all();   
+        $data['maritime_related_violation'] = $this->maritime_related_violation_model->get_all();   
+ 
+        
         $this->base->load('admin', 'admin/add_marsaf', $data); 
  
 	} 
