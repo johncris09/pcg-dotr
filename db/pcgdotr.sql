@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2022 at 10:46 AM
+-- Generation Time: Dec 11, 2022 at 03:48 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -354,25 +354,6 @@ INSERT INTO `incident_consequences` (`id`, `incident_consequences`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `inspection_purpose`
---
-
-CREATE TABLE `inspection_purpose` (
-  `id` int(11) NOT NULL,
-  `inspection_purpose` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `inspection_purpose`
---
-
-INSERT INTO `inspection_purpose` (`id`, `inspection_purpose`) VALUES
-(1, 'MAINTENANCE'),
-(2, 'REPAIR');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `inspection_type`
 --
 
@@ -392,87 +373,44 @@ INSERT INTO `inspection_type` (`id`, `inspection_type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lh_type`
---
-
-CREATE TABLE `lh_type` (
-  `id` int(11) NOT NULL,
-  `lh_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `lh_type`
---
-
-INSERT INTO `lh_type` (`id`, `lh_type`) VALUES
-(1, 'PRIMARY'),
-(2, 'SECONDARY');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `lighted_buoy_status`
---
-
-CREATE TABLE `lighted_buoy_status` (
-  `id` int(11) NOT NULL,
-  `lighted_buoy_status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `lighted_buoy_status`
---
-
-INSERT INTO `lighted_buoy_status` (`id`, `lighted_buoy_status`) VALUES
-(1, 'OPERATING'),
-(2, 'NOT OPERATING');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `lighted_buoy__cause_if_not_operating`
---
-
-CREATE TABLE `lighted_buoy__cause_if_not_operating` (
-  `id` int(11) NOT NULL,
-  `lighted_buoy__cause_if_not_operating` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `lighted_buoy__cause_if_not_operating`
---
-
-INSERT INTO `lighted_buoy__cause_if_not_operating` (`id`, `lighted_buoy__cause_if_not_operating`) VALUES
-(1, 'DRIFTED'),
-(2, 'DETACHED SINKER'),
-(3, 'DEFECTIVE 3 AD 1 LANTERN'),
-(4, 'DAMAGE BUOY ASSEMBLY'),
-(5, 'DEFECTIVE BATTERY'),
-(6, 'VANDALIZED'),
-(7, 'STOLEN PARTS');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `lighthouse_cause_if_not_operating`
 --
 
 CREATE TABLE `lighthouse_cause_if_not_operating` (
   `id` int(11) NOT NULL,
-  `cause_if_not_operating` varchar(100) NOT NULL
+  `lighthouse_cause_if_not_operating` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `lighthouse_cause_if_not_operating`
 --
 
-INSERT INTO `lighthouse_cause_if_not_operating` (`id`, `cause_if_not_operating`) VALUES
+INSERT INTO `lighthouse_cause_if_not_operating` (`id`, `lighthouse_cause_if_not_operating`) VALUES
 (1, 'DEFECTIVE LATERN'),
 (2, 'DEFECTIVE BATTERY'),
 (3, 'SOLAR PANEL DAMAGE'),
 (4, 'DEFECTIVE CHARGING CONTROLLER'),
 (5, 'DEFECTIVE LAMP CHANGER'),
 (6, 'VANDALIZED');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lighthouse_inspection_purpose`
+--
+
+CREATE TABLE `lighthouse_inspection_purpose` (
+  `id` int(11) NOT NULL,
+  `lighthouse_inspection_purpose` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `lighthouse_inspection_purpose`
+--
+
+INSERT INTO `lighthouse_inspection_purpose` (`id`, `lighthouse_inspection_purpose`) VALUES
+(1, 'MAINTENANCE'),
+(2, 'REPAIR');
 
 -- --------------------------------------------------------
 
@@ -496,20 +434,83 @@ INSERT INTO `lighthouse_status` (`id`, `lighthouse_status`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `lighthouse_type`
+--
+
+CREATE TABLE `lighthouse_type` (
+  `id` int(11) NOT NULL,
+  `lighthouse_type` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `lighthouse_type`
+--
+
+INSERT INTO `lighthouse_type` (`id`, `lighthouse_type`) VALUES
+(1, 'PRIMARY'),
+(2, 'SECONDARY');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `light_bouy_inspection_purpose`
 --
 
 CREATE TABLE `light_bouy_inspection_purpose` (
   `id` int(11) NOT NULL,
-  `bouy_inspection_purpose` varchar(100) NOT NULL
+  `light_bouy_inspection_purpose` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `light_bouy_inspection_purpose`
 --
 
-INSERT INTO `light_bouy_inspection_purpose` (`id`, `bouy_inspection_purpose`) VALUES
-(1, 'MAINTENANCE');
+INSERT INTO `light_bouy_inspection_purpose` (`id`, `light_bouy_inspection_purpose`) VALUES
+(1, 'MAINTENANCE'),
+(2, 'REPAIR');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `light_buoy_status`
+--
+
+CREATE TABLE `light_buoy_status` (
+  `id` int(11) NOT NULL,
+  `light_buoy_status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `light_buoy_status`
+--
+
+INSERT INTO `light_buoy_status` (`id`, `light_buoy_status`) VALUES
+(1, 'OPERATING'),
+(2, 'NOT OPERATING');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `light_buoy__cause_if_not_operating`
+--
+
+CREATE TABLE `light_buoy__cause_if_not_operating` (
+  `id` int(11) NOT NULL,
+  `light_buoy__cause_if_not_operating` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `light_buoy__cause_if_not_operating`
+--
+
+INSERT INTO `light_buoy__cause_if_not_operating` (`id`, `light_buoy__cause_if_not_operating`) VALUES
+(1, 'DRIFTED'),
+(2, 'DETACHED SINKER'),
+(3, 'DEFECTIVE 3 AD 1 LANTERN'),
+(4, 'DAMAGE BUOY ASSEMBLY'),
+(5, 'DEFECTIVE BATTERY'),
+(6, 'VANDALIZED'),
+(7, 'STOLEN PARTS');
 
 -- --------------------------------------------------------
 
@@ -577,7 +578,8 @@ CREATE TABLE `maritime_incident_severity` (
 
 INSERT INTO `maritime_incident_severity` (`id`, `maritime_incident_severity`) VALUES
 (1, 'VERY SERIOUS MC - INVOLVING TOTAL LOSS OF VESSEL, DEATH OR SEVERE DAMAGE TO THE ENVIRONMENT'),
-(2, 'SERIOUS MC - A) FIRE, EXPLOSION, GROUNDING, CONTACT, HEAVY WEATHER, HULL CRACKING OR SUSPECTED HULL DEFECT. B) STRUCTURAL DAMAGE RENDERING THE VESSEL UNSEAWORTHY, SUCH AS PENETRATION OF THE HULL UNDERWATER, IMMOBILIZATION OF MAIN ENGINES, EXTENSIVE ACCOMMODATION DAMAGE. C) POLLUTION. AND D) BREAKDOWN NECESSITATING TOWAGE OR SHORE ASSISTANCE.');
+(2, 'SERIOUS MC - A) FIRE, EXPLOSION, GROUNDING, CONTACT, HEAVY WEATHER, HULL CRACKING OR SUSPECTED HULL DEFECT. B) STRUCTURAL DAMAGE RENDERING THE VESSEL UNSEAWORTHY, SUCH AS PENETRATION OF THE HULL UNDERWATER, IMMOBILIZATION OF MAIN ENGINES, EXTENSIVE ACCOMMODATION DAMAGE. C) POLLUTION. AND D) BREAKDOWN NECESSITATING TOWAGE OR SHORE ASSISTANCE.'),
+(3, 'MI - EVENTS OTHER THAN MARINE CASUALTY, WHICH HAS OCCURED DIRECTLY IN CONNECTION WITH THE OPERATION OF A SHIP THAT ENDANGERED, OR IF NOT CORRECTED WOULD ENDANGER THE SAFETY OF SHIP, ITS OCCUPANTS OR ANY OTHER PERSON OR ENVIRONMENT');
 
 -- --------------------------------------------------------
 
@@ -607,17 +609,17 @@ INSERT INTO `maritime_related_violation` (`id`, `maritime_related_violation`) VA
 --
 
 CREATE TABLE `marsaf_incident_cause` (
-  `id` int(11) DEFAULT NULL,
-  `marsaf_incident_cause` varchar(100) NOT NULL
+  `id` int(11) NOT NULL,
+  `incident_cause` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `marsaf_incident_cause`
 --
 
-INSERT INTO `marsaf_incident_cause` (`id`, `marsaf_incident_cause`) VALUES
-(NULL, 'HUMAN FACTOR'),
-(NULL, 'OPERATIONAL FACTOR');
+INSERT INTO `marsaf_incident_cause` (`id`, `incident_cause`) VALUES
+(1, 'HUMAN FACTOR'),
+(2, 'OPERATIONAL FACTOR');
 
 -- --------------------------------------------------------
 
@@ -981,7 +983,8 @@ CREATE TABLE `salvage_operation_purpose` (
 INSERT INTO `salvage_operation_purpose` (`id`, `salvage_operation_purpose`) VALUES
 (1, 'HAZARDS TO MARITIME NAVIGATION, ESPECIALY THOSE WHICH OBSTRUCT THE SEALANES'),
 (2, 'HAMPER THE DEVELOPMENT OF PORTS AND HARBOR'),
-(3, 'EMERGENCY CONDITIONS FOR THE SAFETY AND PROPERTY AT SEA');
+(3, 'EMERGENCY CONDITIONS FOR THE SAFETY AND PROPERTY AT SEA'),
+(4, 'FOR THE VALUE OF CARGO');
 
 -- --------------------------------------------------------
 
@@ -1209,7 +1212,8 @@ CREATE TABLE `very_serious_mc_category` (
 
 INSERT INTO `very_serious_mc_category` (`id`, `very_serious_mc_category`) VALUES
 (1, 'CATEGORY 1 - INVOLVING CONVENTIONAL VESSEL OF 300 GT ABOVE WITH MULTIPLE DEATHS'),
-(2, 'CATEGORY 2 - INVOLVING NON-CONVENTIONAL VESSEL OF LESS THAN 300 GT WITH 1 OR MORE DEATHS');
+(2, 'CATEGORY 2 - INVOLVING NON-CONVENTIONAL VESSEL OF LESS THAN 300 GT WITH 1 OR MORE DEATHS'),
+(3, 'CATEGORY 3 - INVOLVING CONVENTIONAL VESSEL OF 300 GT WITH 1 DEATH');
 
 -- --------------------------------------------------------
 
@@ -1391,33 +1395,9 @@ ALTER TABLE `incident_consequences`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `inspection_purpose`
---
-ALTER TABLE `inspection_purpose`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `inspection_type`
 --
 ALTER TABLE `inspection_type`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `lh_type`
---
-ALTER TABLE `lh_type`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `lighted_buoy_status`
---
-ALTER TABLE `lighted_buoy_status`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `lighted_buoy__cause_if_not_operating`
---
-ALTER TABLE `lighted_buoy__cause_if_not_operating`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1427,15 +1407,39 @@ ALTER TABLE `lighthouse_cause_if_not_operating`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `lighthouse_inspection_purpose`
+--
+ALTER TABLE `lighthouse_inspection_purpose`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `lighthouse_status`
 --
 ALTER TABLE `lighthouse_status`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `lighthouse_type`
+--
+ALTER TABLE `lighthouse_type`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `light_bouy_inspection_purpose`
 --
 ALTER TABLE `light_bouy_inspection_purpose`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `light_buoy_status`
+--
+ALTER TABLE `light_buoy_status`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `light_buoy__cause_if_not_operating`
+--
+ALTER TABLE `light_buoy__cause_if_not_operating`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1460,6 +1464,12 @@ ALTER TABLE `maritime_incident_severity`
 -- Indexes for table `maritime_related_violation`
 --
 ALTER TABLE `maritime_related_violation`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `marsaf_incident_cause`
+--
+ALTER TABLE `marsaf_incident_cause`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1719,34 +1729,10 @@ ALTER TABLE `incident_consequences`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `inspection_purpose`
---
-ALTER TABLE `inspection_purpose`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `inspection_type`
 --
 ALTER TABLE `inspection_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `lh_type`
---
-ALTER TABLE `lh_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `lighted_buoy_status`
---
-ALTER TABLE `lighted_buoy_status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `lighted_buoy__cause_if_not_operating`
---
-ALTER TABLE `lighted_buoy__cause_if_not_operating`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `lighthouse_cause_if_not_operating`
@@ -1755,16 +1741,40 @@ ALTER TABLE `lighthouse_cause_if_not_operating`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `lighthouse_inspection_purpose`
+--
+ALTER TABLE `lighthouse_inspection_purpose`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `lighthouse_status`
 --
 ALTER TABLE `lighthouse_status`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `lighthouse_type`
+--
+ALTER TABLE `lighthouse_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `light_bouy_inspection_purpose`
 --
 ALTER TABLE `light_bouy_inspection_purpose`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `light_buoy_status`
+--
+ALTER TABLE `light_buoy_status`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `light_buoy__cause_if_not_operating`
+--
+ALTER TABLE `light_buoy__cause_if_not_operating`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `maritime_acitivity`
@@ -1782,13 +1792,19 @@ ALTER TABLE `maritime_casualty_nature`
 -- AUTO_INCREMENT for table `maritime_incident_severity`
 --
 ALTER TABLE `maritime_incident_severity`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `maritime_related_violation`
 --
 ALTER TABLE `maritime_related_violation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `marsaf_incident_cause`
+--
+ALTER TABLE `marsaf_incident_cause`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `marsaf_inspection_type`
@@ -1878,7 +1894,7 @@ ALTER TABLE `responding_unit`
 -- AUTO_INCREMENT for table `salvage_operation_purpose`
 --
 ALTER TABLE `salvage_operation_purpose`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `spiller`
@@ -1926,7 +1942,7 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `very_serious_mc_category`
 --
 ALTER TABLE `very_serious_mc_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `vessel_type`
