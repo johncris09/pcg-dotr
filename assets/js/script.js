@@ -113,9 +113,10 @@ $('select#report-type').on('change', function(e){
 
 $('select#maritime-incident').on('change', function(e){
     e.preventDefault(); 
-    var report_type = $(this).val(); 
+    var maritime_incident = $(this).val(); 
+    console.info(maritime_incident)
     $('.toggle-show').css({"display": "none" });
-    $('.toggle-show[data-value="'+report_type+'"]').css({"display": "block" }); 
+    $('.toggle-show[data-id="'+maritime_incident+'"]').css({"display": "block" }); 
 
 }) 
 

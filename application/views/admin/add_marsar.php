@@ -7,47 +7,47 @@
 							<h3 class="box-title m-b-0">ENTER DATA FOR MARITIME SAFETY REPORT</h3> 
 							<div class="stepwizard">
 								<div class="stepwizard-row setup-panel">
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
 										<p><small>Step 1</small></p>
 									</div>
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
 										<p><small>Step 2</small></p>
 									</div>  
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
 										<p><small>Step 3</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
 										<p><small>Step 4</small></p>
 									</div>     
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
 										<p><small>Step 5</small></p>
 									</div>     
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
 										<p><small>Step 6</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-7" type="button" class="btn btn-default btn-circle" disabled="disabled">7</a>
 										<p><small>Step 7</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-8" type="button" class="btn btn-default btn-circle" disabled="disabled">8</a>
 										<p><small>Step 8</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-9" type="button" class="btn btn-default btn-circle" disabled="disabled">9</a>
 										<p><small>Step 9</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-10" type="button" class="btn btn-default btn-circle" disabled="disabled">10</a>
 										<p><small>Step 10</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-11" type="button" class="btn btn-default btn-circle" disabled="disabled">11</a>
 										<p><small>Step 11</small></p>
 									</div>
@@ -94,14 +94,13 @@
 													<label>TYPES OF MARITIME INCIDENT <strong class="text-danger">*</strong> </label>
 													<select id="maritime-incident" class="form-control" required>
 														<option value="">Select</option>
-														<option value="AGROUNDING">AGROUNDINGf</option>
-														<option value="ALLISION">ALLISIONf</option>
-														<option value="CAPSIZING">CAPSIZING</option>
-														<option value="COLLISION">COLLISION</option>
-														<option value="ENGINE TROUBLE">ENGINE TROUBLE</option>
-														<option value="FIRE">FIRE</option>
-														<option value="MAN OVERBOARD">MAN OVERBOARD</option>
-														<option value="STEERING CASUALTY">STEERING CASUALTY</option> 
+														<?php 
+															foreach($maritime_incident_type as $row){
+														?>
+															<option value="<?php echo $row->id; ?>"><?php echo $row->maritime_incident_type ?></option>
+														<?php
+															}
+														?> 
 													</select>
 												</div>
 											</div>
@@ -115,189 +114,366 @@
 									<div class="panel-heading">
 										<h3 class="panel-title text-white">Step 2</h3>
 									</div>
-									<div class="panel-body"> 
-										<div  class="toggle-show"  data-value="AGROUNDING" style="display:none">  
-											<div class="row">
-												<div class="col-md-12"> 
-													<p><strong style="font-size: 1.3em;color: #000;">AGROUNDING</strong></p>
-												</div>
-											</div>
-											<div class="row">
-												<div class="form-group"> 
-													<label class="col-sm-12">CAUSE OF INCIDENT</label>
-													<div class="col-sm-12">
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Machinery Failure</label>
+									<div class="panel-body">  
+										<?php 
+											foreach($maritime_incident_type as $row){ 
+												$maritime_incident_type_id = $row->id ;
+										?>
+
+											<div  class="toggle-show"  data-id="<?php echo $maritime_incident_type_id; ?>" style="display:none"> 
+												<?php 
+													if($maritime_incident_type_id == 1){ // AGROUNDING
+												?> 
+
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSE OF INCIDENT</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($incident_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="incident_cause"  id="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->incident_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div>
+															</div>
+														</div>
+												<?php 
+													}else if($maritime_incident_type_id == 2){ // ALLISION
+												?> 	
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSE OF INCIDENT</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($incident_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="incident_cause"  id="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->incident_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div> 
+															</div>
 														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Navigational Equipment failure</label>
+												
+												<?php 
+													}else if($maritime_incident_type_id == 3){ // CAPSIZING
+												?> 		
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSE OF INCIDENT</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($incident_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="incident_cause"  id="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->incident_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div>
+															</div>
 														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Human Error</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Environmental Factor (Geographic Location)</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Weather and Sea Condition</label>
+												
+												<?php 
+													}else if($maritime_incident_type_id == 4){ // COLLISION
+												?> 		
+												
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSE OF INCIDENT</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($incident_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="incident_cause"  id="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->incident_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div> 
+															</div>
 														</div>  
-													</div>
-												</div>
-											</div>
-										</div>
-										<div  class="toggle-show"  data-value="ALLISION" style="display:none">  
-											<div class="row">
-												<div class="col-md-12"> 
-													<p><strong style="font-size: 1.3em;color: #000;">ALLISION</strong></p>
-												</div>
-											</div>
-											<div class="row">
-												<div class="form-group"> 
-													<label class="col-sm-12">CAUSE OF INCIDENT</label>
-													<div class="col-sm-12">
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Machinery Failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Navigational Equipment failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Human Error</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Environmental Factor (Geographic Location)</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Weather and Sea Condition</label>
+												<?php 
+													}else if($maritime_incident_type_id == 5){ // ENGINE TROUBLE
+												?>  		
+
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSE OF INCIDENT</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($incident_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="incident_cause"  id="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->incident_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div>  
+															</div>
 														</div>  
-													</div>
-												</div>
-											</div> 
-										</div>
-										<div  class="toggle-show"  data-value="CAPSIZING" style="display:none">  
-											<div class="row">
-												<div class="col-md-12"> 
-													<p><strong style="font-size: 1.3em;color: #000;">CAPSIZING</strong></p>
-												</div>
+												<?php 
+													}else if($maritime_incident_type_id == 6){ // FIRE
+												?>  		
+ 
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSES OF FIRE</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($fire_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="fire_cause"  id="fire_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="fire_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->fire_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div> 
+															</div>
+														</div>  
+												
+												<?php 
+													}else if($maritime_incident_type_id == 7){ // MAN OVERBOARD
+												?>  		
+ 
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSE OF INCIDENT</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($man_overboard_incident_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="man_overboard_incident_cause"  id="man_overboard_incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="man_overboard_incident_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->man_overboard_incident_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div> 
+															</div>
+														</div>  
+												
+												<?php 
+													}else if($maritime_incident_type_id == 8){ // STEERING CASUALTY
+												?> 
+ 
+														<div class="row">
+															<div class="col-md-12"> 
+																<p><strong style="font-size: 1.3em;color: #000;"><?php echo $row->maritime_incident_type; ?></strong></p>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">CAUSE OF INCIDENT</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($fire_cause as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="fire_cause"  id="fire_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="fire_cause_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->fire_cause ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div>  
+															</div>
+														</div>  
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">TYPES OF VESSEL INVOLVED </label> 
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($vessel_type_involved as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="vessel_type_involved"  id="vessel_type_involved_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="vessel_type_involved_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_type_involved ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>   
+																</div>  
+															</div>
+														</div>  
+														<div class="row">
+															<div class="col-md-12 ">
+																<div class="form-group">
+																	<label>AGE OF VESSEL (1)AGE OF VESSEL (1)</label>
+																	<select id="maritime-incident" class="form-control" required="">
+																		<option value="">Select</option> 
+																		<?php 
+																			foreach($vessel_age as $row){
+																		?>
+																			<option value="<?php echo $row->id; ?>"><?php echo $row->vessel_age ?></option>
+																		<?php
+																			}
+																		?>   
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-12 ">
+																<div class="form-group">
+																	<label>SIZE OF VESSEL (1)</label>
+																	<select id="maritime-incident" class="form-control" required="">
+																		<option value="">Select</option><?php 
+																			foreach($vessel_size as $row){
+																		?>
+																			<option value="<?php echo $row->id; ?>"><?php echo $row->vessel_size ?></option>
+																		<?php
+																			}
+																		?>  
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group">
+																<label class="col-sm-12">PORT OF REGISTRY  (VESSEL 1)</label>
+																<div class="col-sm-12">
+																	<input type="text" class="form-control"  >  
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group">
+																<label class="col-sm-12">PORT OF DEPARTURE </label>
+																<div class="col-sm-12">
+																	<input type="text" class="form-control"  >  
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group">
+																<label class="col-sm-12">NEXT PORT OF CALL</label>
+																<div class="col-sm-12">
+																	<input type="text" class="form-control"  >  
+																</div>
+															</div>
+														</div>
+														
+														<div class="row">
+															<div class="form-group">
+																<label class="col-sm-12">AGE OF VESSEL (2)</label>
+																<div class="col-sm-12"> 
+																	<select id="maritime-incident" class="form-control" required="">
+																		<option value="">Select</option><?php 
+																			foreach($vessel_age as $row){
+																		?>
+																			<option value="<?php echo $row->id; ?>"><?php echo $row->vessel_age ?></option>
+																		<?php
+																			}
+																		?>  
+																	</select> 
+																	<span class="help-block"><small>Maritime Incidents involving two vessels fill out two information of vessels. </small></span> 
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group"> 
+																<label class="col-sm-12">SIZE OF VESSEL (2)</label>
+																<div class="col-sm-12">
+																	<?php 
+																		foreach($vessel_size as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="vessel_size"  id="vessel_size_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="vessel_size_<?php echo $maritime_incident_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_size ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?>    
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-6">
+																<div class="form-group">
+																<label class="col-sm-12">PORT OF REGISTRY (2)</label> 
+																	<input type="text" class="form-control"> 
+																</div> 
+															</div>   
+														</div> 
+														<div class="row">
+															<div class="form-group">
+																<label class="col-sm-12">PORT OF DEPARTURE ( VESSEL 2)</label>
+																<div class="col-sm-12">
+																	<input type="text" class="form-control"  >  
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="form-group">
+																<label class="col-sm-12">NEXT PORT OF CALL ( VESSEL 2)</label>
+																<div class="col-sm-12">
+																	<input type="text" class="form-control"  >  
+																</div>
+															</div>
+														</div> 
+
+												<?php 
+													} 
+												?>
 											</div>
-											<div class="row">
-												<div class="form-group"> 
-													<label class="col-sm-12">CAUSE OF INCIDENT</label>
-													<div class="col-sm-12">
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Machinery Failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Navigational Equipment failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Human Error</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Environmental Factor (Geographic Location)</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Weather and Sea Condition</label>
-														</div>  
-													</div>
-												</div>
-											</div> 
-										</div>
-										<div  class="toggle-show"  data-value="COLLISION" style="display:none">  
-											<div class="row">
-												<div class="col-md-12"> 
-													<p><strong style="font-size: 1.3em;color: #000;">COLLISION</strong></p>
-												</div>
-											</div>
-											<div class="row">
-												<div class="form-group"> 
-													<label class="col-sm-12">CAUSE OF INCIDENT</label>
-													<div class="col-sm-12">
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Machinery Failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Navigational Equipment failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Human Error</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Environmental Factor (Geographic Location)</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Weather and Sea Condition</label>
-														</div>  
-													</div>
-												</div>
-											</div> 
-										</div>
-										<div  class="toggle-show"  data-value="ENGINE TROUBLE" style="display:none">  
-											<div class="row">
-												<div class="col-md-12"> 
-													<p><strong style="font-size: 1.3em;color: #000;">ENGINE TROUBLE</strong></p>
-												</div>
-											</div>
-											<div class="row">
-												<div class="form-group"> 
-													<label class="col-sm-12">CAUSE OF INCIDENT</label>
-													<div class="col-sm-12">
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Machinery Failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Navigational Equipment failure</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Human Error</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Environmental Factor (Geographic Location)</label>
-														</div> 
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Weather and Sea Condition</label>
-														</div>  
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Electrical Failure</label>
-														</div>   
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Failure in Ships Steering System</label>
-														</div>   
-														<div class="checkbox checkbox-custom">
-															<input id="agency1" type="checkbox">
-															<label for="agency1">Broken Propeller and Rudder (Wooden Hulled Vessels)</label>
-														</div>  
-													</div>
-												</div>
-											</div> 
-										</div>
+
+										<?php 
+											}
+										?>
+											 
 										<div  class="toggle-show"  data-value="FIRE" style="display:none">  
 											<div class="row">
 												<div class="col-md-12"> 
