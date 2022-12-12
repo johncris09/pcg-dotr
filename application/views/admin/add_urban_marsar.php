@@ -704,25 +704,25 @@
 									</div>
 									<div class="panel-body">  
 										<div class="row">
-										<p><strong style="font-size: 1.3em;color: #000;">STORM SURGE</strong></p>
-										<p>A coastal flood or tsunami-like phenomenon of rising water commonly associated with low-pressure weather systems, such as cyclones.</p>
+											<p><strong style="font-size: 1.3em;color: #000;">EARTHQUAKE</strong></p>
+											<p>The shaking of the surface of the Earth resulting from a sudden release of energy in the Earth's lithosphere that creates seismic waves.</p>
 										</div>
 										<div class="row">
 											<div class="form-group">
-												<label class="">NAME OF VICTIM/s (If Identified)</label> 
+												<label class="">NAME OF BARANGAY</label> 
 												<input type="text" name="" id="" class="form-control"> 
 											</div>
 										</div>  
 										<div class="row">
 											<div class="form-group"> 
-												<label class="">WEATHER FORECAST</label> 
+												<label class="">LOCATION</label> 
 												<div class="radio-list"> 
 													<?php  
-														foreach($weather_forecast  as $row){
+														foreach($earthquake_location  as $row){
 													?>
 															<div class="radio radio-info">
-																<input type="radio" name="weather_forecast" id="weather_forecast_<?php echo $row->weather_forecast; ?>" value=""  >
-																<label for="weather_forecast_<?php echo $row->id; ?>"><?php echo $row->weather_forecast; ?></label>
+																<input type="radio" name="earthquake_location" id="earthquake_location_<?php echo $row->earthquake_location; ?>" value=""  >
+																<label for="earthquake_location_<?php echo $row->id; ?>"><?php echo $row->earthquake_location; ?></label>
 															</div> 
 													<?php 
 														}
@@ -732,25 +732,59 @@
 										</div>
 										<div class="row">
 											<div class="form-group"> 
-												<label class="">NUMBER OF INJURED PERSONS </label> 
-												<?php 
-													$arr = [ '1', '2', '3', '4', 'MORE THAN 5', 'Other', ];
-													foreach($arr  as $row){
-												?>
-														<div class="radio radio-info">
-															<input type="radio" name="injured_person_number" id="injured_person_number_<?php echo $row; ?>" value=""  >
-															<label for="injured_person_number_<?php echo $row; ?>"><?php echo $row; ?></label>
-														</div> 
-												<?php 
-													}
-												?> 
+												<label class="">CAUSE OF EARTHQUAKES</label> 
+												<div class="radio-list"> 
+												<select  class="form-control" required="">
+													<option value="">Select</option>
+													<?php 
+														foreach($earthquake_cause as $row){
+													?>
+														<option value="<?php echo $row->id ?>"><?php echo $row->earthquake_cause ?></option>
+													<?php
+														}
+													?>
+												</select>
+												</div>  
 											</div>
-										</div>   
+										</div>
 										<div class="row">
 											<div class="form-group"> 
-												<label class="">NUMBER OF CASUALTIES </label> 
+												<label class="">EARTHQUAKE MAGNITUDE LEVEL</label> 
 												<?php 
-													$arr = [ '1', '2', '3', '4', 'MORE THAN 5', 'Other', ];
+													foreach($earthquake_magnitude_level as $row){
+												?>  
+													<div class="checkbox checkbox-custom">
+														<input  type="checkbox" name="earthquake_magnitude_level"  id="earthquake_magnitude_level_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+														<label for="earthquake_magnitude_level_<?php echo $row->id  ?>"><?php echo $row->earthquake_magnitude_level ?></label>
+													</div> 
+												<?php
+													}
+												?>   
+											</div>
+										</div>  
+										<div class="row">
+											<div class="form-group">
+												<label class="">ACTION TAKEN</label> 
+												<input type="text" name="" class="form-control" id=""> 
+											</div>
+										</div>    
+										<button class="btn btn-primary nextBtn pull-right" type="button">Next</button> 
+									</div> 
+								</div> 
+								<div class="panel panel-primary setup-content" id="step-11">
+									<div class="panel-heading">
+										<h3 class="panel-title text-white">Step 11</h3>
+									</div>
+									<div class="panel-body">  
+										<div class="row">
+											<p><strong style="font-size: 1.3em;color: #000;">LANDSLIDE</strong></p>
+											<p>Are several forms of mass wasting that may include a wide range of ground movements, such as rockfalls, deep-seated slope failures, mudflows, and debris flows.</p>
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<label class="">NUMBER OF CASUALTIES</label> 
+												<?php 
+													$arr = [ '1-10', '10-20',  'MORE THAN 20', 'Other', ];
 													foreach($arr  as $row){
 												?>
 														<div class="radio radio-info">
@@ -763,29 +797,252 @@
 											</div>
 										</div>  
 										<div class="row">
-											<div class="form-group"> 
-												<label class="">NUMBER OF RESCUED</label> 
+											<div class="form-group">
+												<label class="">AFFECTED AREAS</label> 
+												<input type="text" name="" id="" class="form-control"> 
+											</div>
+										</div> 
+										<div class="row">
+											<div class="form-group">
+												<label class="">NUMBER OF RESCUED ADULT MALES</label> 
 												<?php 
-													$arr = [ '1', '2', '3', '4', 'MORE THAN 5', 'Other', ];
+													$arr = [ '1-10', '10-20',  'MORE THAN 20', 'Other', ];
 													foreach($arr  as $row){
 												?>
 														<div class="radio radio-info">
-															<input type="radio" name="rescue_number" id="rescue_number_<?php echo $row; ?>" value=""  >
-															<label for="rescue_number_<?php echo $row; ?>"><?php echo $row; ?></label>
+															<input type="radio" name="rescued_adult_male_number " id="rescued_adult_male_number _<?php echo $row; ?>" value=""  >
+															<label for="rescued_adult_male_number _<?php echo $row; ?>"><?php echo $row; ?></label>
+														</div> 
+												<?php 
+													}
+												?> 
+											</div>
+										</div>   
+										<div class="row">
+											<div class="form-group">
+												<label class="">NUMBER OF RESCUED CHILDREN</label> 
+												<?php 
+													$arr = [ '1-10', '10-20',  'MORE THAN 20', 'Other', ];
+													foreach($arr  as $row){
+												?>
+														<div class="radio radio-info">
+															<input type="radio" name="rescued_children_number " id="rescued_children_number _<?php echo $row; ?>" value=""  >
+															<label for="rescued_children_number _<?php echo $row; ?>"><?php echo $row; ?></label>
 														</div> 
 												<?php 
 													}
 												?> 
 											</div>
 										</div>  
-										
+										<div class="row">
+											<div class="form-group">
+												<label class="">NUMBER OF RESCUED FEMALE (ADULT)</label> 
+												<?php 
+													$arr = [ '1-10', '10-20',  'MORE THAN 20', 'Other', ];
+													foreach($arr  as $row){
+												?>
+														<div class="radio radio-info">
+															<input type="radio" name="rescued_adult_female_number " id="rescued_adult_female_number _<?php echo $row; ?>" value=""  >
+															<label for="rescued_adult_female_number _<?php echo $row; ?>"><?php echo $row; ?></label>
+														</div> 
+												<?php 
+													}
+												?> 
+											</div>
+										</div> 
+										<div class="row">
+											<div class="form-group">
+												<label class="">NUMBER OF RESCUED FEMALES (CHILDREN 0 - 18 YO)</label> 
+												<?php 
+													$arr = [ '1-10', '10-20',  'MORE THAN 20', 'Other', ];
+													foreach($arr  as $row){
+												?>
+														<div class="radio radio-info">
+															<input type="radio" name="rescued_18y_below_female_number " id="rescued_18y_below_female_number _<?php echo $row; ?>" value=""  >
+															<label for="rescued_18y_below_female_number _<?php echo $row; ?>"><?php echo $row; ?></label>
+														</div> 
+												<?php 
+													}
+												?> 
+											</div>
+										</div>  
+										<div class="row">
+											<div class="form-group">
+												<label class="">LOCATION</label> 
+												<input type="text" name="" class="form-control" id=""> 
+											</div>
+										</div>    
+										<button class="btn btn-primary nextBtn pull-right" type="button">Next</button> 
+									</div> 
+								</div> 
+								<div class="panel panel-primary setup-content" id="step-12">
+									<div class="panel-heading">
+										<h3 class="panel-title text-white">Step 12</h3>
+									</div>
+									<div class="panel-body">  
+										<div class="row">
+											<p><strong style="font-size: 1.3em;color: #000;">FIRE INCIDENT</strong></p>
+										</div> 
+										<div class="row">
+											<div class="form-group">
+												<label class="">LOCATION OF INCIDENT (BARANGAY)</label> 
+												<input type="text" name="" class="form-control" id=""> 
+											</div>
+										</div> 
+										<div class="row">
+											<div class="form-group"> 
+												<label class="col-sm-12">LOCATION OF BARANGAY</label>
+												<div class="col-sm-12">
+												<?php 
+													foreach($fire_incident_location as $row){
+												?>  
+													<div class="checkbox checkbox-custom">
+														<input  type="checkbox" name="fire_incident_location"  id="fire_incident_location_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+														<label for="fire_incident_location_<?php echo $row->id  ?>"><?php echo $row->fire_incident_location ?></label>
+													</div> 
+												<?php
+													}
+												?> 
+												</div> 
+											</div>
+										</div>  
+										<div class="row">
+											<div class="form-group">
+												<label class="">POSSIBLE CAUSE</label> 
+												<input type="text" name="" class="form-control" id=""> 
+											</div>
+										</div> 
+										<div class="row">
+											<div class="form-group">
+												<label class=""> ESTIMATED COST OF DAMAGE</label> 
+												<?php 
+													$arr = [ '1-10', '10-20',  'MORE THAN 20', 'Other', ];
+													foreach($damage_estimated_cost  as $row){
+												?>
+														<div class="radio radio-info">
+															<input type="radio" name="casualty_number" id="casualty_number_<?php echo $row->id; ?>" value=""  >
+															<label for="casualty_number_<?php echo $row->id; ?>"><?php echo $row->damage_estimated_cost; ?></label>
+														</div> 
+												<?php 
+													}
+												?> 
+											</div>
+										</div>  
 										<div class="row">
 											<div class="form-group">
 												<label class="">ACTION TAKEN</label> 
+												<input type="text" name="" id="" class="form-control"> 
+											</div>
+										</div>     
+										<button class="btn btn-primary nextBtn pull-right" type="button">Next</button> 
+									</div> 
+								</div> 
+								<div class="panel panel-primary setup-content" id="step-13">
+									<div class="panel-heading">
+										<h3 class="panel-title text-white">Step 13</h3>
+									</div>
+									<div class="panel-body">  
+										<div class="row">
+											<p><strong style="font-size: 1.3em;color: #000;">PRE-EMPTIVE EVACUATION</strong></p>
+										</div> 
+										<div class="row">
+											<div class="form-group"> 
+												<label class=" ">PRE-EMPTIVE EVACUATION ACTIVITY</label> 
+												<?php 
+													foreach($pre_emptive_evacuation_activity as $row){
+												?>  
+													<div class="checkbox checkbox-custom">
+														<input  type="checkbox" name="pre_emptive_evacuation_activity"  id="pre_emptive_evacuation_activity_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+														<label for="pre_emptive_evacuation_activity_<?php echo $row->id  ?>"><?php echo $row->pre_emptive_evacuation_activity ?></label>
+													</div> 
+												<?php
+													}
+												?>  
+											</div>
+										</div> 
+										<div class="row">
+											<div class="form-group">
+												<label class="">DATE OF PRE-EMPTIVE EVACUATION</label> 
+												<input type="date" name="" class="form-control" id=""> 
+											</div>
+										</div> 
+										<div class="row"  > 
+											<div class="form-group ">
+												<label class="control-label">TIME OF PRE-EMPTIVE EVACUATION</label> 
+												<div class="col-md-4"> 
+													<select name="" id="" class="form-control" >
+														<option value=""> </option>
+														<?php 
+															foreach(range(intval('00:00:00'),intval('23:00:00')) as $time) {
+														?>
+																<option value="<?php echo date("H", mktime($time)) ?>"><?php echo date("H", mktime($time)) ?></option>
+														<?php  
+															}
+														?>
+													</select>
+												</div>
+												<div class="col-md-4">
+													<select name="" id="" class="form-control " style="float:left !important"  >
+														<option value=""> </option>
+														<?php 
+															foreach(range(intval('00'),intval('59')) as $minute) { 
+																$minute = ($minute < 10)?  "0" .$minute :  $minute  ; 
+														?>
+																<option value="<?php echo $minute ?>"><?php echo $minute ?></option>
+														<?php  
+															}
+														?>
+													</select>
+												</div>
+												
+											</div> 
+										</div>
+										<div class="row">
+											<div class="form-group">
+												<label class="">LOCATION OF EVACUATION CENTER</label> 
 												<input type="text" name="" class="form-control" id=""> 
 											</div>
-										</div>   
+										</div> 
+										<div class="row">
+											<div class="form-group"> 
+												<label class=" ">COORDINATION WITH</label> 
+												<?php 
+													foreach($pre_emptive_evacuation_coordination_with as $row){
+												?>  
+													<div class="checkbox checkbox-custom">
+														<input  type="checkbox" name="pre_emptive_evacuation_coordination_with"  id="pre_emptive_evacuation_coordination_with_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+														<label for="pre_emptive_evacuation_coordination_with_<?php echo $row->id  ?>"><?php echo $row->pre_emptive_evacuation_coordination_with ?></label>
+													</div> 
+												<?php
+													}
+												?>  
+											</div>
+										</div> 
 										<button class="btn btn-primary nextBtn pull-right" type="button">Next</button> 
+									</div> 
+								</div> 
+								<div class="panel panel-primary setup-content" id="step-14">
+									<div class="panel-heading">
+										<h3 class="panel-title text-white">Step 14</h3>
+									</div>
+									<div class="panel-body">  
+										<div class="row">
+											<p><strong style="font-size: 1.3em;color: #000;">FORMAL PCG REPORT</strong></p>
+											<p>Attached PCG Spot Report in this Section</p>
+										</div>  
+										<div class="row">
+											<div class="form-group">
+												<label class="">RADIO MESSAGE SPOT REPORT</label> 
+												<input type="file" name="" class="form-control" id=""> 
+											</div>
+										</div> 
+										<div class="row">
+											<div class="form-group">
+												<label class="">PHOTOGRAPHS </label> 
+												<input type="file" name="" class="form-control" id=""> 
+											</div>
+										</div>  
+										<button class="btn btn-danger pull-right" type="button">Finish!</button>
 									</div> 
 								</div> 
 							</form>

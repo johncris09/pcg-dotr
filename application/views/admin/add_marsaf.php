@@ -173,16 +173,16 @@
 																<div class="form-group"> 
 																	<label class="col-sm-12">TYPE OF VESSEL</label>
 																	<div class="col-sm-12">
-																		<?php 
-																			foreach($vessel_type as $row){
-																		?>  
-																			<div class="checkbox checkbox-custom">
-																				<input  type="checkbox" name="vessel_type"  id="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
-																				<label for="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
-																			</div> 
-																		<?php
-																			}
-																		?> 
+																	<?php 
+																		foreach($vessel_type as $row){
+																	?>  
+																		<div class="checkbox checkbox-custom">
+																			<input  type="checkbox" name="vessel_type"  id="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"  value="<?php echo $row->id  ?>" >
+																			<label for="vessel_type_<?php echo $report_type_id . "_" . $row->id  ?>"><?php echo $row->vessel_type ?></label>
+																		</div> 
+																	<?php
+																		}
+																	?> 
 																	</div> 
 																</div>
 															</div>  

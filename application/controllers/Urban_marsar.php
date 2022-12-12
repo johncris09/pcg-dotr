@@ -35,13 +35,14 @@ class Urban_marsar extends CI_Controller {
         $data['cadaver_location'] = $this->cadaver_location_model->get_all();  
         $data['victim_number'] = $this->victim_number_model->get_all(); 
         $data['weather_forecast'] = $this->weather_forecast_model->get_all(); 
-        $data['earthquake_location'] = $this->victim_number_model->get_all(); 
-        $data['earthquake_cause'] = $this->victim_number_model->get_all(); 
-        $data['earthquake_magnitude_level'] = $this->victim_number_model->get_all(); 
-        $data['fire_incident_location'] = $this->victim_number_model->get_all(); 
+        $data['earthquake_location'] = $this->earthquake_location_model->get_all(); 
+        $data['earthquake_cause'] = $this->earthquake_cause_model->get_all(); 
+        $data['earthquake_magnitude_level'] = $this->earthquake_magnitude_level_model->get_all(); 
+        $data['fire_incident_location'] = $this->fire_incident_location_model->get_all(); 
         $data['damage_estimated_cost'] = $this->damage_estimated_cost_model->get_all();   
-        $data['information_acquired_thru'] = $this->information_acquired_thru_model->get_all();   
-        
+        $data['information_acquired_thru'] = $this->information_acquired_thru_model->get_all();  
+        $data['pre_emptive_evacuation_coordination_with'] = $this->pre_emptive_evacuation_coordination_with_model->get_all();    
+        $data['pre_emptive_evacuation_activity'] = $this->pre_emptive_evacuation_activity_model->get_all();   
         $this->base->load('admin', 'add_urban_marsar', $data); 
  
 	} 

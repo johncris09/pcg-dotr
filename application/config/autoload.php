@@ -86,8 +86,7 @@ $autoload['model']     	= array(
     'seaborne_patrol_activity_conduct_model', 
     'panelling_conducted_facilities_model', 
     'k9_deployed_type_model',
-    'eod_deployment_model', 
-
+    'eod_deployment_model',  
     'urban_rescue_type_model',
     'time_assets_deployment_model', 
     'asset_mobility_deployed_type_model', 
@@ -104,6 +103,8 @@ $autoload['model']     	= array(
     'earthquake_magnitude_level_model',
     'fire_incident_location_model',
     'damage_estimated_cost_model', 
+    'pre_emptive_evacuation_coordination_with_model',
+    'pre_emptive_evacuation_activity_model'
     
 
     

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2022 at 07:20 AM
+-- Generation Time: Dec 12, 2022 at 07:52 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -476,7 +476,7 @@ INSERT INTO `earthquake_location` (`id`, `earthquake_location`) VALUES
 --
 
 CREATE TABLE `earthquake_magnitude_level` (
-  `aid` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `earthquake_magnitude_level` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -484,7 +484,7 @@ CREATE TABLE `earthquake_magnitude_level` (
 -- Dumping data for table `earthquake_magnitude_level`
 --
 
-INSERT INTO `earthquake_magnitude_level` (`aid`, `earthquake_magnitude_level`) VALUES
+INSERT INTO `earthquake_magnitude_level` (`id`, `earthquake_magnitude_level`) VALUES
 (1, '0 - 1.9 (MICRO)'),
 (2, '2.0 - 2.9 (MINOR)'),
 (3, '3.0 - 3.9 (MINOR)'),
@@ -1321,6 +1321,26 @@ INSERT INTO `pre_emptive_evacuation_activity` (`id`, `pre_emptive_evacuation_act
 (2, 'CONDUCT SEABORN PATROL'),
 (3, 'CONDUCT COASTAL PATROL'),
 (4, 'WEATHER MONITORING');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pre_emptive_evacuation_coordination_with`
+--
+
+CREATE TABLE `pre_emptive_evacuation_coordination_with` (
+  `id` int(11) NOT NULL,
+  `pre_emptive_evacuation_coordination_with` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pre_emptive_evacuation_coordination_with`
+--
+
+INSERT INTO `pre_emptive_evacuation_coordination_with` (`id`, `pre_emptive_evacuation_coordination_with`) VALUES
+(1, 'LGU'),
+(2, 'DSWD'),
+(3, 'DRRMC');
 
 -- --------------------------------------------------------
 
@@ -2433,7 +2453,7 @@ ALTER TABLE `earthquake_location`
 -- Indexes for table `earthquake_magnitude_level`
 --
 ALTER TABLE `earthquake_magnitude_level`
-  ADD PRIMARY KEY (`aid`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `eod_deployment`
@@ -2661,6 +2681,12 @@ ALTER TABLE `pd_no_705`
 -- Indexes for table `pre_emptive_evacuation_activity`
 --
 ALTER TABLE `pre_emptive_evacuation_activity`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pre_emptive_evacuation_coordination_with`
+--
+ALTER TABLE `pre_emptive_evacuation_coordination_with`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3025,7 +3051,7 @@ ALTER TABLE `earthquake_location`
 -- AUTO_INCREMENT for table `earthquake_magnitude_level`
 --
 ALTER TABLE `earthquake_magnitude_level`
-  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `eod_deployment`
@@ -3254,6 +3280,12 @@ ALTER TABLE `pd_no_705`
 --
 ALTER TABLE `pre_emptive_evacuation_activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `pre_emptive_evacuation_coordination_with`
+--
+ALTER TABLE `pre_emptive_evacuation_coordination_with`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `psc_action_code`
