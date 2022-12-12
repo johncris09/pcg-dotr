@@ -7,35 +7,35 @@
 							<h3 class="box-title m-b-0">ENTER DATA FOR MARINE ENVIRONMENTAL PROTECTION REPORT</h3> 
 							<div class="stepwizard">
 								<div class="stepwizard-row setup-panel">
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
 										<p><small>Step 1</small></p>
 									</div>
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
 										<p><small>Step 2</small></p>
 									</div>  
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
 										<p><small>Step 3</small></p>
 									</div>  
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
 										<p><small>Step 4</small></p>
 									</div>  
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
 										<p><small>Step 5</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
 										<p><small>Step 6</small></p>
 									</div>    
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-7" type="button" class="btn btn-default btn-circle" disabled="disabled">7</a>
 										<p><small>Step 7</small></p>
 									</div>      
-									<div class="stepwizard-step col-xs-3"> 
+									<div class="stepwizard-step col-xs-1"> 
 										<a href="#step-8" type="button" class="btn btn-default btn-circle" disabled="disabled">8</a>
 										<p><small>Step 8</small></p>
 									</div>  
@@ -96,179 +96,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 10654 (FISHERY CODE OF THE PHILIPPINES)</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 86. UNAUTHORIZED FISHING</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 87. ENGAGING IN UNAUTHORIZED FISHERIES ACTIVITIES</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 88. FAILURE TO SECURE FISHING PERMIT PRIOR TO ENGAGING IN DISTANT WATER FISHING</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 89. UNREPORTED FISHING</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 90. UNREGULATED FISHING</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 91. POACHING IN PHILIPPINE WATERS</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 92. FISHING THROUGH EXPLOSIVES, NOXIOUS OR POISONOUS SUBSTANCE, OR ELECTRICITY</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 93. USE OF FINE MESH NET</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 94. FISHING IN OVEREXPLOITED FISHERY MANAGEMENT AREAS</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 95. USE OF ACTIVE GEAR IN MUNICIPAL WATERS, BAYS AND OTHER FISHERY MANAGEMENT AREAS</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 96. BAN ON CORAL EXPLOITATION AND EXPORTATION</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 97. BAN ON MURO-AMI, OTHER METHODS AND GEAR DESTRUCTIVE TO CORAL REEFS AND OTHER MARINE HABITAT</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 98. ILLEGAL USE OF SUPERLIGHTS OR FISHING LIGHT ATTRACTOR</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 99. CONVERSION OF MANGROVES</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 100. FISHING DURING CLOSED SEASON</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 101. FISHING IN MARINE PROTECTED AREAS, FISHERY RESERVES, REFUGE AND SANCTUARIES</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">Section 102. Fishing or Taking of Rare, Threatened or Endangered Species</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">Section 103. Capture of Sabalo and Other Breeders/</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 104. EXPORTATION OF BREEDERS, SPAWNERS, EGGS OR FRY</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 105. IMPORTATION OR EXPORTATION OF FISH OR FISHERY SPECIES</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 106. VIOLATION OF HARVEST CONTROL RULES</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 107. AQUATIC POLLUTION</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 108. FAILURE TO COMPLY WITH MINIMUM SAFETY STANDARDS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 109. FAILURE TO SUBMIT A YEARLY REPORT ON ALL FISHPONDS, FISH PENS AND FISH CAGES</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 110. GATHERING AND MARKETING OF SHELL FISHES OR OTHER AQUATIC SPECIES</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 111. OBSTRUCTION TO NAVIGATION OR FLOW OR EBB OF TIDE IN ANY STREAM, RIVER, LAKE OR BAY</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 112. NONCOMPLIANCE WITH GOOD AQUACULTURE PRACTICES</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 113. COMMERCIAL FISHING VESSEL OPERATORS EMPLOYING UNLICENSED FISHERFOLK, FISHWORKER OR CREW</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 114. OBSTRUCTION OF DEFINED MIGRATION PATHS</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 115. OBSTRUCTION TO FISHERY LAW ENFORCEMENT OFFICER</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 116. NONCOMPLIANCE WITH FISHERIES OBSERVER COVERAGE</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 117. NONCOMPLIANCE WITH PORT STATE MEASURES</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 118. FAILURE TO COMPLY WITH RULES AND REGULATIONS ON CONSERVATION AND MANAGEMENT MEASURES</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 119. NONCOMPLIANCE WITH VESSEL MONITORING MEASURES.</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 120. CONSTRUCTING, IMPORTING OR CONVERTING FISHING VESSELS OR GEARS WITHOUT PERMIT FROM THE DEPARTMENT</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 121. USE OF UNLICENSED GEAR</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 122. FALSIFYING, CONCEALING OR TAMPERING WITH VESSEL MARKINGS, IDENTITY OR REGISTRATION</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 123. CONCEALING, TAMPERING OR DISPOSING OF EVIDENCE RELATING TO AN INVESTIGATION OF A VIOLATION</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 124. NONCOMPLIANCE WITH THE REQUIREMENTS FOR THE INTRODUCTION OF FOREIGN OR EXOTIC AQUATIC SPECIES</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 125. FAILURE TO COMPLY WITH STANDARDS AND TRADE-RELATED MEASURES</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 126. POSSESSING, DEALING IN OR DISPOSING ILLEGALLY CAUGHT OR TAKEN FISH.</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 127. UNAUTHORIZED DISCLOSURE OF SENSITIVE TECHNICAL INFORMATION.</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 128. OTHER VIOLATIONS</label>
-														<input type="text">
-													</div>     
+													<?php 
+														foreach($ra_10654 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_10654"  id="ra_10654_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_10654_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
 												</div>
 											</div>
 										</div> 
@@ -276,106 +113,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 9165 (COMPREHENSIVE DANGEROUS DRUGS ACT OF 2022) </label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 4. IMPORTATION OF DANGEROUS DRUGS AND/OR CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS</label>
-													</div>     
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 5. SALE, TRADING, ADMINISTRATION, DISPENSATION, DELIVERY, DISTRIBUTION AND TRANSPORTATION OF DANGEROUS DRUGS AND/OR CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 6. MAINTENANCE OF A DEN, DIVE OR RESORT</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 7. EMPLOYEES AND VISITORS OF A DEN, DIVE OR RESORT</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 8. MANUFACTURE OF DANGEROUS DRUGS AND/OR CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 9. ILLEGAL CHEMICAL DIVERSION OF CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 10. MANUFACTURE OR DELIVERY OF EQUIPMENT, INSTRUMENT, APPARATUS, AND OTHER PARAPHERNALIA FOR DANGEROUS DRUGS AND/OR CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 11. POSSESSION OF DANGEROUS DRUGS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 12. POSSESSION OF EQUIPMENT, INSTRUMENT, APPARATUS AND OTHER PARAPHERNALIA FOR DANGEROUS DRUGS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 13. POSSESSION OF DANGEROUS DRUGS DURING PARTIES, SOCIAL GATHERINGS OR MEETINGS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 14. POSSESSION OF EQUIPMENT, INSTRUMENT, APPARATUS AND OTHER PARAPHERNALIA FOR DANGEROUS DRUGS DURING PARTIES, SOCIAL GATHERINGS OR MEETINGS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 15. USE OF DANGEROUS DRUGS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 16. CULTIVATION OR CULTURE OF PLANTS CLASSIFIED AS DANGEROUS DRUGS OR ARE SOURCES THEREOF</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 17. MAINTENANCE AND KEEPING OF ORIGINAL RECORDS OF TRANSACTIONS ON DANGEROUS DRUGS AND/OR CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 18. UNNECESSARY PRESCRIPTION OF DANGEROUS DRUGS.</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 19. UNLAWFUL PRESCRIPTION OF DANGEROUS DRUGS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 20. CONFISCATION AND FORFEITURE OF THE PROCEEDS OR INSTRUMENTS OF THE UNLAWFUL ACT, INCLUDING THE PROPERTIES OR PROCEEDS DERIVED FROM THE ILLEGAL TRAFFICKING OF DANGEROUS DRUGS AND/OR PRECURSORS AND ESSENTIAL CHEMICALS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 21. CUSTODY AND DISPOSITION OF CONFISCATED, SEIZED, AND/OR SURRENDERED DANGEROUS DRUGS, PLANT SOURCES OF DANGEROUS DRUGS, CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS, INSTRUMENTS/PARAPHERNALIA AND/OR LABORATORY EQUIPMENT.</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 22. GRANT OF COMPENSATION, REWARD AND AWARD</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 23. PLEA-BARGAINING PROVISION</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 24. NON-APPLICABILITY OF THE PROBATION LAW FOR DRUG TRAFFICKERS AND PUSHERS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 25. QUALIFYING AGGRAVATING CIRCUMSTANCES IN THE COMMISSION OF A CRIME BY AN OFFENDER UNDER THE INFLUENCE OF DANGEROUS DRUGS</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 26. ATTEMPT OR CONSPIRACY</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. CRIMINAL LIABILITY OF A PUBLIC OFFICER OR EMPLOYEE FOR MISAPPROPRIATION, MISAPPLICATION OR FAILURE TO ACCOUNT FOR THE CONFISCATED, SEIZED AND/OR SURRENDERED DANGEROUS DRUGS, PLANT SOURCES OF DANGEROUS DRUGS, CONTROLLED PRECURSORS AND ESSENTIAL CHEMICALS, INSTRUMENTS/PARAPHERNALIA AND/OR LABORATORY EQUIPMENT INCLUDING THE PROCEEDS OR PROPERTIES OBTAINED FROM THE UNLAWFUL ACT COMMITTED</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 28. CRIMINAL LIABILITY OF GOVERNMENT OFFICIALS AND EMPLOYEES</label>
-													</div>     
+													<?php 
+														foreach($ra_9165 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_9165"  id="ra_9165_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_9165_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
 												</div>
 											</div>
 										</div> 
@@ -383,46 +130,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 10591 (COMPREHENSIVE LAW ON FIREARMS AND AMMUNITION REGULATION ACT</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 38. LIABILITY FOR PLANTING EVIDENCE</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 29. USE OF LOOSE FIREARM IN THE COMMISSION OF A CRIME</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 30. LIABILITY OF JURIDICAL PERSON</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 31. ABSENCE OF PERMIT TO CARRY OUTSIDE OF RESIDENCE</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 32. UNLAWFUL MANUFACTURE, IMPORTATION, SALE OR DISPOSITION OF FIREARMS OR AMMUNITION OR PARTS THEREOF, MACHINERY, TOOL OR INSTRUMENT USED OR INTENDED TO BE USED IN THE MANUFACTURE OF FIREARMS, AMMUNITION OR PARTS THEREOF</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 33. ARMS SMUGGLING</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 34. TAMPERING, OBLITERATION OR ALTERATION OF FIREARMS IDENTIFICATION</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 35. USE OF AN IMITATION FIREARM</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 40. FAILURE TO NOTIFY LOST OR STOLEN FIREARM OR LIGHT WEAPON</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 41. ILLEGAL TRANSFER/REGISTRATION OF FIREARMS</label>
-													</div>       
+													<?php 
+														foreach($ra_10591 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_10591"  id="ra_10591_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_10591_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
 												</div>
 											</div>
 										</div>
@@ -430,65 +147,50 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 9208 (ANTI TRAFFICKING IN PERSON ACT OF 2003)</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 4. ACTS OF TRAFFICKING IN PERSONS</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 5. ACTS THAT PROMOTE TRAFFICKING IN PERSONS</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 6. QUALIFIED TRAFFICKING IN PERSONS</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 11. USE OF TRAFFICKED PERSONS</label>
-													</div>        
-												</div>
+													<?php 
+														foreach($ra_9208 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_9208"  id="ra_9208_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_9208_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
+												</div>  
 											</div>
 										</div>
 										<div class="row">
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 9147 (WILDLIFE RESOURCES CONSERVATION AND PROTECTION ACT)</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH A) KILLING AND DESTROYING WILDLIFE SPECIES</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH B) INFLICTING INJURY WHICH CRIPPLES AND/OR IMPAIRS THE REPRODUCTIVE SYSTEM OF WILDLIFE SPECIES</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH C) EFFECTING ANY OF THE FOLLOWING ACTS IN CRITICAL HABITAT(S)</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH D) INTRODUCTION, REINTRODUCTION OR RESTOCKING OF WILDLIFE RESOURCES</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH E) TRADING OF WILDLIFE</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH F) COLLECTING, HUNTING OR POSSESSING WILDLIFE, THEIR BY-PRODUCTS AND DERIVATIVES</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH  G) GATHERING OR DESTROYING OF ACTIVE NESTS, NEST TREES, HOST PLANTS AND THE LIKE</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH H) MALTREATING AND/OR INFLICTING OTHER INJURIES NOT COVERED BY THE PRECEDING PARAGRAPH; AND</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 27. (PARAGRAPH I) TRANSPORTING OF WILDLIFE.</label>
-													</div>         
+													<?php 
+														foreach($ra_9147 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_9147"  id="ra_9147_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_9147_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group"> 
+												<label class="col-sm-12">PD NO. 705 (REVISED FORESTRY CODE OF THE PHILIPPINES)</label>
+												<div class="col-sm-12">
+													<?php 
+														foreach($pd_no_705 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="pd_no_705"  id="pd_no_705_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="pd_no_705_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
 												</div>
 											</div>
 										</div>
@@ -496,46 +198,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 1937 (TARIFF AND CUSTOMS CODE ON ILLEGAL ACTS)</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3601. UNLAWFUL IMPORTATION</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3602. VARIOUS FRAUDULENT PRACTICES AGAINST CUSTOMS REVENUE</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3603. FAILURE TO REPORT FRAUD</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3604. STATUTORY OFFENSE OF OFFICIALS AND EMPLOYEES</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3605. CONCEALMENT OF DESTRUCTION OF EVIDENCE OF FRAUD</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3606. BREAKING OF SEAL ON CAR OR CONVEYANCE BY LAND, SEA OR AIR</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3607. ALTERATION OF MARKS ON ANY PACKAGE OF WAREHOUSED ARTICLES</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3608. FRAUDULENT OPENING OR ENTERING OF WAREHOUSE</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3609. FRAUDULENT REMOVAL OF CONCEALMENT OF WAREHOUSED ARTICLES</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3610. VIOLATION OF TARIFF AND CUSTOMS LAWS AND REGULATIONS IN GENERAL</label>
-													</div>         
+													<?php 
+														foreach($ra_1937 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_1937"  id="ra_1937_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_1937_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
 												</div>
 											</div>
 										</div>
@@ -543,18 +215,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">PD  No. 532 (ANTI-PIRACY AND ANTI-HIGHWAY ROBBERY LAW OF 1974)</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3 (PARAGRAPH A) PIRACY</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3 (PARAGRAPH B) HIGHWAY ROBBERY/BRIGANDAGE</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 4. AIDING PIRATES OR HIGHWAY ROBBERS/BRIGANDS OR ABETTING PIRACY OR HIGHWAY ROBBERY/BRIGANDAGE</label>
-													</div>        
+													<?php 
+														foreach($pd_no_532 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="pd_no_532"  id="pd_no_532_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="pd_no_532_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>     
 												</div>
 											</div>
 										</div>
@@ -562,112 +232,68 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 10066 (NATIONAL HERITAGE AT OF 2009)</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 48. (PARAGRAPH A) DESTROYS, DEMOLISHES, MUTILATES OR DAMAGES ANY WORLD HERITAGE SITE, NATIONAL CULTURAL TREASURES, IMPORTANT CULTURAL PROPERTY AND ARCHAEOLOGICAL AND ANTHROPOLOGICAL SITES;</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 48. (PARAGRAPH B) MODIFIES, ALTERS, OR DESTROYS THE ORIGINAL FEATURES OF OR UNDERTAKES CONSTRUCTION OR REAL ESTATE DEVELOPMENT IN ANY NATIONAL SHRINE, MONUMENT, LANDMARK AND OTHER HISTORIC EDIFICES AND STRUCTURES, DECLARED, CLASSIFIED, AND MARKED BY THE NATIONAL HISTORICAL INSTITUTE AS SUCH, WITHOUT THE PRIOR WRITTEN PERMISSION FROM THE COMMISSION. THIS INCLUDES THE DESIGNATED SECURITY OR BUFFER ZONE, EXTENDING FIVE (5) METERS FROM THE VISIBLE PERIMETER OF THE MONUMENT OR SITE;</label>
-													</div>      
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 48. (PARAGRAPH C) EXPLORES, EXCAVATES OR UNDERTAKES DIGGINGS FOR THE PURPOSE OF OBTAINING MATERIALS OF CULTURAL HISTORICAL VALUE WITHOUT PRIOR WRITTEN AUTHORITY FROM THE NATIONAL MUSEUM. NO EXCAVATION OR DIGGINGS SHALL BE PERMITTED WITHOUT THE SUPERVISION OF A CERTIFIED ARCHAEOLOGIST;</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 48. (PARAGRAPH D) APPROPRIATES EXCAVATION FINDS CONTRARY TO THE PROVISIONS OF THE NEW CIVIL CODE AND OTHER PERTINENT LAWS;</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 48. (PARAGRAPH E) IMPORTS, SELLS, DISTRIBUTES, PROCURES, ACQUIRES, OR EXPORTS CULTURAL PROPERTY STOLEN, OR OTHERWISE LOST AGAINST THE WILL OF THE LAWFUL OWNER;</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 48. (PARAGRAPH F) ILLICITLY EXPORTS CULTURAL PROPERTY LISTED IN THE PHILIPPINE REGISTRY OF CULTURAL PROPERTY OR THOSE THAT MAY BE CATEGORIZED AS SUCH UPON VISITATION OR INCORRECTLY DECLARES THE SAME DURING TRANSIT; AND</label>
-													</div>    
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 48. (PARAGRAPH E) DEALS IN CULTURAL PROPERTY WITHOUT PROPER REGISTRATION AND LICENSE ISSUED BY THE CULTURAL AGENCY CONCERNED.</label>
-													</div>  
+													<?php 
+														foreach($ra_10066 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_10066"  id="ra_10066_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_10066_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>   
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 6539 (ANTI CARNAPPING ACT 1972)</label>
-												<div class="col-sm-12">  
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 12. DEFACING OR TAMPERING WITH SERIAL NUMBERS OF MOTOR VEHICLE ENGINES, ENGINE BLOCKS AND CHASSIS.</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 13. PENAL PROVISIONS</label>
-													</div>
-												</div>
+												<div class="col-sm-12">
+													<?php 
+														foreach($ra_6539 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_6539"  id="ra_6539_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_6539_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>   
+												</div> 
 											</div>
 										</div>
 										<div class="row">
 											<div class="form-group"> 
 												<label class="col-sm-12">RA 10845 (ANTI AGRICULTURAL SMUGGLING ACT OF 2016)</label>
-												<div class="col-sm-12">  
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH A) IMPORTING OR BRINGING INTO THE PHILIPPINES WITHOUT THE REQUIRED IMPORT PERMIT FROM THE REGULATORY AGENCIES;</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH B) USING IMPORT PERMITS OF PERSONS, NATURAL OR JURIDICAL, OTHER THAN THOSE SPECIFICALLY NAMED IN THE PERMIT;</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH C) USING FAKE, FICTITIOUS OR FRAUDULENT IMPORT PERMITS OR SHIPPING DOCUMENTS;</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH D) SELLING, LENDING, LEASING, ASSIGNING, CONSENTING OR ALLOWING THE USE OF IMPORT PERMITS OF CORPORATIONS, NONGOVERNMENT ORGANIZATIONS, ASSOCIATIONS, COOPERATIVES, OR SINGLE PROPRIETORSHIPS BY OTHER PERSONS;</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH E) MISCLASSIFICATION, UNDERVALUATION OR MISDECLARATION UPON THE FILING OF IMPORT ENTRY AND REVENUE DECLARATION WITH THE BOC IN ORDER TO EVADE THE PAYMENT OF RIGHTFUL TAXES AND DUTIES DUE TO THE GOVERNMENT;</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH F) ORGANIZING OR USING DUMMY CORPORATIONS, NONGOVERNMENT ORGANIZATIONS, ASSOCIATIONS, COOPERATIVES, OR SINGLE PROPRIETORSHIPS FOR THE PURPOSE OF ACQUIRING IMPORT PERMITS;</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH G)  TRANSPORTING OR STORING THE AGRICULTURAL PRODUCT SUBJECT TO ECONOMIC SABOTAGE REGARDLESS OF QUANTITY; OR</label>
-													</div>
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECTION 3. (PARAGRAPH H) ACTING AS BROKER OF THE VIOLATING IMPORTER.</label>
-													</div> 
-												</div>
+												<div class="col-sm-12">
+													<?php 
+														foreach($ra_10845 as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="ra_10845"  id="ra_10845_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="ra_10845_<?php echo $row->id  ?>"><?php echo $row->section ?></label>
+														</div> 
+													<?php
+														}
+													?>   
+												</div>  
 											</div>
 										</div>
 										<div class="row">
 											<div class="form-group"> 
 												<label class="col-sm-12">MARPOL VIOLATIONS</label>
-												<div class="col-sm-12">  
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">DISPOSAL OF GARBAGE (HPCG MC 07-14 DATED 19 DEC 14)</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">DISCHARGE OF SEWAGE FROM SHIPS (HPCG MC 10-2014)</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">DISPOSAL OF USED OIL (HPCG MC 01-2005)</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">DISPOSAL OF NOXIOUS SUBSTANCES (HPCG MC 11-2014)</label>
-													</div>  
-												</div>
+												<div class="col-sm-12">
+													<?php 
+														foreach($marpol_violation as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="marpol_violation"  id="marpol_violation_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="marpol_violation_<?php echo $row->id  ?>"><?php echo $row->marpol_violation ?></label>
+														</div> 
+													<?php
+														}
+													?>   
+												</div>   
 											</div>
 										</div> 
 										<button class="btn btn-primary nextBtn pull-right" type="button">Next</button> 
@@ -736,19 +362,17 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">CONDUCT OF ACTIVITY</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">INITIATED</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">JOINT (LGU AND OTHER LAW ENFORCEMENT AGENCY)</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">PARTICIPATED</label>
-													</div>  
-												</div>
+													<?php 
+														foreach($seaborne_patrol_activity_conduct as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="seaborne_patrol_activity_conduct"  id="seaborne_patrol_activity_conduct_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="seaborne_patrol_activity_conduct_<?php echo $row->id  ?>"><?php echo $row->seaborne_patrol_activity_conduct ?></label>
+														</div> 
+													<?php
+														}
+													?>   
+												</div> 
 											</div>
 										</div> 
 										<div class="row">
@@ -1008,31 +632,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12">FACILITIES</label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">PORTS</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">AIRPORTS</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">MALLS</label>
-													</div>  
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">AFP/PNP/PCG CHECKPOINTS</label>
-													</div>  
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">EVENTS PLACE</label>
-													</div>   
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">Other</label>
-														<input type="text"> 
-													</div> 
+													<?php 
+														foreach($panelling_conducted_facilities as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="panelling_conducted_facilities"  id="panelling_conducted_facilities_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="panelling_conducted_facilities_<?php echo $row->id  ?>"><?php echo $row->panelling_conducted_facilities ?></label>
+														</div> 
+													<?php
+														}
+													?>  
 												</div>
 											</div>
 										</div> 
@@ -1053,18 +662,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12"> </label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">EXPLOSIVE</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">NARCOTICS</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SEARCH AND RESCUE</label>
-													</div>   
+													<?php 
+														foreach($k9_deployed_type as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="k9_deployed_type"  id="k9_deployed_type_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="k9_deployed_type_<?php echo $row->id  ?>"><?php echo $row->k9_deployed_type ?></label>
+														</div> 
+													<?php
+														}
+													?>    
 												</div>
 											</div>
 										</div> 
@@ -1085,18 +692,16 @@
 											<div class="form-group"> 
 												<label class="col-sm-12"> </label>
 												<div class="col-sm-12">
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">BOMB THREAT</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">SECURITY PANELING</label>
-													</div> 
-													<div class="checkbox checkbox-custom">
-														<input id="agency1" type="checkbox">
-														<label for="agency1">CODE ONE MSN</label>
-													</div>   
+													<?php 
+														foreach($eod_deployment as $row){
+													?>  
+														<div class="checkbox checkbox-custom">
+															<input  type="checkbox" name="eod_deployment"  id="eod_deployment_<?php echo $row->id  ?>"  value="<?php echo $row->id  ?>" >
+															<label for="eod_deployment_<?php echo $row->id  ?>"><?php echo $row->eod_deployment ?></label>
+														</div> 
+													<?php
+														}
+													?>  
 												</div>
 											</div>
 										</div> 

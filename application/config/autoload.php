@@ -70,12 +70,40 @@ $autoload['model']     	= array(
     'vessel_age_model', 
     'vessel_type_involved_model',
     'fire_cause_model', 
-    'man_overboard_incident_cause_model',
+    'man_overboard_incident_cause_model', 
+    'ra_10654_model', 
+    'ra_9165_model',
+    'ra_10591_model',
+    'ra_9208_model',
+    'ra_9147_model',
+    'pd_no_705_model',
+    'ra_1937_model',
+    'pd_no_532_model',
+    'ra_10066_model', 
+    'ra_6539_model', 
+    'ra_10845_model', 
+    'marpol_violation_model',  
+    'seaborne_patrol_activity_conduct_model', 
+    'panelling_conducted_facilities_model', 
+    'k9_deployed_type_model',
+    'eod_deployment_model', 
 
-
-    
-    
-    
+    'urban_rescue_type_model',
+    'time_assets_deployment_model', 
+    'asset_mobility_deployed_type_model', 
+    'victim_age_model',
+    'victim_number_model', 
+    'drowning_cause_model', 
+    'drowning_incident_location_model', 
+    'body_built_model',
+    'cadaver_approximate_age_model',
+    'cadaver_location_model', 
+    'weather_forecast_model',
+    'earthquake_location_model',
+    'earthquake_cause_model',
+    'earthquake_magnitude_level_model',
+    'fire_incident_location_model',
+    'damage_estimated_cost_model', 
     
 
     
