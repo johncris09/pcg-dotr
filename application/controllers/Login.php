@@ -42,7 +42,7 @@ class Login extends CI_Controller {
 
             if (!empty($result['status']) && $result['status'] === TRUE) {
 				// echo $result;
-				print_r($result);
+				// print_r($result);
 
                 /**
                  * Create Session
@@ -53,8 +53,8 @@ class Login extends CI_Controller {
                     'user_id'  => $result['data']->user_id,
                     'username'  => ucwords($result['data']->username), 
                     'email'  => $result['data']->email, 
-                    'firstname'  => $result['data']->firstname, 
-                    'lastname'  => $result['data']->lastname, 
+                    'firstname'  => $result['data']->first_name, 
+                    'lastname'  => $result['data']->last_name, 
                     'profile_picture'  => $result['data']->profile_picture,  
                 );
                 

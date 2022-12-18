@@ -4,7 +4,7 @@
         <div class="user-profile">
             <div class="dropdown user-pro-body">
                 <div class="profile-image">
-                    <img src="<?php echo base_url(); ?>assets/img/profile-photo.jpg" alt="user-img" class="img-circle">
+                    <img src="<?php echo base_url(); ?>assets/img/cgdnm-logo.png" alt="user-img" class="img-circle">
                     <a href="javascript:void(0);" class="dropdown-toggle u-dropdown text-blue" data-toggle="dropdown"
                         role="button" aria-haspopup="true" aria-expanded="false">
                         <span class="badge badge-danger">
@@ -15,7 +15,8 @@
                         <li><a href="signout"><i class="fa fa-power-off"></i> Logout</a></li>
                     </ul>
                 </div>
-                <p class="profile-text m-t-15 font-16"><a href="javascript:void(0);"> Hanna Gover</a></p>
+                <p class="profile-text m-t-15 font-16"><a href="javascript:void(0);">
+                        <?= $_SESSION['firstname'].' '.$_SESSION['lastname'] ?></a></p>
             </div>
         </div>
         <nav class="sidebar-nav">

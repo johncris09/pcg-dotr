@@ -26,7 +26,7 @@ class User_model extends CI_Model {
 
         } else {
             return ['status' => FALSE,'data' => FALSE];
-        }
+        } 
     }
 
     public function save_user($data)
