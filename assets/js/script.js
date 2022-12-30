@@ -93,10 +93,9 @@ $('select#station').on('change', function(e){
 
 $('select#report-selection').on('change', function(e){
     e.preventDefault(); 
-    var id = $(this).val();
-    console.info(id)
-    $('.toggle-show').css({"display": "none" });
-    $('.toggle-show#' + id).css({"display": "block" }); 
+    var id = $(this).val(); 
+    $('.toggle-show').css({"display": "none" }); 
+    $('.toggle-show[data-id="'+id+'"]').css({"display": "block" }); 
 
 })
 
@@ -113,8 +112,7 @@ $('select#report-type').on('change', function(e){
 
 $('select#maritime-incident').on('change', function(e){
     e.preventDefault(); 
-    var maritime_incident = $(this).val(); 
-    console.info(maritime_incident)
+    var maritime_incident = $(this).val();  
     $('.toggle-show').css({"display": "none" });
     $('.toggle-show[data-id="'+maritime_incident+'"]').css({"display": "block" }); 
 
@@ -146,12 +144,12 @@ allNextBtn.click(function () {
     var curStep = $(this).closest(".setup-content"),
         curStepBtn = curStep.attr("id"),
         nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-        // curInputs = curStep.find("select,input[type='text'],input[type='url']"),
+        // curInputs = curStep.find("select,input[type='text']"), 
         curInputs = curStep.find(""),
         isValid = true;
 
     $(".form-group").removeClass("has-error");
-    for (var i = 0; i < curInputs.length; i++) {
+    for (var i = 0; i < curInputs.length; i++) { 
         if (!curInputs[i].validity.valid) {
             isValid = false;
             $(curInputs[i]).closest(".form-group").addClass("has-error");
