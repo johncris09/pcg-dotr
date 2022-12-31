@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2022 at 07:52 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Dec 31, 2022 at 04:09 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `action_code` (
   `id` int(11) NOT NULL,
   `action_code` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `action_code`
@@ -53,7 +53,7 @@ INSERT INTO `action_code` (`id`, `action_code`) VALUES
 CREATE TABLE `activity_conduct` (
   `id` int(11) NOT NULL,
   `activity_conduct` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `activity_conduct`
@@ -73,7 +73,7 @@ INSERT INTO `activity_conduct` (`id`, `activity_conduct`) VALUES
 CREATE TABLE `affected_area` (
   `id` int(11) NOT NULL,
   `affected_area` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `affected_area`
@@ -97,7 +97,7 @@ INSERT INTO `affected_area` (`id`, `affected_area`) VALUES
 CREATE TABLE `affected_biodiversity` (
   `id` int(11) NOT NULL,
   `affected_biodiversity` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `affected_biodiversity`
@@ -118,7 +118,7 @@ INSERT INTO `affected_biodiversity` (`id`, `affected_biodiversity`) VALUES
 CREATE TABLE `application_type` (
   `id` int(11) NOT NULL,
   `application_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `application_type`
@@ -140,7 +140,7 @@ INSERT INTO `application_type` (`id`, `application_type`) VALUES
 CREATE TABLE `asset_deployment` (
   `id` int(11) NOT NULL,
   `asset_deployment` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `asset_deployment`
@@ -168,7 +168,7 @@ INSERT INTO `asset_deployment` (`id`, `asset_deployment`) VALUES
 CREATE TABLE `asset_mobility_deployed_type` (
   `id` int(11) NOT NULL,
   `asset_mobility_deployed_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `asset_mobility_deployed_type`
@@ -189,7 +189,7 @@ INSERT INTO `asset_mobility_deployed_type` (`id`, `asset_mobility_deployed_type`
 CREATE TABLE `beach_coast_line_length` (
   `id` int(11) NOT NULL,
   `beach_coast_line_length` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `beach_coast_line_length`
@@ -209,7 +209,7 @@ INSERT INTO `beach_coast_line_length` (`id`, `beach_coast_line_length`) VALUES
 CREATE TABLE `body_built` (
   `id` int(11) NOT NULL,
   `body_built` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `body_built`
@@ -229,7 +229,7 @@ INSERT INTO `body_built` (`id`, `body_built`) VALUES
 CREATE TABLE `bouy_type` (
   `id` int(11) NOT NULL,
   `bouy_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `bouy_type`
@@ -251,7 +251,7 @@ INSERT INTO `bouy_type` (`id`, `bouy_type`) VALUES
 CREATE TABLE `cadaver_approximate_age` (
   `id` int(11) NOT NULL,
   `cadaver_approximate_age` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cadaver_approximate_age`
@@ -275,7 +275,7 @@ INSERT INTO `cadaver_approximate_age` (`id`, `cadaver_approximate_age`) VALUES
 CREATE TABLE `cadaver_location` (
   `id` int(11) NOT NULL,
   `cadaver_location` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `cadaver_location`
@@ -294,7 +294,7 @@ INSERT INTO `cadaver_location` (`id`, `cadaver_location`) VALUES
 CREATE TABLE `coastal_and_beach_violation` (
   `id` int(11) NOT NULL,
   `coastal_and_beach_violation` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `coastal_and_beach_violation`
@@ -322,7 +322,7 @@ INSERT INTO `coastal_and_beach_violation` (`id`, `coastal_and_beach_violation`) 
 CREATE TABLE `conduct_of_activity` (
   `conduct_of_activity_id` int(11) NOT NULL,
   `conduct_of_activity` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `conduct_of_activity`
@@ -342,7 +342,7 @@ INSERT INTO `conduct_of_activity` (`conduct_of_activity_id`, `conduct_of_activit
 CREATE TABLE `damage_estimated_cost` (
   `id` int(11) NOT NULL,
   `damage_estimated_cost` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `damage_estimated_cost`
@@ -365,7 +365,7 @@ INSERT INTO `damage_estimated_cost` (`id`, `damage_estimated_cost`) VALUES
 CREATE TABLE `drill_conducted` (
   `id` int(11) NOT NULL,
   `drill_conducted` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `drill_conducted`
@@ -387,7 +387,7 @@ INSERT INTO `drill_conducted` (`id`, `drill_conducted`) VALUES
 CREATE TABLE `drowning_cause` (
   `id` int(11) NOT NULL,
   `drowning_cause` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `drowning_cause`
@@ -411,7 +411,7 @@ INSERT INTO `drowning_cause` (`id`, `drowning_cause`) VALUES
 CREATE TABLE `drowning_incident_location` (
   `id` int(11) NOT NULL,
   `drowning_incident_location` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `drowning_incident_location`
@@ -437,7 +437,7 @@ INSERT INTO `drowning_incident_location` (`id`, `drowning_incident_location`) VA
 CREATE TABLE `earthquake_cause` (
   `id` int(11) NOT NULL,
   `earthquake_cause` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `earthquake_cause`
@@ -459,7 +459,7 @@ INSERT INTO `earthquake_cause` (`id`, `earthquake_cause`) VALUES
 CREATE TABLE `earthquake_location` (
   `id` int(11) NOT NULL,
   `earthquake_location` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `earthquake_location`
@@ -478,7 +478,7 @@ INSERT INTO `earthquake_location` (`id`, `earthquake_location`) VALUES
 CREATE TABLE `earthquake_magnitude_level` (
   `id` int(11) NOT NULL,
   `earthquake_magnitude_level` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `earthquake_magnitude_level`
@@ -505,7 +505,7 @@ INSERT INTO `earthquake_magnitude_level` (`id`, `earthquake_magnitude_level`) VA
 CREATE TABLE `eod_deployment` (
   `id` int(11) NOT NULL,
   `eod_deployment` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `eod_deployment`
@@ -525,7 +525,7 @@ INSERT INTO `eod_deployment` (`id`, `eod_deployment`) VALUES
 CREATE TABLE `ere_result` (
   `id` int(11) NOT NULL,
   `ere_result` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ere_result`
@@ -543,7 +543,7 @@ INSERT INTO `ere_result` (`id`, `ere_result`) VALUES
 CREATE TABLE `facility_type` (
   `id` int(11) NOT NULL,
   `facility_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `facility_type`
@@ -565,7 +565,7 @@ INSERT INTO `facility_type` (`id`, `facility_type`) VALUES
 CREATE TABLE `fire_cause` (
   `id` int(11) NOT NULL,
   `fire_cause` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `fire_cause`
@@ -585,7 +585,7 @@ INSERT INTO `fire_cause` (`id`, `fire_cause`) VALUES
 CREATE TABLE `fire_incident_location` (
   `id` int(11) NOT NULL,
   `fire_incident_location` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `fire_incident_location`
@@ -604,7 +604,7 @@ INSERT INTO `fire_incident_location` (`id`, `fire_incident_location`) VALUES
 CREATE TABLE `garbage_type_collected` (
   `id` int(11) NOT NULL,
   `garbage_type_collected` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `garbage_type_collected`
@@ -626,7 +626,7 @@ INSERT INTO `garbage_type_collected` (`id`, `garbage_type_collected`) VALUES
 CREATE TABLE `incident_cause` (
   `id` int(11) NOT NULL,
   `incident_cause` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `incident_cause`
@@ -647,7 +647,7 @@ INSERT INTO `incident_cause` (`id`, `incident_cause`) VALUES
 CREATE TABLE `incident_consequences` (
   `id` int(11) NOT NULL,
   `incident_consequences` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `incident_consequences`
@@ -672,7 +672,7 @@ INSERT INTO `incident_consequences` (`id`, `incident_consequences`) VALUES
 CREATE TABLE `information_acquired_thru` (
   `id` int(11) NOT NULL,
   `information_acquired_thru` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `information_acquired_thru`
@@ -697,7 +697,7 @@ INSERT INTO `information_acquired_thru` (`id`, `information_acquired_thru`) VALU
 CREATE TABLE `inspection_type` (
   `id` int(11) NOT NULL,
   `inspection_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `inspection_type`
@@ -716,7 +716,7 @@ INSERT INTO `inspection_type` (`id`, `inspection_type`) VALUES
 CREATE TABLE `k9_deployed_type` (
   `id` int(11) NOT NULL,
   `k9_deployed_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `k9_deployed_type`
@@ -736,7 +736,7 @@ INSERT INTO `k9_deployed_type` (`id`, `k9_deployed_type`) VALUES
 CREATE TABLE `lighthouse_cause_if_not_operating` (
   `id` int(11) NOT NULL,
   `lighthouse_cause_if_not_operating` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `lighthouse_cause_if_not_operating`
@@ -759,7 +759,7 @@ INSERT INTO `lighthouse_cause_if_not_operating` (`id`, `lighthouse_cause_if_not_
 CREATE TABLE `lighthouse_inspection_purpose` (
   `id` int(11) NOT NULL,
   `lighthouse_inspection_purpose` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `lighthouse_inspection_purpose`
@@ -778,7 +778,7 @@ INSERT INTO `lighthouse_inspection_purpose` (`id`, `lighthouse_inspection_purpos
 CREATE TABLE `lighthouse_status` (
   `id` int(11) NOT NULL,
   `lighthouse_status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `lighthouse_status`
@@ -797,7 +797,7 @@ INSERT INTO `lighthouse_status` (`id`, `lighthouse_status`) VALUES
 CREATE TABLE `lighthouse_type` (
   `id` int(11) NOT NULL,
   `lighthouse_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `lighthouse_type`
@@ -816,7 +816,7 @@ INSERT INTO `lighthouse_type` (`id`, `lighthouse_type`) VALUES
 CREATE TABLE `light_bouy_inspection_purpose` (
   `id` int(11) NOT NULL,
   `light_bouy_inspection_purpose` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `light_bouy_inspection_purpose`
@@ -835,7 +835,7 @@ INSERT INTO `light_bouy_inspection_purpose` (`id`, `light_bouy_inspection_purpos
 CREATE TABLE `light_buoy_status` (
   `id` int(11) NOT NULL,
   `light_buoy_status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `light_buoy_status`
@@ -854,7 +854,7 @@ INSERT INTO `light_buoy_status` (`id`, `light_buoy_status`) VALUES
 CREATE TABLE `light_buoy__cause_if_not_operating` (
   `id` int(11) NOT NULL,
   `light_buoy__cause_if_not_operating` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `light_buoy__cause_if_not_operating`
@@ -878,7 +878,52 @@ INSERT INTO `light_buoy__cause_if_not_operating` (`id`, `light_buoy__cause_if_no
 CREATE TABLE `man_overboard_incident_cause` (
   `id` int(11) NOT NULL,
   `man_overboard_incident_cause` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marep`
+--
+
+CREATE TABLE `marep` (
+  `id` int(11) NOT NULL,
+  `station` int(11) DEFAULT NULL,
+  `sub_station` int(11) DEFAULT NULL,
+  `report_type` int(11) DEFAULT NULL,
+  `date_created` datetime DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL,
+  `activity_conduct` varchar(100) DEFAULT NULL,
+  `participating_agency` varchar(100) DEFAULT NULL,
+  `participant_number` varchar(100) DEFAULT NULL,
+  `area_coverage` varchar(100) DEFAULT NULL,
+  `garbage_type_collected` varchar(100) DEFAULT NULL,
+  `garbage_collected_volume` varchar(100) DEFAULT NULL,
+  `seedlings_planted_number` varchar(100) DEFAULT NULL,
+  `planted_trees_kind` varchar(100) DEFAULT NULL,
+  `vessel_type` varchar(100) DEFAULT NULL,
+  `vessel_name` varchar(100) DEFAULT NULL,
+  `inspection_type` varchar(100) DEFAULT NULL,
+  `marpol_violation` varchar(100) DEFAULT NULL,
+  `facility_type` varchar(100) DEFAULT NULL,
+  `facility_name` varchar(100) DEFAULT NULL,
+  `oil_spill_date_incident` datetime DEFAULT NULL,
+  `oil_spill_hour_incident` varchar(100) DEFAULT NULL,
+  `oil_spill_minute_incident` varchar(100) DEFAULT NULL,
+  `oil_spill_location` varchar(100) DEFAULT NULL,
+  `oil_spill_map_location` varchar(100) DEFAULT NULL,
+  `spiller` varchar(100) DEFAULT NULL,
+  `oil_spill_vessel_name` varchar(100) DEFAULT NULL,
+  `oil_spill_companyl_name` varchar(100) DEFAULT NULL,
+  `tier_level` varchar(100) DEFAULT NULL,
+  `oil_type` varchar(100) DEFAULT NULL,
+  `responding_unit` varchar(100) DEFAULT NULL,
+  `oil_retrieved_volume` varchar(100) DEFAULT NULL,
+  `affected_area` varchar(100) DEFAULT NULL,
+  `affected_biodiversity` varchar(100) DEFAULT NULL,
+  `training_type` int(11) DEFAULT NULL,
+  `training_center_name` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -889,7 +934,7 @@ CREATE TABLE `man_overboard_incident_cause` (
 CREATE TABLE `maritime_acitivity` (
   `id` int(11) NOT NULL,
   `maritime_acitivity` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `maritime_acitivity`
@@ -910,7 +955,7 @@ INSERT INTO `maritime_acitivity` (`id`, `maritime_acitivity`) VALUES
 CREATE TABLE `maritime_casualty_nature` (
   `id` int(11) NOT NULL,
   `maritime_casualty_nature` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `maritime_casualty_nature`
@@ -938,7 +983,7 @@ INSERT INTO `maritime_casualty_nature` (`id`, `maritime_casualty_nature`) VALUES
 CREATE TABLE `maritime_incident_severity` (
   `id` int(11) NOT NULL,
   `maritime_incident_severity` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `maritime_incident_severity`
@@ -958,7 +1003,7 @@ INSERT INTO `maritime_incident_severity` (`id`, `maritime_incident_severity`) VA
 CREATE TABLE `maritime_incident_type` (
   `id` int(11) NOT NULL,
   `maritime_incident_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `maritime_incident_type`
@@ -982,7 +1027,7 @@ INSERT INTO `maritime_incident_type` (`id`, `maritime_incident_type`) VALUES
 CREATE TABLE `maritime_related_violation` (
   `id` int(11) NOT NULL,
   `maritime_related_violation` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `maritime_related_violation`
@@ -1003,7 +1048,7 @@ INSERT INTO `maritime_related_violation` (`id`, `maritime_related_violation`) VA
 CREATE TABLE `marpol_violation` (
   `id` int(11) NOT NULL,
   `marpol_violation` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `marpol_violation`
@@ -1023,7 +1068,7 @@ INSERT INTO `marpol_violation` (`id`, `marpol_violation`) VALUES
 CREATE TABLE `marsaf_incident_cause` (
   `id` int(11) NOT NULL,
   `incident_cause` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `marsaf_incident_cause`
@@ -1042,7 +1087,7 @@ INSERT INTO `marsaf_incident_cause` (`id`, `incident_cause`) VALUES
 CREATE TABLE `marsaf_inspection_type` (
   `id` int(11) NOT NULL,
   `inspection_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `marsaf_inspection_type`
@@ -1063,7 +1108,7 @@ INSERT INTO `marsaf_inspection_type` (`id`, `inspection_type`) VALUES
 CREATE TABLE `marsaf_vessel_type` (
   `id` int(11) NOT NULL,
   `vessel_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `marsaf_vessel_type`
@@ -1083,13 +1128,27 @@ INSERT INTO `marsaf_vessel_type` (`id`, `vessel_type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `marsar`
+--
+
+CREATE TABLE `marsar` (
+  `id` int(11) DEFAULT NULL,
+  `station` int(11) NOT NULL,
+  `sub_station` int(11) NOT NULL,
+  `maritime_incident_type` int(11) NOT NULL,
+  `date_created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `marsar_incident_cause`
 --
 
 CREATE TABLE `marsar_incident_cause` (
   `id` int(11) NOT NULL,
   `incident_cause` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `marsar_incident_cause`
@@ -1112,7 +1171,7 @@ INSERT INTO `marsar_incident_cause` (`id`, `incident_cause`) VALUES
 CREATE TABLE `material_report` (
   `id` int(11) NOT NULL,
   `material_report` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `material_report`
@@ -1133,7 +1192,7 @@ INSERT INTO `material_report` (`id`, `material_report`) VALUES
 CREATE TABLE `noted_deficiency` (
   `id` int(11) NOT NULL,
   `noted_deficiency` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `noted_deficiency`
@@ -1174,14 +1233,14 @@ INSERT INTO `noted_deficiency` (`id`, `noted_deficiency`) VALUES
 
 CREATE TABLE `oil_type` (
   `id` int(11) NOT NULL,
-  `oil_types` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `oil_type` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `oil_type`
 --
 
-INSERT INTO `oil_type` (`id`, `oil_types`) VALUES
+INSERT INTO `oil_type` (`id`, `oil_type`) VALUES
 (1, 'HEAVY OIL'),
 (2, 'CRUDE OIL'),
 (3, 'BUNKER FUEL'),
@@ -1197,7 +1256,7 @@ INSERT INTO `oil_type` (`id`, `oil_types`) VALUES
 CREATE TABLE `panelling_conducted_facilities` (
   `id` int(11) NOT NULL,
   `panelling_conducted_facilities` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `panelling_conducted_facilities`
@@ -1219,7 +1278,7 @@ INSERT INTO `panelling_conducted_facilities` (`id`, `panelling_conducted_facilit
 CREATE TABLE `participating_agency` (
   `id` int(11) NOT NULL,
   `participating_agency` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `participating_agency`
@@ -1244,7 +1303,7 @@ INSERT INTO `participating_agency` (`id`, `participating_agency`) VALUES
 CREATE TABLE `pdi_result` (
   `id` int(11) NOT NULL,
   `pdi_result` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pdi_result`
@@ -1263,7 +1322,7 @@ INSERT INTO `pdi_result` (`id`, `pdi_result`) VALUES
 CREATE TABLE `pd_no_532` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pd_no_532`
@@ -1282,7 +1341,7 @@ INSERT INTO `pd_no_532` (`id`, `section`) VALUES
 CREATE TABLE `pd_no_705` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pd_no_705`
@@ -1310,7 +1369,7 @@ INSERT INTO `pd_no_705` (`id`, `section`) VALUES
 CREATE TABLE `pre_emptive_evacuation_activity` (
   `id` int(11) NOT NULL,
   `pre_emptive_evacuation_activity` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pre_emptive_evacuation_activity`
@@ -1331,7 +1390,7 @@ INSERT INTO `pre_emptive_evacuation_activity` (`id`, `pre_emptive_evacuation_act
 CREATE TABLE `pre_emptive_evacuation_coordination_with` (
   `id` int(11) NOT NULL,
   `pre_emptive_evacuation_coordination_with` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pre_emptive_evacuation_coordination_with`
@@ -1351,7 +1410,7 @@ INSERT INTO `pre_emptive_evacuation_coordination_with` (`id`, `pre_emptive_evacu
 CREATE TABLE `psc_action_code` (
   `id` int(11) NOT NULL,
   `psc_action_code` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `psc_action_code`
@@ -1377,7 +1436,7 @@ INSERT INTO `psc_action_code` (`id`, `psc_action_code`) VALUES
 CREATE TABLE `psc_center` (
   `id` int(11) NOT NULL,
   `psc_center` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `psc_center`
@@ -1397,7 +1456,7 @@ INSERT INTO `psc_center` (`id`, `psc_center`) VALUES
 CREATE TABLE `ra_1937` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_1937`
@@ -1424,7 +1483,7 @@ INSERT INTO `ra_1937` (`id`, `section`) VALUES
 CREATE TABLE `ra_6539` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_6539`
@@ -1442,7 +1501,7 @@ INSERT INTO `ra_6539` (`id`, `section`) VALUES
 CREATE TABLE `ra_9147` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_9147`
@@ -1468,7 +1527,7 @@ INSERT INTO `ra_9147` (`id`, `section`) VALUES
 CREATE TABLE `ra_9165` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_9165`
@@ -1510,7 +1569,7 @@ INSERT INTO `ra_9165` (`id`, `section`) VALUES
 CREATE TABLE `ra_9208` (
   `id` int(11) NOT NULL,
   `section` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_9208`
@@ -1530,7 +1589,7 @@ INSERT INTO `ra_9208` (`id`, `section`) VALUES
 CREATE TABLE `ra_10066` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_10066`
@@ -1553,7 +1612,7 @@ INSERT INTO `ra_10066` (`id`, `section`) VALUES
 CREATE TABLE `ra_10591` (
   `id` int(11) NOT NULL,
   `section` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_10591`
@@ -1581,7 +1640,7 @@ INSERT INTO `ra_10591` (`id`, `section`) VALUES
 CREATE TABLE `ra_10654` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_10654`
@@ -1641,7 +1700,7 @@ INSERT INTO `ra_10654` (`id`, `section`) VALUES
 CREATE TABLE `ra_10845` (
   `id` int(11) NOT NULL,
   `section` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ra_10845`
@@ -1665,7 +1724,7 @@ INSERT INTO `ra_10845` (`id`, `section`) VALUES
 CREATE TABLE `recration_watercraft` (
   `id` int(11) NOT NULL,
   `recration_watercraft` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `recration_watercraft`
@@ -1689,7 +1748,7 @@ INSERT INTO `recration_watercraft` (`id`, `recration_watercraft`) VALUES
 CREATE TABLE `recreational_violation` (
   `id` int(11) NOT NULL,
   `recreational_violation` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `recreational_violation`
@@ -1709,7 +1768,7 @@ INSERT INTO `recreational_violation` (`id`, `recreational_violation`) VALUES
 CREATE TABLE `related_international_conventions_noted_deficiency` (
   `id` int(11) NOT NULL,
   `related_international_conventions_noted_deficiency` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `related_international_conventions_noted_deficiency`
@@ -1737,7 +1796,7 @@ INSERT INTO `related_international_conventions_noted_deficiency` (`id`, `related
 CREATE TABLE `report_selection` (
   `report_selection_id` int(11) NOT NULL,
   `report_selection` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `report_selection`
@@ -1761,7 +1820,7 @@ INSERT INTO `report_selection` (`report_selection_id`, `report_selection`) VALUE
 CREATE TABLE `report_type` (
   `id` int(11) NOT NULL,
   `report_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `report_type`
@@ -1787,14 +1846,14 @@ INSERT INTO `report_type` (`id`, `report_type`) VALUES
 
 CREATE TABLE `responding_unit` (
   `id` int(11) NOT NULL,
-  `responding_units` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `responding_unit` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `responding_unit`
 --
 
-INSERT INTO `responding_unit` (`id`, `responding_units`) VALUES
+INSERT INTO `responding_unit` (`id`, `responding_unit`) VALUES
 (1, 'SPILLER'),
 (2, 'MEP FORCE'),
 (3, 'PCG UNITS');
@@ -1808,7 +1867,7 @@ INSERT INTO `responding_unit` (`id`, `responding_units`) VALUES
 CREATE TABLE `salvage_operation_purpose` (
   `id` int(11) NOT NULL,
   `salvage_operation_purpose` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `salvage_operation_purpose`
@@ -1829,7 +1888,7 @@ INSERT INTO `salvage_operation_purpose` (`id`, `salvage_operation_purpose`) VALU
 CREATE TABLE `seaborne_patrol_activity_conduct` (
   `id` int(11) NOT NULL,
   `seaborne_patrol_activity_conduct` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `seaborne_patrol_activity_conduct`
@@ -1849,7 +1908,7 @@ INSERT INTO `seaborne_patrol_activity_conduct` (`id`, `seaborne_patrol_activity_
 CREATE TABLE `spiller` (
   `id` int(11) NOT NULL,
   `spiller` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `spiller`
@@ -1868,7 +1927,7 @@ INSERT INTO `spiller` (`id`, `spiller`) VALUES
 CREATE TABLE `station` (
   `station_id` int(11) NOT NULL,
   `station` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `station`
@@ -1890,7 +1949,7 @@ CREATE TABLE `sub_station` (
   `sub_station_id` int(11) NOT NULL,
   `sub_station` varchar(100) NOT NULL,
   `station_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `sub_station`
@@ -1929,7 +1988,7 @@ INSERT INTO `sub_station` (`sub_station_id`, `sub_station`, `station_id`) VALUES
 CREATE TABLE `tier_level` (
   `id` int(11) NOT NULL,
   `tier_level` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tier_level`
@@ -1949,7 +2008,7 @@ INSERT INTO `tier_level` (`id`, `tier_level`) VALUES
 CREATE TABLE `time_assets_deployment` (
   `id` int(11) NOT NULL,
   `time_assets_deployment` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `time_assets_deployment`
@@ -1970,7 +2029,7 @@ INSERT INTO `time_assets_deployment` (`id`, `time_assets_deployment`) VALUES
 CREATE TABLE `training_type` (
   `id` int(11) NOT NULL,
   `training_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `training_type`
@@ -1990,7 +2049,7 @@ INSERT INTO `training_type` (`id`, `training_type`) VALUES
 CREATE TABLE `urban_rescue_type` (
   `id` int(11) NOT NULL,
   `urban_rescue_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `urban_rescue_type`
@@ -2021,7 +2080,7 @@ CREATE TABLE `user` (
   `last_name` varchar(100) NOT NULL,
   `profile_picture` varchar(100) NOT NULL,
   `role` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `user`
@@ -2053,7 +2112,7 @@ CREATE TABLE `user_role` (
   `user_role_id` int(11) NOT NULL,
   `value` varchar(100) DEFAULT NULL,
   `text` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `user_role`
@@ -2103,7 +2162,7 @@ INSERT INTO `user_role` (`user_role_id`, `value`, `text`) VALUES
 CREATE TABLE `very_serious_mc_category` (
   `id` int(11) NOT NULL,
   `very_serious_mc_category` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `very_serious_mc_category`
@@ -2123,7 +2182,7 @@ INSERT INTO `very_serious_mc_category` (`id`, `very_serious_mc_category`) VALUES
 CREATE TABLE `vessel_age` (
   `id` int(11) NOT NULL,
   `vessel_age` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vessel_age`
@@ -2143,7 +2202,7 @@ INSERT INTO `vessel_age` (`id`, `vessel_age`) VALUES
 CREATE TABLE `vessel_size` (
   `id` int(11) NOT NULL,
   `vessel_size` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vessel_size`
@@ -2163,7 +2222,7 @@ INSERT INTO `vessel_size` (`id`, `vessel_size`) VALUES
 CREATE TABLE `vessel_type` (
   `id` int(11) NOT NULL,
   `vessel_type` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vessel_type`
@@ -2187,7 +2246,7 @@ INSERT INTO `vessel_type` (`id`, `vessel_type`) VALUES
 CREATE TABLE `vessel_type_involved` (
   `id` int(11) NOT NULL,
   `vessel_type_involved` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vessel_type_involved`
@@ -2216,7 +2275,7 @@ INSERT INTO `vessel_type_involved` (`id`, `vessel_type_involved`) VALUES
 CREATE TABLE `victim_age` (
   `id` int(11) NOT NULL,
   `victim_age` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `victim_age`
@@ -2240,7 +2299,7 @@ INSERT INTO `victim_age` (`id`, `victim_age`) VALUES
 CREATE TABLE `victim_number` (
   `id` int(11) NOT NULL,
   `victim_number` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -2251,7 +2310,7 @@ CREATE TABLE `victim_number` (
 CREATE TABLE `vsei_deficiency_code` (
   `id` int(11) NOT NULL,
   `vsei_deficiency_code` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vsei_deficiency_code`
@@ -2292,7 +2351,7 @@ INSERT INTO `vsei_deficiency_code` (`id`, `vsei_deficiency_code`) VALUES
 CREATE TABLE `vsei_result` (
   `id` int(11) NOT NULL,
   `vsei_result` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vsei_result`
@@ -2311,7 +2370,7 @@ INSERT INTO `vsei_result` (`id`, `vsei_result`) VALUES
 CREATE TABLE `weather_forecast` (
   `id` int(11) NOT NULL,
   `weather_forecast` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `weather_forecast`
@@ -2567,6 +2626,12 @@ ALTER TABLE `light_buoy__cause_if_not_operating`
 -- Indexes for table `man_overboard_incident_cause`
 --
 ALTER TABLE `man_overboard_incident_cause`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `marep`
+--
+ALTER TABLE `marep`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3165,6 +3230,12 @@ ALTER TABLE `light_buoy__cause_if_not_operating`
 -- AUTO_INCREMENT for table `man_overboard_incident_cause`
 --
 ALTER TABLE `man_overboard_incident_cause`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `marep`
+--
+ALTER TABLE `marep`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
