@@ -104,7 +104,8 @@ $autoload['model']     	= array(
     'fire_incident_location_model',
     'damage_estimated_cost_model', 
     'pre_emptive_evacuation_coordination_with_model',
-    'pre_emptive_evacuation_activity_model'
+    'pre_emptive_evacuation_activity_model',
+    'marep_model',
     
 
     
