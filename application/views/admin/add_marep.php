@@ -30,15 +30,9 @@
 												<select id="station"  class="form-control" required="">
 													<option value="">Select</option>
 													<?php 
-														foreach($station as $row){
-															if($row->station_id == 1){
-																$selectd = "selected";
-															}else{
-																$selectd = "";
-
-															}
+														foreach($station as $row){ 
 													?>
-														<option <?php echo $selectd ; ?> value="<?php echo $row->station_id ?>"><?php echo $row->station ?></option>
+														<option   value="<?php echo $row->station_id ?>"><?php echo $row->station ?></option>
 													<?php
 														}
 													?>
