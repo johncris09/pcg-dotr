@@ -1096,48 +1096,19 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td scope="row">COASTAL CLEAN-UP</td>
-										<td>August 2, 2022 at 11:00 am</td>
-										<td><a href="">View</a></td>
-										<td><a href="">Edit/Details</a></td>
-									</tr> 
-									<tr>
-										<td scope="row">COASTAL CLEAN-UP</td>
-										<td>August 2, 2022 at 11:00 am</td>
-										<td><a href="">View</a></td>
-										<td><a href="">Edit/Details</a></td>
-									</tr> 
-									<tr>
-										<td scope="row">COASTAL CLEAN-UP</td>
-										<td>August 2, 2022 at 11:00 am</td>
-										<td><a href="">View</a></td>
-										<td><a href="">Edit/Details</a></td>
-									</tr> 
-									<tr>
-										<td scope="row">COASTAL CLEAN-UP</td>
-										<td>August 2, 2022 at 11:00 am</td>
-										<td><a href="">View</a></td>
-										<td><a href="">Edit/Details</a></td>
-									</tr> 
-									<tr>
-										<td scope="row">COASTAL CLEAN-UP</td>
-										<td>August 2, 2022 at 11:00 am</td>
-										<td><a href="">View</a></td>
-										<td><a href="">Edit/Details</a></td>
-									</tr> 
-									<tr>
-										<td scope="row">COASTAL CLEAN-UP</td>
-										<td>August 2, 2022 at 11:00 am</td>
-										<td><a href="">View</a></td>
-										<td><a href="">Edit/Details</a></td>
-									</tr> 
-									<tr>
-										<td scope="row">COASTAL CLEAN-UP</td>
-										<td>August 2, 2022 at 11:00 am</td>
-										<td><a href="">View</a></td>
-										<td><a href="">Edit/Details</a></td>
-									</tr> 
+									<?php 
+										foreach($marep as $row){
+									?>
+										<tr>
+											<td scope="row"><?php echo $row->report_selection ?></td>
+											<td><?php echo date('F d, Y \a\t\ H:i', strtotime($row->date_created )) ?></td>
+											<td><a href="">View</a></td>
+											<td><a href="">Edit/Details</a></td>
+										</tr>  
+									<?php
+
+										}
+									?> 
 								</tbody>
 							</table>
 						</div>
