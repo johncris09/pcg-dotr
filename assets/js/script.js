@@ -56,7 +56,8 @@ $('select#station').on('change', function(e){
     e.preventDefault();
     var text = $(this).find(':selected').text() 
     var station_id = $(this).val() 
-
+    
+    $('input[name="station"]').val(station_id)
     var text = text.replace('CGS ', ""); 
 
     $('#station-text').text(text)
@@ -91,9 +92,18 @@ $('select#station').on('change', function(e){
 })
 
 
+$('select#sub-station').on('change', function(e){
+    e.preventDefault();
+    var text = $(this).find(':selected').text() 
+    var sub_station_id = $(this).val()  
+    $('input[name="sub_station"]').val(sub_station_id)  
+})
+
+
 $('select#report-selection').on('change', function(e){
     e.preventDefault(); 
     var id = $(this).val(); 
+    $('input[name="report_selection"]').val(id)
     $('.toggle-show').css({"display": "none" }); 
     $('.toggle-show[data-id="'+id+'"]').css({"display": "block" }); 
 
