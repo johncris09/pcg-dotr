@@ -343,7 +343,7 @@
 									<?php 
 										}else if(  $row['report_selection_id'] == 3){ //Tree Planting
 									?>
-											<form method="post" action="<?= site_url() ?>insert_marep" role="form" enctype="multipart/form-data">
+											<form   method="post" action="<?= site_url() ?>insert_marep" role="form" enctype="multipart/form-data">
 												<!-- hidden -->
 												<input type="hidden" title="Station" name="station">
 												<input type="hidden" title="Sub Station" name="sub_station">
@@ -455,7 +455,7 @@
 														</div> 
 													</div>  
 												</div>  
-												<button type="submit" class="btn btn-danger pull-right" type="button">Finish!</button>  
+												<button type="submit" class="btn btn-danger pull-right" >Finish!</button>  
 											</form>
 									
 									<?php 
