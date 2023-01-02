@@ -56,10 +56,8 @@ $('select#station').on('change', function(e){
     e.preventDefault();
     var text = $(this).find(':selected').text() 
     var station_id = $(this).val() 
-    
     $('input[name="station"]').val(station_id)
-    var text = text.replace('CGS ', ""); 
-
+    var text = text.replace('CGS ', "");  
     $('#station-text').text(text)
 
     if(station_id != ""){
@@ -96,6 +94,8 @@ $('select#sub-station').on('change', function(e){
     e.preventDefault();
     var text = $(this).find(':selected').text() 
     var sub_station_id = $(this).val()  
+    
+    console.info(sub_station_id)
     $('input[name="sub_station"]').val(sub_station_id)  
 })
 
@@ -123,6 +123,7 @@ $('select#report-type').on('change', function(e){
 $('select#maritime-incident').on('change', function(e){
     e.preventDefault(); 
     var maritime_incident = $(this).val();  
+    $('input[name="maritime_incident"]').val(maritime_incident)
     $('.toggle-show').css({"display": "none" });
     $('.toggle-show[data-id="'+maritime_incident+'"]').css({"display": "block" }); 
 
