@@ -37,8 +37,8 @@ class Marep extends CI_Controller {
         $data['oil_type'] = $this->oil_type_model->get_all();
         $data['responding_unit'] = $this->responding_unit_model->get_all();
         $data['affected_area'] = $this->affected_area_model->get_all();
-        $data['affected_biodiversity'] = $this->affected_biodiversity_model->get_all();
-         
+        $data['affected_biodiversity'] = $this->affected_biodiversity_model->get_all(); 
+        $data['marep'] = $this->marep_model->get_all();  
         $this->base->load('admin', 'admin/add_marep', $data); 
  
 	} 

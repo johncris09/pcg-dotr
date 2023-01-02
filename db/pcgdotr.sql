@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 31, 2022 at 04:09 AM
+-- Generation Time: Jan 02, 2023 at 04:09 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -880,6 +880,19 @@ CREATE TABLE `man_overboard_incident_cause` (
   `man_overboard_incident_cause` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `man_overboard_incident_cause`
+--
+
+INSERT INTO `man_overboard_incident_cause` (`id`, `man_overboard_incident_cause`) VALUES
+(1, 'Failure to wear PPE'),
+(2, 'Failure to wear PPE'),
+(3, 'Failure to wear PPE'),
+(4, 'Murder'),
+(5, 'Suicide'),
+(6, 'Weather and Sea Condition'),
+(7, 'Working Over The Sides');
+
 -- --------------------------------------------------------
 
 --
@@ -924,6 +937,16 @@ CREATE TABLE `marep` (
   `training_type` int(11) DEFAULT NULL,
   `training_center_name` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `marep`
+--
+
+INSERT INTO `marep` (`id`, `station`, `sub_station`, `report_type`, `date_created`, `location`, `activity_conduct`, `participating_agency`, `participant_number`, `area_coverage`, `garbage_type_collected`, `garbage_collected_volume`, `seedlings_planted_number`, `planted_trees_kind`, `vessel_type`, `vessel_name`, `inspection_type`, `marpol_violation`, `facility_type`, `facility_name`, `oil_spill_date_incident`, `oil_spill_hour_incident`, `oil_spill_minute_incident`, `oil_spill_location`, `oil_spill_map_location`, `spiller`, `oil_spill_vessel_name`, `oil_spill_companyl_name`, `tier_level`, `oil_type`, `responding_unit`, `oil_retrieved_volume`, `affected_area`, `affected_biodiversity`, `training_type`, `training_center_name`) VALUES
+(1, 1, 1, 1, '2023-02-01 15:14:00', 'this is location', '1', '1,2', '123', 'area', '1,2', '13', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, ' ::00', NULL, NULL, NULL, NULL, NULL, '', NULL, '', '', 0, NULL),
+(2, 3, 7, 4, '2023-01-11 15:13:00', 'this is location', NULL, '', NULL, NULL, '', NULL, NULL, NULL, '2', 'vessel name', '1', 'marpol violation', NULL, NULL, NULL, NULL, NULL, NULL, ' ::00', NULL, NULL, NULL, NULL, NULL, '', NULL, '', '', 0, NULL),
+(3, 3, 7, 1, '2023-01-26 14:12:00', 'oroqueita', '2', '1,2,7', '13', 'fasdf', '1,2,4', '123', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, ' ::00', NULL, NULL, NULL, NULL, NULL, '', NULL, '', '', 0, NULL),
+(4, 1, 1, NULL, '2023-01-17 00:00:00', NULL, NULL, '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, ' ::00', NULL, NULL, NULL, NULL, NULL, '', NULL, '', '', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -1016,7 +1039,8 @@ INSERT INTO `maritime_incident_type` (`id`, `maritime_incident_type`) VALUES
 (4, 'COLLISION'),
 (5, 'ENGINE TROUBLE'),
 (6, 'FIRE'),
-(7, 'MAN OVERBOARD');
+(7, 'MAN OVERBOARD'),
+(8, 'STEERING CASUALTY');
 
 -- --------------------------------------------------------
 
@@ -1161,6 +1185,47 @@ INSERT INTO `marsar_incident_cause` (`id`, `incident_cause`) VALUES
 (4, 'Environmental Factor (Geographic Location)'),
 (5, 'Electrical Failure'),
 (6, 'Failure in Ships Steering System');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marslec`
+--
+
+CREATE TABLE `marslec` (
+  `id` int(11) NOT NULL,
+  `station` int(11) DEFAULT NULL,
+  `sub_station` int(11) DEFAULT NULL,
+  `date_created` datetime DEFAULT NULL,
+  `ra_10654` varchar(100) DEFAULT NULL,
+  `ra_9165` varchar(100) DEFAULT NULL,
+  `ra_10591` varchar(100) DEFAULT NULL,
+  `ra_9208` varchar(100) DEFAULT NULL,
+  `ra_9147` varchar(100) DEFAULT NULL,
+  `pd_no_705` varchar(100) DEFAULT NULL,
+  `ra_1937` varchar(100) DEFAULT NULL,
+  `pd_no_532` varchar(100) DEFAULT NULL,
+  `ra_10066` varchar(100) DEFAULT NULL,
+  `ra_6539` varchar(100) DEFAULT NULL,
+  `ra_10845` varchar(100) DEFAULT NULL,
+  `marpol_violation` varchar(100) DEFAULT NULL,
+  `seaborne_patrol_date` datetime DEFAULT NULL,
+  `seaborne_patrol_location` varchar(100) DEFAULT NULL,
+  `seaborne_patrol_activity_conduct` varchar(100) DEFAULT NULL,
+  `seaborne_patrol_number_conduncted` int(11) DEFAULT NULL,
+  `seaborne_patrol_area_covered` varchar(100) DEFAULT NULL,
+  `seaborne_patrol_number_hour_conducted` int(11) DEFAULT NULL,
+  `shore_patrol_date_started` datetime DEFAULT NULL,
+  `shore_patrol_date_ended` datetime DEFAULT NULL,
+  `shore_patrol_number_conducted` int(11) DEFAULT NULL,
+  `shore_patrol_coastline_covered_length` int(11) DEFAULT NULL,
+  `sea_marshall_date_started` datetime DEFAULT NULL,
+  `sea_marshall_date_ended` datetime DEFAULT NULL,
+  `panelling_conducted_date` datetime DEFAULT NULL,
+  `panelling_conducted_facilities` varchar(100) DEFAULT NULL,
+  `k9_deployed_type` varchar(100) DEFAULT NULL,
+  `eod_deployment` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -2695,6 +2760,12 @@ ALTER TABLE `marsar_incident_cause`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `marslec`
+--
+ALTER TABLE `marslec`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `material_report`
 --
 ALTER TABLE `material_report`
@@ -3230,13 +3301,13 @@ ALTER TABLE `light_buoy__cause_if_not_operating`
 -- AUTO_INCREMENT for table `man_overboard_incident_cause`
 --
 ALTER TABLE `man_overboard_incident_cause`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `marep`
 --
 ALTER TABLE `marep`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `maritime_acitivity`
@@ -3260,7 +3331,7 @@ ALTER TABLE `maritime_incident_severity`
 -- AUTO_INCREMENT for table `maritime_incident_type`
 --
 ALTER TABLE `maritime_incident_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `maritime_related_violation`
@@ -3297,6 +3368,12 @@ ALTER TABLE `marsaf_vessel_type`
 --
 ALTER TABLE `marsar_incident_cause`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `marslec`
+--
+ALTER TABLE `marslec`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `material_report`
