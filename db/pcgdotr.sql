@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2023 at 04:09 AM
+-- Generation Time: Jan 03, 2023 at 05:29 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -2108,6 +2108,82 @@ INSERT INTO `training_type` (`id`, `training_type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `urban_marsar`
+--
+
+CREATE TABLE `urban_marsar` (
+  `id` int(11) NOT NULL,
+  `station` int(11) DEFAULT NULL,
+  `sub_station` int(11) DEFAULT NULL,
+  `urban_rescue_type` varchar(100) DEFAULT NULL,
+  `date_created` datetime DEFAULT NULL,
+  `incident_details` varchar(100) DEFAULT NULL,
+  `incident_barangay_name` varchar(100) DEFAULT NULL,
+  `incident_map_location` varchar(100) DEFAULT NULL,
+  `information_acquired_thru` varchar(100) DEFAULT NULL,
+  `time_assets_deployment` varchar(100) DEFAULT NULL,
+  `asset_mobility_deployed_type` varchar(100) DEFAULT NULL,
+  `number_rescued_person` int(11) DEFAULT NULL,
+  `number_injured_person` int(11) DEFAULT NULL,
+  `number_casualties` int(11) DEFAULT NULL,
+  `number_missing_person` int(11) DEFAULT NULL,
+  `number_rescuers_deployed` int(11) DEFAULT NULL,
+  `drowning_victim_name` varchar(100) DEFAULT NULL,
+  `drowning_victim_gender` varchar(11) DEFAULT NULL,
+  `first_responder` varchar(100) DEFAULT NULL,
+  `drowning_victim_age` varchar(100) DEFAULT NULL,
+  `drowning_victim_number` varchar(100) DEFAULT NULL,
+  `response_barangay_name` varchar(100) DEFAULT NULL,
+  `drowning_cause` varchar(100) DEFAULT NULL,
+  `drowning_incident_location` varchar(100) DEFAULT NULL,
+  `drowning_action_taken` varchar(100) DEFAULT NULL,
+  `retrieval_victim_name` varchar(100) DEFAULT NULL,
+  `retrieval_victim_gender` varchar(100) DEFAULT NULL,
+  `body_built` int(100) DEFAULT NULL,
+  `adistinct_feature` varchar(100) DEFAULT NULL,
+  `cadaver_location` int(11) DEFAULT NULL,
+  `cadaver_approximate_age` varchar(100) DEFAULT NULL,
+  `exact_cadaver_location` varchar(100) DEFAULT NULL,
+  `retrieval_barangay_name` varchar(100) DEFAULT NULL,
+  `cadaver_discovered_number` varchar(100) DEFAULT NULL,
+  `retrieval_operation_length` varchar(11) DEFAULT NULL,
+  `time_person_reported_missing` varchar(100) DEFAULT NULL,
+  `retrieval_last_location` varchar(100) DEFAULT NULL,
+  `retrieval_action_taken` varchar(100) DEFAULT NULL,
+  `storm_surge_victim_name` varchar(100) DEFAULT NULL,
+  `weather_forecast` int(11) DEFAULT NULL,
+  `storm_surge_injured_person_number` varchar(100) DEFAULT NULL,
+  `storm_surge_casualty_number` varchar(100) DEFAULT NULL,
+  `storm_surge_rescue_number` varchar(100) DEFAULT NULL,
+  `storm_surge_action_taken` varchar(100) DEFAULT NULL,
+  `earthquake_barangay_name` varchar(100) DEFAULT NULL,
+  `earthquake_location` int(11) DEFAULT NULL,
+  `earthquake_cause` int(11) DEFAULT NULL,
+  `earthquake_magnitude_level` varchar(100) DEFAULT NULL,
+  `earthquake_action_taken` varchar(100) DEFAULT NULL,
+  `lanslide_casualty_number` varchar(100) DEFAULT NULL,
+  `lanslide_affected_area` varchar(100) DEFAULT NULL,
+  `landslide_rescued_adult_male_number` varchar(100) DEFAULT NULL,
+  `landslide_rescued_children_number` varchar(100) DEFAULT NULL,
+  `landslide_rescued_adult_female_number` varchar(100) DEFAULT NULL,
+  `landslide_rescued_18y_below_female_number` varchar(100) DEFAULT NULL,
+  `lanslide_location` varchar(100) DEFAULT NULL,
+  `fire_incident_barangay_name` varchar(100) DEFAULT NULL,
+  `fire_incident_location` varchar(100) DEFAULT NULL,
+  `fire_incident_cause` varchar(100) DEFAULT NULL,
+  `fire_incident_cost` varchar(100) DEFAULT NULL,
+  `fire_incident_acton_taken` varchar(100) DEFAULT NULL,
+  `pre_emptive_evacuation_activity` varchar(100) NOT NULL,
+  `pre_emptive_evacuation_date` datetime NOT NULL,
+  `evacuation_center_location` varchar(100) DEFAULT NULL,
+  `pre_emptive_evacuation_coordination_with` varchar(100) DEFAULT NULL,
+  `spot_report` varchar(100) DEFAULT NULL,
+  `photographs` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `urban_rescue_type`
 --
 
@@ -2980,6 +3056,12 @@ ALTER TABLE `training_type`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `urban_marsar`
+--
+ALTER TABLE `urban_marsar`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `urban_rescue_type`
 --
 ALTER TABLE `urban_rescue_type`
@@ -3584,6 +3666,12 @@ ALTER TABLE `time_assets_deployment`
 --
 ALTER TABLE `training_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `urban_marsar`
+--
+ALTER TABLE `urban_marsar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `urban_rescue_type`

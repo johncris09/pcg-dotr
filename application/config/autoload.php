@@ -107,6 +107,7 @@ $autoload['model']     	= array(
     'pre_emptive_evacuation_activity_model',
     'marep_model',
     'marslec_model',
+    'urban_marsar_model',
     
 
     
