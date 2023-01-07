@@ -15,7 +15,7 @@ class Marsaf extends CI_Controller {
     public function index()
 	{ 
         $data['page_title'] = "MARSAF"; 
-        $this->load->view('admin/marsaf', $data);  
+        $this->base->load('admin', 'marsaf/manage_marsaf', $data);
 	}
  
     public function add()

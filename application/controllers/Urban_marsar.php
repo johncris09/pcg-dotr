@@ -15,7 +15,8 @@ class Urban_marsar extends CI_Controller {
     public function index()
 	{ 
         $data['page_title'] = "URBAN MARSAR"; 
-        $this->load->view('admin/urban_marsar', $data);  
+        
+        $this->base->load('admin', 'marsar/manage_urban_marsar', $data);
 	}
  
     public function add()
@@ -131,4 +132,3 @@ class Urban_marsar extends CI_Controller {
 	}
         
 }
-

@@ -29,7 +29,7 @@
                     <a class="waves-effect" aria-expanded="false"><i class="icon-anchor fa-fw"></i> <span
                             class="hide-menu"> MAREP</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="#">MAREP List</a></li>
+                        <li><a href="marep">MAREP List</a></li>
                         <li><a href="add_marep">Add MAREP</a></li>
                     </ul>
                 </li>
@@ -37,7 +37,7 @@
                     <a class="waves-effect" aria-expanded="false"><i class="icon-anchor fa-fw"></i> <span
                             class="hide-menu"> MARSAF</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="#">MARSAF List</a></li>
+                        <li><a href="marsaf">MARSAF List</a></li>
                         <li><a href="add_marsaf">Add MARSAF</a></li>
                     </ul>
                 </li>
@@ -45,7 +45,7 @@
                     <a class="waves-effect" aria-expanded="false"><i class="icon-anchor fa-fw"></i> <span
                             class="hide-menu"> MARSAR</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="#">MARSAR List</a></li>
+                        <li><a href="marsar">MARSAR List</a></li>
                         <li><a href="add_marsar">Add MARSAR</a></li>
                     </ul>
                 </li>
@@ -54,7 +54,7 @@
                             class="hide-menu"> MARSLEC</span></a>
                     <ul aria-expanded="false" class="collapse">
 
-                        <li><a href="#">MARSLEC List</a></li>
+                        <li><a href="marslec">MARSLEC List</a></li>
                         <li><a href="add_marslec">Add MARSLEC</a></li>
                     </ul>
                 </li>
@@ -62,7 +62,7 @@
                     <a class="waves-effect" aria-expanded="false"><i class="icon-anchor fa-fw"></i> <span
                             class="hide-menu">URBAN MARSAR</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="#" URBAN>MARSAR List</a></li>
+                        <li><a href="urban_marsar" URBAN>MARSAR List</a></li>
                         <li><a href="add_urban_marsar">Add URBAN MARSAR</a></li>
                     </ul>
                 </li>

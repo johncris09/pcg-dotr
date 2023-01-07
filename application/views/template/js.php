@@ -20,6 +20,13 @@ var BASE_URL = "<?php echo base_url() ?>";
 <!-- ===== Plugin JS ===== -->
 <!-- ===== Style Switcher JS ===== -->
 <script src="<?php echo base_url(); ?>assets/vendor/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="<?php echo base_url(); ?>assets/plugins/components/chartist-js/dist/chartist.min.js"></script>
+<script
+    src="<?php echo base_url(); ?>assets/plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js">
+</script>
+<script src='<?php echo base_url(); ?>assets/plugins/components/moment/moment.js'></script>
+<script src='<?php echo base_url(); ?>assets/plugins/components/fullcalendar/fullcalendar.js'></script>
+<script src="<?php echo base_url(); ?>assets/js/db2.js"></script>
 
 
 <script src="<?php echo base_url(); ?>assets/js/script.js"></script>

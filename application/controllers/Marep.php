@@ -12,10 +12,10 @@ class Marep extends CI_Controller {
         }
     }
 
-    public function index()
-	{ 
+    public function index(){ 
+        $data['marep'] = $this->marep_model->get_all();  
         $data['page_title'] = "MAREP"; 
-        $this->load->view('admin/marep', $data);  
+        $this->base->load('admin', 'marep/manage_marep', $data);
 	}
  
     public function add()
