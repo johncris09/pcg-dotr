@@ -12,8 +12,9 @@ class Marslec extends CI_Controller {
     }
     public function index()
 	{ 
+        $data['marslec'] = $this->marslec_model->get_all();   
         $data['page_title'] = "MARSLEC"; 
-        $this->load->view('admin/marslec', $data);  
+        $this->base->load('admin', 'marslec/manage_marslec', $data);
 	}
     public function add()
 	{          

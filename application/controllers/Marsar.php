@@ -15,7 +15,7 @@ class Marsar extends CI_Controller {
     public function index()
 	{ 
         $data['page_title'] = "MARSAR"; 
-        $this->load->view('admin/marsar', $data);  
+        $this->base->load('admin', 'marsar/manage_marsar', $data);
 	}
  
     public function add()
